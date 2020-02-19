@@ -1,0 +1,24 @@
+%!PostProc (html): KEY_DEC_3 control+shift+flecha abajo
+%!PostProc (html): KEY_INC_3 control+shift+flecha arriba
+%!PostProc (html): KEY_DEC_5 Control+shift+Flecha izquierda
+%!PostProc (html): KEY_INC_5 Control+shift+Flecha derecha
+%!PostProc (html): KEY_DEC_20 Control+shift+retroceso de página
+%!PostProc (html): KEY_INC_20 Control+shift+avance de página
+%!PostProc (html): KEY_MIDDLE Control+shift+m"
+%!PostProc (html): KEY_PLAY Control+p
+%!PostProc (html): KEY_MUTE Control+m
+%!PostProc (html): KEY_REC Control+r
+%!PostProc (html): KEY_EXPAND Control+e
+%!PostProc (html): KEY_BACK Control+flecha izquierda
+%!PostProc (html): KEY_NEXT Control+flecha derecha
+%!PostProc (html): KEY_FAV Control+f
+%!PostProc (html): KEY_OPTIONS Control+o
+%!PostProc (html): KEY_TOP Control+t
+%!PostProc (html): KEY_EXIT Control+q
+%!PostProc (html): KEY_SAY_INFO alt+i
+%!PostProc (html): KEY_SAY_BUFFER alt+b
+%!PostProc (html): KEY_SAY_VOLUME alt+v
+%!PostProc (html): KEY_GOTO_SEARCHEDIT control+alt+e
+%!PostProc (html): KEY_GOTO_STATIONSLIST control+alt+s
+%!PostProc (html): KEY_STOP control+s
+

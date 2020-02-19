@@ -1,0 +1,28 @@
+ADDON_SUMMARY - Historial
+Autor: ADDON_AUTHOR_NAME
+
+
+%!includeconf: ../addon_global.t2tconf
+%!includeconf: addon_informations.t2tconf
+URL: ADDON_AUTHOR_URL
+
++ v1.0 (19/02/2020) +
+El complemento cambia de nombre y pasa a la versión 1.0.
+
+Compatibilidad con NVDA 2019.3 y con versiones superiores a 2019.1.
+
++ v1.4 (19 Junio 2014) +
+
+- traducción de la documentación para el complemento RadioSure en español por Rémy Ruiz
+
+
++ v1.3 (17 Junio 2014) +
+
+- añadido órdenes de teclado para mover el foco al campo de búsqueda y a la lista de emisoras
+- modificación del script clickExpandButton para colocar el foco en la lista de emisoras
+
+
++ v1.2 (5 Junio 2014) +
+Reestructuración integral del complemento escrito por un desconocido
+
+

@@ -1,0 +1,30 @@
+ ADDON_SUMMARY - Historique
+Auteur: ADDON_AUTHOR_NAME
+
+
+%!includeconf: ../addon_global.t2tconf
+%!includeconf: addon_informations.t2tconf
+URL: ADDON_AUTHOR_URL
+
+
++ v1.0 (19/02/2020) +
+L'extension change de nom et repart à la version 1.0.
+
+Mise en compatibilité avec NVDA 2019.3 et avec les  versions supérieures à la 2019.1.
+
+
++ v1.4. (19 Juin 2014) +
+
+- traduction de la documentation pour l'extension RadioSure en espagnol par Rémy Ruiz
+
+
++ v1.3 (17 Juin 2014) +
+
+- ajout des commandes clavier  pour déplacer le focus à la zone de recherche et la liste des stations
+- modification du script clickExpandButton pour mettre le focus sur la liste des stations
+
+
++ v1.2 (5 Juin 2014) +
+Reprise intégrale de l'extension écrite par un inconnu
+
+

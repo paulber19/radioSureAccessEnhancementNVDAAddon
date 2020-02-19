@@ -1,0 +1,194 @@
+ADDON_SUMMARY - manual del usuario
+Autor: ADDON_AUTHOR_NAME
+
+%!includeconf: ../addon_userManual.t2tconf
+%!includeconf: addon_informations.t2tconf
+%!includeconf: addon_keys.t2tconf
+URL: ADDON_AUTHOR_URL
+Descargar:
+- [versión estable ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
+- [Versión de desarrollo ADDON_DEV_URL]
+
+
+Compatibilidad:
+- versión mínima de NVDA requerida: MINIMUM_NVDA_VERSION
+- última versión de NVDA probada: LAST_TESTED_NVDA_VERSION
+
+
+= Índice =[toc]
+%%toc
+
++ Introducción +
+Este complemento mejora la accesibilidad del software RadioSure con NVDA.
+
+++ Características ++
+Este complemento proporciona:
+
+- [un script para reproducir o detener la emisora actual sin movimiento del foco #HDR2], 
+- [un script para reproducir la emisora anterior o siguiente en la lista de las emisoras ya jugadas, (sin movimiento del foco) #HDR4],
+- [un script para aumentar o disminuir el volumen sin movimiento del foco #HDR1],
+- [un script para silenciar o restablecer el volumen sin movimiento del foco #HDR3],
+- [un script para leer el nivel del volumen #HDR5],
+- [un script para iniciar o detener la grabación de la emisora actual sin movimiento del foco #HDR6],
+- [un script para mostrar la lista de emisoras favoritas #HDR7],
+- [un script para mostrar la ventana de opciones de RadioSure #HDR8],
+- [un script para leer el nombre de la emisora actual y la línea de estado #HDR9],
+- [un script para leer el búfer de reproducción #HDR10],
+- [un script para mostrar o ocultar el cuadro de búsqueda y la lista de emisoras de radio #HDR11],
+- [un script para ir al cuadro de edición de búsqueda de emisoras de radio  #HDR20],
+- [un script para ir a la lista de emisoras de radio (resultado de la búsqueda) #HDR21],
+- [un script para pulsar en el botón Top #HDR22],
+- [un script para salir de la aplicación  #HDR12],
+- [el posible uso de la barra espaciadora o la tecla "Intro" para pulsar en un botón #HDR13].
+
+
+
+++ Actualización ++
+La actualización del complemento por defecto se hace automáticamente poco tiempo después de iniciar NVDA (entre 20 y 600 segundos) y como máximo una vez al día.
+Puedes desactivar esta actualización desmarcando la opción "Buscar automáticamente actualizaciones" que se encuentra en las opciones del complemento, elemento de menú "Actualización".
+La versión del complemento puede ser:
+- Ya sea una versión estable: su número de versión es de tipo "1.0" por ejemplo.
+- Ya sea una versión de desarrollo: su número de versión es entonces de tipo "1.0-dev1", o "1.0-rc1", o "1.0-beta2".
+
+
+Por defecto, una versión estable se actualiza con la última versión estable (Número de versión superior).
+Sin embargo, es posible actualizar la versión actual estable con una versión de desarrollo de la próxima versión estable. Simplemente marcando la opción "Actualizar también versiones estable hacia versiones de desarrollo" situado en las opciones del complemento, elemento de menú "Actualización".
+
+Una versión de desarrollo se actualiza con una versión de desarrollo más reciente o con su versión estable.
+
+El botón "Buscar actualización" situado en las opciones del complemento, elemento de menú "Actualización", permite buscar inmediatamente una actualización
+
+
+
+++ Compatibilidad ++
+Este complemento ha sido probado con la versión 2.0 y 2.2 de RadioSure.
+
+++ Historial ++
+El historial de las versiones del complemento está en el archivo ["change.html" change.html]
+
+
+++ Configuración a respetar ++
+Ninguna configuración especial.
+
+
++ Script para iniciar  o detener la reproducción de la emisora actual +[hdr2]
+
+Este script se lanza mediante las órdenes de teclado "KEY_PLAY".
+Tiene como objetivo de pulsar en el botón "Play" sin necesidad de mover el foco.
+Al presionar este botón se inicia o se detiene la reproducción de la emisora actual.
+
+
++ Scripts para reproducir la emisora anterior o siguiente +[hdr4]
+RadioSure mantiene el historial de emisoras jugadas y muestra los botones "Back" y "Next" para moverse en este historial.
+Estos scripts permiten pulsar estos botones sin necesidad de mover el foco.
+Estos script se lanzan mediante las órdenes de teclado siguientes:
+
+- "KEY_BACK": pasa a la emisora anterior ya jugada y inicia su reproducción
+- "KEY_NEXT": pasa a la emisora siguiente ya jugada y inicia su reproducción
+
+
++ Scripts para aumentar o disminuir el volumene +[hdr1]
+
+Estos scripts permiten cambiar el nivel del volumen sin ningun movimiento del foco.
+Estos script se lanzan mediante las órdenes de teclado siguientes:
+
+- "KEY_INC_3": aumentar ligeramente el volumen en incrementos de 3%,
+- "KEY_DEC_3": disminuir ligeramente el volumen en incrementos de 3%,
+- "KEY_INC_5": aumentar el volumen en incrementos de 5%,
+- "KEY_DEC_5": disminuir el volumen en incrementos de 5%,
+- "KEY_INC_20": aumentar fuertemente el volumen en incrementos de 20%,
+- "KEY_DEC_20": disminuir fuertemente el volumen en incrementos de 20%,
+- "KEY_MIDDLE": ajustar el volumen en el nivel medio (50%)
+
+
+
++ Script para silenciar o restablecer el volumen +[hdr3]
+
+Este script se lanza mediante las órdenes de teclado "KEY_MUTE".
+Tiene como objetivo de pulsar en el botón "Mute" sin necesidad de mover el foco.
+Al presionar este botón se silencia o se restablece el volumen. 
+
+
++ Script para leer el nivel del volumen +[hdr5]
+Este script se lanza mediante las órdenes de teclado "KEY_SAY_VOLUME".
+Sin mover el foco, anuncia el nivel del volumen en porcentaje
+
+
++ Script para iniciar o detener la grabación de la emisora actual +[hdr6]
+
+Este script se lanza mediante las órdenes de teclado "KEY_REC".
+Tiene como objetivo de pulsar en el botón "Rec" sin necesidad de mover el foco, lo que inicia o detiene la grabación de la emisora actual.
+
+
++ Script para mostrar la lista de emisoras favoritas +[hdr7]
+Este script se lanza mediante las órdenes de teclado "KEY_FAV".
+Tiene como objetivo de pulsar en el botón "Fav".
+Al presionar este botón aparece bajo la forma de menú contextual, la lista de emisoras favoritas.
+
++ Script para mostrar la ventana de opciones de RadioSure +[hdr8]
+Este script se lanza mediante las órdenes de teclado "KEY_OPTIONS".
+Tiene como objetivo de pulsar en el botón "Options" lo que provoca la visualización de la ventana de configuración de opciones de RadioSure.
+
++ Script para pulsar en el botón Top +[hdr22]
+Este script se lanza mediante las órdenes de teclado "KEY_TOP".
+????
+
++ Script para leer el nombre de la emisora actual y la línea de estado +[hdr9]
+Este script se lanza mediante las órdenes de teclado "KEY_SAY_INFO".
+Permite el anuncio de las informaciones de la emisora actual mostrado por RadioSure como:
+- el nombre de la emisora,
+- el estado de reproducción iniciada o detenida,
+- la codificación utilizada.
+
+
+Pulsado dos veces, se copian estas informaciones al Portapapeles.
+Ejemplo:
+
+http://www.maxfm.rs Emisión  (00:14) MP3, 160 kbps
+
+
++ Script para leer el búfer de reproducción +[hdr10]
+Este script se lanza mediante las órdenes de teclado "KEY_SAY_BUFFER".
+Anuncia el búfer de reproducción( información mostrado por RadioSure).
+Ejemplo: búfer 100%
+
+
++ Script para mostrar o ocultar el cuadro de búsqueda y la lista de emisoras de radio +[hdr11]
+
+Este script se lanza mediante las órdenes de teclado "KEY_EXPAND".
+Tiene como objetivo de pulsar en el botón "Expand" sin mover el foco.
+Esta pulsación provoca que se muestre o se oculte la lista de emisoras y el cuadro de búsqueda.
+Si hay visualización, el foco se coloca en la lista de emisoras.
+
+
++ script para ir al cuadro de edición de búsqueda de emisoras de radio +[HDR20]
+Este script se lanza mediante las órdenes de teclado KEY_GOTO_SEARCHEDIT.
+EsteTiene como objetivo de colocar el foco en el cuadro de edición de búsqueda de emisoras de radio.
+Este cuadro de edición se presenta bajo la forma de un campo de edición y de una lista desplegable memorizando los anteriores criterios de búsqueda.
+Este cuadro de edición no podria ser mostrado.
+En este caso, el script provoca una pulsación en el botón Expand para que aparezca antes de mover el foco.
+Si las órdenes de teclado es tecleado cuando el foco está ya en el cuadro, el script lo informa.
+
+
++ script para ir a la lista de emisoras de radio +[HDR21]
+Este script se lanza mediante las órdenes de teclado KEY_GOTO_STATIONSLIST.
+Tiene como objetivo de colocar el foco en la lista de emisoras de radio que contiene el resultado de la búsqueda.
+El foco se mueve a La emisora de radio   seleccionada anteriormente y esta se anuncia, como por ejemplo:
+
+#Musik.12punks on RauteMusik.FM; País: Germany; Género: Rock-Punk; Idioma: German
+
+Esta lista no podria ser mostrada.
+En este caso, el script provoca una pulsación en el botón Expand para que aparezca antes de mover el foco.
+Si las órdenes de teclado es tecleado cuando el foco está ya en la lista, el script lo informa.
+
+
++ Script para salir de la aplicación +[hdr12]
+Este script se lanza mediante las órdenes de teclado "KEY_EXIT".
+Tiene como objetivo de pulsar en el botón "Exit".
+Esta pulsación provoca la confirmación del usuario, cierra la ventana y detendra la aplicación RadioSure.
+
+
++ Pulsar en un botón con la barra espaciadora +[HDR13]
+En RadioSure, la barra espaciadora está previsto por defecto para activar los botones, pero no la tecla "Intro".
+Ahora para pulsar los botones, puedes utilizar la tecla "Intro" o la barra espaciadora.
+El complemento  proporciona esta posibilidad sin impedir el funcionamiento en todas las demás situaciones.

@@ -1,0 +1,215 @@
+ADDON_SUMMARY - manuel utilisateur
+Author: ADDON_AUTHOR_NAME
+
+%!includeconf: ../addon_userManual.t2tconf
+%!includeconf: addon_informations.t2tconf
+%!includeconf: addon_keys.t2tconf
+URL: ADDON_AUTHOR_URL
+
+
+Download: 
+- [ stable version ADDON_VERSION download server 1 ADDON_DOWNLOAD_SERVER1] 
+- [Development Version ADDON_DEV_URL] 
+
+
+Compatibility: 
+- minimum version of NVDA supported: MINIMUM_NVDA_VERSION 
+- latest version of NVDA tested: LAST_TESTED_NVDA_VERSION 
+
+
+= Sommaire =[toc]
+%%toc
+
+
++ Introduction +
+This module improves the accessibility of RadioSure software with NVDA.
+
+++ Features ++
+This additional module provides:
+
+- [a script to start or stop the current station without moving focus # HDR2],
+- [a script to launch the previous or next station from the list of stations already played, (without moving focus) # HDR4],
+- [a script to increase or decrease the volume without moving focus # HDR1],
+- [a script to cut or reset the volume without moving focus # HDR3],
+- [a script to read the volume level # HDR5],
+- [a script to start or stop the recording of the current station without moving focus # HDR6],
+- [a script to display the list of favorite stations # HDR7],
+- [a script to display the RadioSure # HDR8 options window],
+- [a script to read the name of the current station and the status line # HDR9],
+- [a script to read the read buffer # HDR10],
+- [a script to show or hide the search area and the list of radio stations # HDR11],
+- [a script to go to the edit radio station search area # HDR20],
+- [a script to go to the list of radio stations (search result) # HDR21],
+- [a script to press the Top button # HDR22],
+- [a script to quit the application # HDR12],
+- [the possible use of the space bar or the "Enter" key to press a button # HDR13].
+
+
+
+++ update ++ 
+The update of the extension is, by default, automatically a short time after the start of NVDA (about 10 seconds) and a maximum of once per day. 
+It is possible to disable this update by unchecking the option "automatically check for updates" in the extension settings. 
+The version of the extension can be: 
+- a stable version: its version number is "1.0" for example. 
+- either a development version: the version number is of the type "1.0-dev1", or "1.0-rc1", or "1.0-beta2". 
+
+
+By default, the stable version is updated with a stable version more recent (higher version number). 
+But it is possible to update the stable version running with a development version of the next stable version. Just check the option "Update also update the stable release to the versions of development" located in the settings of the extension. 
+
+A development version is updated with a development version more recent or stable version. 
+
+The button "Search for update" placed in the extension settings allows you to search immediately for an update. 
+
+
+
+++ Compatibility ++
+This module has been tested with version 2.0 and 2.2 of RadioSure.
+
+++ Configuration to be respected ++
+No special configuration.
+
+
++ Script to start or stop playback of the current station +[hdr2]
+
+This script is launched by the keyboard command "KEY_PLAY".
+
+Its purpose is to press the "Play" button without moving the focus.
+
+Pressing this button starts or stops playback of the current station.
+
+
++ Scripts to launch the previous or next station +[hdr4]
+RadioSure maintains the history of stations played and presents the "Back" and "Next" buttons to move through this history.
+
+These scripts allow you to press these buttons without moving the focus.
+
+These scripts are launched by the following keyboard commands:
+
+- "KEY_BACK": goes to the previous station already played and starts playing it
+- "KEY_NEXT": goes to the next station already played and starts playing
+
+
++ Scripts to increase or decrease the volume +[hdr1]
+
+These scripts allow you to change the volume level without moving the focus.
+These scripts are launched by the following keyboard commands:
+
+- "KEY_INC_3": slightly increase the Volume in steps of 3%,
+- "KEY_DEC_3": slightly decrease the Volume in steps of 3%,
+- "KEY_INC_5": increase the volume in steps of 5%,
+- "KEY_DEC_5": decrease the volume in steps of 5%,
+- "KEY_INC_20": greatly increase the volume in steps of 20%,
+- "KEY_DEC_20": sharply reduce the volume in steps of 20%,- "KEY_MIDDLE": set the volume at the medium level (50%)
+
+
+
++ Script to cut or reset the volume +[hdr3]
+
+This script is launched by the keyboard command "KEY_MUTE".
+
+Its purpose is to press the "Mute" button without moving the focus.
+
+Pressing this button cuts or restores the volume.
+
+
++ Script to read the volume level +[hdr5]
+This script is launched by the keyboard command "KEY_SAY_VOLUME".
+
+Without moving the focus, it announces the volume level in percentage
+
+
++ Script to start or stop recording of the current station +[hdr6]
+
+This script is launched by the keyboard commands "KEY_REC".
+
+Its purpose is to press the "Rec" button without moving the focus, which starts or stops the recording of the current station.
+
+
++ Script to display the list of favorite stations +[hdr7]
+This script is launched by the keyboard command "KEY_FAV".
+
+Its purpose is to press the "Fav" button.
+
+Pressing this button brings up the list of favorite stations in the context menu.
+
++ Script to display the RadioSure options window +[hdr8]
+This script is launched by the keyboard command "KEY_OPTIONS".
+
+Its purpose is to press the "Options" button, which causes the RadioSure options configuration window to be displayed.
+
++ Script to press the Top + button +[hdr22]
+This script is launched by the keyboard command "KEY_TOP".
+????
+
++ Script to read the name of the current station and the status line +[hdr9]
+This script is launched by the keyboard command "KEY_SAY_INFO".
+
+It announces the information of the current station displayed by RadioSure as:
+- the name of the station,
+- the reading state started or stopped,
+- the encoding used.
+
+
+Double tap, it will copy this information to the clipboard.
+
+For example:
+
+http://www.maxfm.rs Reading (00:14) MP3, 160 kbps
+
+
++ Script to read the reading buffer +[hdr10]
+This script is launched by the keyboard command "KEY_SAY_BUFFER".
+
+it announces the reading buffer (information displayed by RadioSure).
+For example: 100% buffer
+
+
++ Script to show or hide the search area and the list of radio stations +[hdr11]
+
+This script is launched by the keyboard command "KEY_EXPAND".
+
+Its purpose is to press the "Expand" button without moving the focus.
+
+This press displays or hides the search zone and the list of stations.
+If there is a display, the focus is placed in the station list.
+
+
++ script to go to the radio station search editing area +[HDR20]
+This script is launched by the keyboard command KEY_GOTO_SEARCHEDIT.
+
+Its purpose is to focus on the radio station search editing area.
+
+This editing area is in the form of an edit field and a drop-down list memorizing the previous search criteria.
+This editing area may not be displayed.
+In that case,the script causes a press on the Expand button to make it appear before moving the focus.
+
+If the keyboard command is typed when the focus is already in the area, the script signals this.
+
+
++ script to go to the list of radio stations +[HDR21]
+This script is launched by the keyboard command KEY_GOTO_STATIONSLIST.
+
+Its purpose is to put the focus in the list of radio stations which contains the search result.
+The focus is placed on the radio station previously selected and it is announced, such as for example:
+
+# Musik.12punks on RauteMusik.FM; Country: Germany; Genre: Rock-Punk; Language: German
+
+This list may not be displayed.
+In this case, the script causes a press on the Expand button to make it appear before moving the focus.
+If the keyboard command is typed when the focus is already in the list the script signals it.
+
++ Script to exit the application +[hdr12]
+This script is launched by the keyboard command "KEY_EXIT".
+
+Its purpose is to press the "Exit" button.
+
+This press results in user confirmation, closing the window and stopping the RadioSure application.
+
+
++ Press a button with the space bar + [HDR13]
+In RadioSure, the space bar is provided by default to activate the buttons, but not the "Enter" key.
+
+Now to press the buttons, you can use the "Enter" key or the space bar.
+
+The module provides this possibility without preventing operation in all other situations.
