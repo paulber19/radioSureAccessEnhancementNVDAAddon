@@ -7,6 +7,11 @@ Author: ADDON_AUTHOR_NAME
 URL: ADDON_AUTHOR_URL
 
 
++ v1.1 (03/04/2020) +
+- compatibility with NVDA 2020.1,
+- compliance for NVDA extension compatibility test
+
+
 + v1.0 (12/02/2020) +
 The  extension has changed  its name and goes back to version 1.0.
 
