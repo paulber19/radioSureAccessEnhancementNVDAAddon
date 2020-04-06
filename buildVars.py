@@ -20,7 +20,7 @@ addon_info = {
 	"addon_description" : _("""This add-on Improves the accessibility of RadioSure, Internet Radio Player with NVDA.
 	"""),
 	# version
-	"addon_version" : "1.1",
+	"addon_version" : "1.1.1",
 	# Author(s)
 	"addon_author" : "paulber19",
 	# URL for the add-on documentation support

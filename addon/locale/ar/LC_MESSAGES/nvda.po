@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: radio_sure 1.4\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2020-02-14 10:15+0100\n"
+"PO-Revision-Date: 2020-04-04 00:02+0200\n"
+"Last-Translator: wafiqtaher <wafiqtaher@gmail.com>\n"
+"Language-Team: paulber007 <wafiqtaher@gmail.com>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#: buildVars.py:17
+msgid "radioSure Internet Radio Player : accessibility enhancement"
+msgstr "تحسين إمكانية الوصول لبرنامج :radioSure"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
+msgid ""
+"This add-on Improves the accessibility of RadioSure, Internet Radio Player "
+"with NVDA.\n"
+"\t"
+msgstr ""
+"الوظيفة الإضافية تعمل على تحسين إمكانية الوصول إلى RadioSure ، وراديو راديو "
+"الإنترنت مع NVDA. \n"
+" \v\t"
+
+#. Translators: the label of a message box dialog  to ask the user if he wants keep current configuration settings.
+#: installTasks.py:48
+msgid "Do you want to keep current add-on configuration settings ?"
+msgstr "هل تريد الاحتفاظ بإعدادات تكوين الوظيفة الإضافية الحالية؟"
+
+#. Translators: the title of a message box dialog.
+#: installTasks.py:50
+#, python-format
+msgid "%s - installation"
+msgstr "%s التثبيت"
+
+#: appModules\radioSure\__init__.py:184
+msgid "{name} {state}"
+msgstr "اسم {name}الحالة {state}"
+
+#: appModules\radioSure\__init__.py:193
+msgid "{name} {state} {live}"
+msgstr "الإسم {name}الحالة  {state} مباشر {live}"
+
+#: appModules\radioSure\__init__.py:199 appModules\radioSure\__init__.py:448
+msgid "{0}%"
+msgstr "{0}بالمئةِ"
+
+#: appModules\radioSure\__init__.py:216
+msgid "Stations"
+msgstr "محطات"
+
+#: appModules\radioSure\__init__.py:217
+msgid "Search"
+msgstr "بحث"
+
+#: appModules\radioSure\__init__.py:238
+msgid "Are you sure you want  to quit RadioSure?"
+msgstr "هل أنت متأكد أنك تريد إنهاء RadioSure؟"
+
+#: appModules\radioSure\__init__.py:238
+msgid "Warning"
+msgstr "تحذير"
+
+#: appModules\radioSure\__init__.py:259
+msgid "Move focus to Exit button and click it to exit the application"
+msgstr "انقل التركيز إلى زر \"إنهاء\" وانقر فوقه للخروج من التطبيق"
+
+#: appModules\radioSure\__init__.py:270
+msgid ""
+"Without moving focus, click on  Play button to play or stop the current "
+"station"
+msgstr ""
+"دون تحريك التركيز ، انقر فوق الزر \"تشغيل\" لتشغيل أو إيقاف المحطة الحالية"
+
+#: appModules\radioSure\__init__.py:282
+msgid ""
+"Without moving focus, click on Back button to play the prior played station"
+msgstr ""
+"بدون تحريك التركيز ، انقر فوق الزر \"السابق\" لتشغيل محطة التشغيل السابقة"
+
+#: appModules\radioSure\__init__.py:294
+msgid ""
+"Without moving focus, click on  Next button to play the next played station"
+msgstr "دون تحريك التركيز ، انقر فوق الزر \"التالي\" لتشغيل المحطة التالية"
+
+#: appModules\radioSure\__init__.py:304
+msgid "Without moving focus, click on  Rec button to start or stop record"
+msgstr "دون تحريك التركيز ، انقر على زر Rec لبدء أو إيقاف السجل"
+
+#: appModules\radioSure\__init__.py:324
+msgid "Search edit box and Stations list are not more visible"
+msgstr "مربع تحرير البحث وقائمة المحطات ليست أكثر وضوحًا"
+
+#: appModules\radioSure\__init__.py:333
+msgid ""
+"Without moving focus, click  on Expand button to  show or mask stations list"
+msgstr ""
+"دون تحريك التركيز ، انقر فوق الزر \"توسيع\" لإظهار أو إخفاء قائمة المحطات"
+
+#: appModules\radioSure\__init__.py:342
+msgid "Move focus to Options button and click it to open Options dialog"
+msgstr "انقل التركيز إلى الزر \"خيارات\" وانقر فوقه لفتح مربع الحوار \"خيارات\""
+
+#: appModules\radioSure\__init__.py:356
+msgid ""
+"Move focus to Fav button and click it to show the list of favorites station"
+msgstr "انقل التركيز إلى زر Fav وانقر فوقه لإظهار قائمة محطة المفضلة"
+
+#: appModules\radioSure\__init__.py:368
+msgid "Without moving focus, click on Top buttonto ???"
+msgstr "دون تحريك التركيز ، انقر فوق الزر العلوي لـ ؟؟؟"
+
+#: appModules\radioSure\__init__.py:380
+msgid "Without moving focus, click on Mute butt button to Mute volume on or off"
+msgstr "دون تحريك التركيز ، انقر على زر كتم الصوت لكتم الصوت أو إيقاف تشغيله"
+
+#: appModules\radioSure\__init__.py:387
+msgid "Decrease slightly the volume (down 3%)"
+msgstr "خفض مستوى الصوت قليلاً (بنسبة 3%)"
+
+#: appModules\radioSure\__init__.py:394
+msgid "Increase slightly the volume (up 3%)"
+msgstr "زيادة حجم الصوت قليلا (بزيادة 3%)"
+
+#: appModules\radioSure\__init__.py:402
+msgid "Decrease the volume (down 5%)"
+msgstr "خفض مستوى الصوت (بنسبة 5%)"
+
+#: appModules\radioSure\__init__.py:409
+msgid "Increase the volume (up 5%)"
+msgstr "زيادة مستوى الصوت (بنسبة 5%)"
+
+#: appModules\radioSure\__init__.py:418
+msgid "Increase strongly  the volume (up 20%)"
+msgstr "زيادة حجم قوة الصوت (بزيادة 20%)"
+
+#: appModules\radioSure\__init__.py:426
+msgid "Decrease strongly the volume (down -20%)"
+msgstr "خفض الصوت بنسبة 20%"
+
+#: appModules\radioSure\__init__.py:440
+msgid "Set volume to middle( 50%)"
+msgstr "ضبط مستوى الصوت على الوسط (50%)"
+
+#: appModules\radioSure\__init__.py:449
+msgid "Say volume"
+msgstr "قل مستوى الصوت"
+
+#: appModules\radioSure\__init__.py:457
+msgid "Informations copied to clipboard"
+msgstr "تم نسخ المعلومات إلى الحافظة"
+
+#: appModules\radioSure\__init__.py:470
+msgid ""
+"Say the name   of current station and the status line. Twice, copy these "
+"informations  to clipboard"
+msgstr ""
+"قل اسم المحطة الحالية وسطر الحالة. مرتين ، انسخ هذه المعلومات إلى الحافظة"
+
+#: appModules\radioSure\__init__.py:492
+msgid "Say buffer"
+msgstr "قل متعادل"
+
+#: appModules\radioSure\__init__.py:501
+msgid "You are in stations list window"
+msgstr "أنت في نافذة قائمة المحطات"
+
+#. impossible to display list
+#: appModules\radioSure\__init__.py:518
+msgid "Stations list not found"
+msgstr "قائمة المحطات غير موجودة"
+
+#: appModules\radioSure\__init__.py:527
+msgid ""
+"Move focus to stations list. IF stations list is not visible, click Expand "
+"button before."
+msgstr ""
+"نقل التركيز إلى قائمة المحطات. إذا كانت قائمة المحطات غير مرئية ، انقر فوق "
+"الزر \"توسيع\" أولا."
+
+#: appModules\radioSure\__init__.py:539
+msgid "You are in search edit field"
+msgstr "أنت في مجال تحرير البحث"
+
+#. impossible to display search edit box
+#: appModules\radioSure\__init__.py:556
+msgid "Search edit box not found"
+msgstr "لم يتم العثور على مربع تحرير البحث"
+
+#: appModules\radioSure\__init__.py:566
+msgid ""
+"Move focus to search edit box. IF search edit box is not visible, click "
+"Expand button before."
+msgstr ""
+"إنقل التركيز إلى مربع تحرير البحث. إذا لم يكن مربع تحرير البحث مرئيًا ، فانقر "
+"فوق الزر \"توسيع\" أولا."
+
+#. Translators: This is the label for the RadioSure settings  dialog.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:26
+#, python-format
+msgid "%s - settings"
+msgstr "%s الإعدادات"
+
+#. Translators: This is the label for a group of editing options in the RadioSure settings panel.
+#. Translators: The title of the dialog displayed while downloading add-on update.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:31
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:129
+msgid "Update"
+msgstr "تحديث"
+
+#. Translators: This is the label for a checkbox in the RadioSure SettingsDialog.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:35
+msgid "Automatically check for &updates "
+msgstr "البح&ث عن التحديث تلقائيا"
+
+#. Translators: This is the label for a checkbox in the RadioSure settings panel.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:39
+msgid "Update also release versions to &developpement versions"
+msgstr "تحديث إصدارات الت&طوير"
+
+#. translators: label for a button in RadioSure settings panel.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:43
+msgid "&Check for update"
+msgstr "&البحث عن  التحديثات"
+
+#. Translators: The message displayed when the add-on requires a newer version of Windows.
+#. gui.messageBox(_("{name} add-on is not compatible with this version of Windows.").format(name = addonName),
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:63
+msgid "The update is not compatible with this version of Windows."
+msgstr "التحديث غير متوافق مع هذا الإصدار من Windows."
+
+#. Translators: The message displayed when trying to update an add-on that is not going to be compatible with the current version of NVDA.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:82
+msgid ""
+"The update is not compatible with this version of NVDA. Minimum NVDA version: "
+"{minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+msgstr ""
+"التحديث غير متوافق مع هذا الإصدار من NVDA. الحد الأدنى من إصدار NVDA: "
+"{minYear} {minMajor} ، آخر اختبار: {testingYear}. {testingMajor}."
+
+#. Translators: The progress message indicating the name of the add-on being downloaded.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:131
+msgid "Downloading {name}"
+msgstr "تنزيل {name}"
+
+#. Translators: A message indicating that an error occurred while downloading an update to NVDA.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:145
+msgid "Error downloading update for {name}."
+msgstr "حدث خطأ أثناء تنزيل التحديث لـ {name}."
+
+#. Translators: The message displayed when an error occurs when trying to update an add-on package due to package problems.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:201
+msgid "Cannot update {name} - missing file or invalid file format"
+msgstr "لا يمكن تحديث {name} - ملف مفقود أو تنسيق ملف غير صالح"
+
+#. Translators: The title of the dialog presented while an Addon is being updated.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:232
+msgid "Updating"
+msgstr "تحديث"
+
+#. Translators: The message displayed while an addon is being updated.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:234
+msgid "Please wait while the add-on is being updated."
+msgstr "الرجاء الانتظار حتى يتم تحديث الوظيفة الإضافية."
+
+#. Translators: The message displayed when an error occurs when installing an add-on package.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:241
+msgid "Failed to update {name} add-on"
+msgstr "فشل تحديث الوظيفة الإضافية {name}"
+
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:297
+msgid "{summary} - update"
+msgstr "ملخص التحديث {summary}"
+
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:306
+msgid "The service is temporarily under maintenance. Please, try again later."
+msgstr "الخدمة قيد الصيانة مؤقتًا. الرجاء معاودة المحاولة في وقت لاحق."
+
+#. Translators: message to user to report a new version.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:327
+#, python-format
+msgid "New version available, version %s. Do you want download it now?"
+msgstr "الإصدار الجديد متاح ، الإصدار %s. هل تريد تنزيله الآن؟"
+
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:341
+#, python-format
+msgid "You are up-to-date. %s is the latest version."
+msgstr "لا يوجد تحديث  %s هو آخر إصدار"
+
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:347
+msgid "Oops! There was a problem checking for updates. Please retry later"
+msgstr ""
+"يا الله! حدثت مشكلة في التحقق من وجود تحديثات. الرجاء إعادة المحاولة لاحقًا"
+
+#. Translators: This is a label of a button appearing on UpdateCheckResult dialog.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:501
+msgid "&Yes"
+msgstr "&نعم"
+
+#. Translators: This is a label of a button appearing on UpdateCheckResult dialog.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:505
+msgid "&No"
+msgstr "&لا"
+
+#. this prompt was triggered by auto update checker
+#. Translators: The label of a button to remind the user later about performing some action.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:509
+msgid "&Later"
+msgstr "&في وقت لاحق"
