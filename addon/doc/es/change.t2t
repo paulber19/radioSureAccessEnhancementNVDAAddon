@@ -6,6 +6,11 @@ Autor: ADDON_AUTHOR_NAME
 %!includeconf: addon_informations.t2tconf
 URL: ADDON_AUTHOR_URL
 
+
++ v1.1.2 (28/04/2020) + 
+Se añade la traducción TR 
++ v1.1.1 (06/04/2020) + 
+Además de la traducción AR
 + v1.0 (19/02/2020) +
 El complemento cambia de nombre y pasa a la versión 1.0.
 

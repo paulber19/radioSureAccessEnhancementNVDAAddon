@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: radiosure 1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-12 14:13+0100\n"
+"PO-Revision-Date: 2020-04-28 08:54+0300\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
+"Language-Team: cagrid@hotmail.com\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: appModules/radiosure/__init__.py:170
+#, python-brace-format
+msgid "{name} {state}"
+msgstr "{name} {state}"
+
+#: appModules/radiosure/__init__.py:179
+#, python-brace-format
+msgid "{name} {state} {live}"
+msgstr "{name} {state} {live}"
+
+#: appModules/radiosure/__init__.py:185 appModules/radiosure/__init__.py:442
+#, python-brace-format
+msgid "{0}%"
+msgstr "%{0}"
+
+#: appModules/radiosure/__init__.py:189
+msgid "Stations"
+msgstr "İstasyonlar"
+
+#: appModules/radiosure/__init__.py:190
+msgid "Search"
+msgstr "Ara"
+
+#: appModules/radiosure/__init__.py:219
+msgid "Are you sure you want  to quit RadioSure?"
+msgstr "RadioSure'dan çıkmak istediğinizden emin misiniz?"
+
+#: appModules/radiosure/__init__.py:219
+msgid "Warning"
+msgstr "Uyarı"
+
+#: appModules/radiosure/__init__.py:249
+msgid "Move focus to Exit button and click it to exit the application"
+msgstr "Odağı Çıkış düğmesine taşı ve uygulamadan çıkmak için tıkla"
+
+#: appModules/radiosure/__init__.py:260
+msgid ""
+"Without moving focus, click on  Play button to play or stop the current "
+"station"
+msgstr ""
+"Odağı değiştirmeden, geçerli istasyonu çalmak veya durdurmak için Oynat "
+"düğmesine tıkla"
+
+#: appModules/radiosure/__init__.py:273
+msgid ""
+"Without moving focus, click on Back button to play the prior played station"
+msgstr ""
+"Odağı değiştirmeden, dinlenen önceki istasyonu çalmak için Geri düğmesine "
+"tıkla"
+
+#: appModules/radiosure/__init__.py:286
+msgid ""
+"Without moving focus, click on  Next button to play the next played station"
+msgstr ""
+"Odağı değiştirmeden, dinlenen istasyon listesindeki sonraki istasyona geçmek "
+"için Sonraki düğmesine tıkla"
+
+#: appModules/radiosure/__init__.py:296
+msgid "Without moving focus, click on  Rec button to start or stop record"
+msgstr ""
+"Odağı değiştirmeden, kaydı başlatmak veya durdurmak için Rec düğmesine tıkla"
+
+#: appModules/radiosure/__init__.py:317
+msgid "Search edit box and Stations list are not more visible"
+msgstr "Arama düzenleme kutusu ve İstasyonlar listesi görünür değil"
+
+#: appModules/radiosure/__init__.py:327
+msgid ""
+"Without moving focus, click  on Expand button to  show or mask stations list"
+msgstr ""
+"Odağı değiştirmeden, istasyon listesini göstermek veya gizlemek için "
+"Genişlet düğmesine tıkla"
+
+#: appModules/radiosure/__init__.py:336
+msgid "Move focus to Options button and click it to open Options dialog"
+msgstr ""
+"Odağı Seçenekler düğmesine taşı ve Seçenekler iletişim kutusunu açmak için "
+"tıkla"
+
+#: appModules/radiosure/__init__.py:350
+msgid ""
+"Move focus to Fav button and click it to show the list of favorites station"
+msgstr ""
+"Odağı Fav düğmesine taşı ve sık kullanılanlar listesini göstermek için tıkla"
+
+#: appModules/radiosure/__init__.py:362
+msgid "Without moving focus, click on Top buttonto ???"
+msgstr "Odağı değiştirmeden, top düğmesine tıkla ???"
+
+#: appModules/radiosure/__init__.py:374
+msgid ""
+"Without moving focus, click on Mute butt button to Mute volume on or off"
+msgstr ""
+"Odağı değiştirmeden, Sesi kapatmak veya açmak için Sustur düğmesine tıkla"
+
+#: appModules/radiosure/__init__.py:381
+msgid "Decrease slightly the volume (down 3%)"
+msgstr "Sesi hafifçe azalt (%3)"
+
+#: appModules/radiosure/__init__.py:388
+msgid "Increase slightly the volume (up 3%)"
+msgstr "Sesi hafifçe artır (%3)"
+
+#: appModules/radiosure/__init__.py:396
+msgid "Decrease the volume (down 5%)"
+msgstr "Sesi azalt (%5)"
+
+#: appModules/radiosure/__init__.py:403
+msgid "Increase the volume (up 5%)"
+msgstr "Sesi artır (%5)"
+
+#: appModules/radiosure/__init__.py:412
+msgid "Increase strongly  the volume (up 20%)"
+msgstr "Sesi güçlü bir şekilde artır (%20)"
+
+#: appModules/radiosure/__init__.py:420
+msgid "Decrease strongly the volume (down -20%)"
+msgstr "Sesi güçlü bir şekilde azalt (-%20)"
+
+#: appModules/radiosure/__init__.py:434
+msgid "Set volume to middle( 50%)"
+msgstr "Ses seviyesini ortala (%50)"
+
+#: appModules/radiosure/__init__.py:443
+msgid "Say volume"
+msgstr "Ses seviyesini seslendir"
+
+#: appModules/radiosure/__init__.py:451
+msgid "Informations copied to clipboard"
+msgstr "Bilgiler panoya kopyalandı"
+
+#: appModules/radiosure/__init__.py:464
+msgid ""
+"Say the name   of current station and the status line. Twice, copy these "
+"informations  to clipboard"
+msgstr ""
+"Mevcut istasyonun adını ve durum satırını seslendir. İki kez, bu bilgileri "
+"panoya kopyala"
+
+#: appModules/radiosure/__init__.py:486
+msgid "Say buffer"
+msgstr "Arabelleği seslendir"
+
+#: appModules/radiosure/__init__.py:495
+msgid "You are in stations list window"
+msgstr "İstasyon listesindesin"
+
+#: appModules/radiosure/__init__.py:512
+msgid "Stations list not found"
+msgstr "İstasyon listesi bulunamadı"
+
+#: appModules/radiosure/__init__.py:521
+msgid ""
+"Move focus to stations list. IF stations list is not visible, click Expand "
+"button before."
+msgstr ""
+"Odağı istasyon listesine taşı. İstasyon listesi görünmüyorsa, önce Genişlet "
+"düğmesine tıkla."
+
+#: appModules/radiosure/__init__.py:533
+msgid "You are in search edit field"
+msgstr "Ara yazı alanındasın"
+
+#: appModules/radiosure/__init__.py:550
+msgid "Search edit box not found"
+msgstr "Ara yazı alanı bulunamadı"
+
+#: appModules/radiosure/__init__.py:560
+msgid ""
+"Move focus to search edit box. IF search edit box is not visible, click "
+"Expand button before."
+msgstr ""
+"Odağı ara yazı alanına taşı. Ara yazı alanı görünmüyorsa, önce Genişlet "
+"düğmesini tıkla."
+
+#: buildVars.py:17
+msgid "radioSure Internet Radio Player : accessibility enhancement"
+msgstr "radioSure Internet Radyo Oynatıcısı: erişilebilirlik geliştirmeleri"
+
+#: buildVars.py:20
+msgid ""
+"This add-on Improves the accessibility of RadioSure, Internet Radio Player "
+"with NVDA.\n"
+"\t"
+msgstr ""
+"Bu eklenti Internet Radyo Oynatıcı RadioSure'un erişilebilirliğini artırır.\n"
+"\t"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:26
+#, python-format
+msgid "%s - settings"
+msgstr "%s - ayarlar"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:31
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:129
+msgid "Update"
+msgstr "Güncelleme"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:35
+msgid "Automatically check for &updates "
+msgstr "Güncellemeleri &otomatik olarak kontrol et"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:39
+msgid "Update also release versions to &developpement versions"
+msgstr "Ana &sürümleri geliştirme sürümleriyle de güncelle"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:43
+msgid "&Check for update"
+msgstr "&Güncellemeleri denetle"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:63
+msgid "The update is not compatible with this version of Windows."
+msgstr "Güncelleme, Windows'un bu sürümüyle uyumlu değil."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:82
+#, python-brace-format
+msgid ""
+"The update is not compatible with this version of NVDA. Minimum NVDA "
+"version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+msgstr ""
+"Güncelleme NVDA'nın bu sürümüyle uyumlu değil. Minimum NVDA sürümü: {minYear}"
+"{minMajor}, son test edilen: {testedYear}.{testedMajor}."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:131
+#, python-brace-format
+msgid "Downloading {name}"
+msgstr "{name} indiriliyor"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:145
+#, python-brace-format
+msgid "Error downloading update for {name}."
+msgstr "{name} İçin güncelleme indirilirken hata oluştu."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:201
+#, python-brace-format
+msgid "Cannot update {name} - missing file or invalid file format"
+msgstr "{name} Güncellenemiyor - eksik dosya veya geçersiz dosya biçimi"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:232
+msgid "Updating"
+msgstr "Güncelleniyor"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:234
+msgid "Please wait while the add-on is being updated."
+msgstr "Eklenti güncellenirken lütfen bekleyin."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:241
+#, python-brace-format
+msgid "Failed to update {name} add-on"
+msgstr "{name} eklentisi güncellenemedi"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:297
+#, python-brace-format
+msgid "{summary} - update"
+msgstr "{summary} - güncelleme"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:306
+msgid "The service is temporarily under maintenance. Please, try again later."
+msgstr "Hizmet geçici olarak bakımda. Lütfen daha sonra tekrar dene."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:327
+#, python-format
+msgid "New version available, version %s. Do you want download it now?"
+msgstr "Yeni sürüm mevcut, sürüm %s. Şimdi indirmek ister misin?"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:341
+#, python-format
+msgid "You are up-to-date. %s is the latest version."
+msgstr "Güncelsin. %s en son sürüm."
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:347
+msgid "Oops! There was a problem checking for updates. Please retry later"
+msgstr ""
+"Hata! Güncellemeler kontrol edilirken bir sorun oluştu. Lütfen daha sonra "
+"tekrar dene"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:501
+msgid "&Yes"
+msgstr "&Evet"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:505
+msgid "&No"
+msgstr "&Hayır"
+
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:509
+msgid "&Later"
+msgstr "&Sonra"
+
+#: installTasks.py:48
+msgid "Do you want to keep current add-on configuration settings ?"
+msgstr "Eklentinin mevcut ayarlarını korumak istiyor musun?"
+
+#: installTasks.py:50
+#, python-format
+msgid "%s - installation"
+msgstr "%s - Kurulumu"
