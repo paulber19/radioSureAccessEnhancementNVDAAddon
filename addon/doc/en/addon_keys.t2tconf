@@ -21,4 +21,8 @@
 %!PostProc (html): KEY_GOTO_SEARCHEDIT control+alt+e
 %!PostProc (html): KEY_GOTO_STATIONSLIST control+alt+s
 %!PostProc (html): KEY_STOP control+s
-
+%!PostProc (html): KEY_Filter_Title alt+control+t
+%!PostProc (html): KEY_Filter_Country alt+control+c
+%!PostProc (html): KEY_Filter_Genre alt+control+g
+%!PostProc (html): KEY_Filter_Language alt+control+l
+%!PostProc (html): KEY_Random_Playback alt+control+r

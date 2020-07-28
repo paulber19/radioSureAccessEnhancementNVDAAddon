@@ -40,20 +40,23 @@ Cette extension apporte:
 - [un script pour aller dans la liste des stations de radio (résultat de la recherche) #HDR21],
 - [un script pour appuyer sur le bouton Top #HDR22],
 - [un script pour quitter l'application  #HDR12],
-- [l'utilisation possible de la barre d'espace  ou de la touche "Entrée" pour appuyer sur un bouton #HDR13].
+- [des scripts pour activer le menu contextuel de chaque entête de colonne de la liste des stations pour filtrer la liste #HDR14],
+- [l'utilisation possible de la barre d'espace  ou de la touche "Entrée" pour appuyer sur un bouton #HDR13],
+- [désactivation configurable du suivi des barres de progression #HDR15],
+- [un script pour lancer la lecture  d'une station choisie au hasard dans la liste des stations #HDR16].
 
 
 
 ++ mise à jour ++
 La mise à jour de l'extension se fait, par défaut, automatiquement peu de temps après le démarrage de NVDA (entre 20 et 600 secondes) et au maximum une fois par jour.
-Il est possible de désactiver cette mise à jour en décochant l'option "Rechercher automatiquement les mises à jour"  se trouvant dans les paramètres de l'extension, élément de menu "Mise à jour".
+Il est possible de désactiver cette mise à jour en décochant l'option "Rechercher automatiquement les mises à jour"  se trouvant dans la catégorie "Mise à jour" des  paramètres de l'extension.
 La version de l'extension peut être:
 - soit une version stable: son numéro de version est du type "1.0" par exemple.
 - soit une version de  développement: son numéro de version est alors du type "1.0-dev1", ou "1.0-rc1", ou "1.0-beta2".
 
 
 Par défaut, une  version stable est mise à jour avec une version stable plus récente (numéro de version supérieur).
-Mais il est possible de mettre à jour la version stable courante avec une version de développement de la prochaine version stable. Il suffit de cocher l'option "Mettre aussi à jour les versions stable vers les versions de développement  " situé dans les paramètres de l'extension, élément de menu "Mise à jour".
+Mais il est possible de mettre à jour la version stable courante avec une version de développement de la prochaine version stable. Il suffit de cocher l'option "Mettre aussi à jour les versions stable vers les versions de développement  " situé dans la catégorie "Mise à jour" des paramètres de l'extension.
 
 Une version de développement  est mise à jour avec une version de développement plus récente ou avec sa version stable.
 
@@ -62,7 +65,7 @@ Le bouton "Rechercher une mise à jour" placé dans les paramètres de l'extensi
 
 
 ++ Compatibilité ++
-Cette extension a été testé avec la version 2.0 et 2.2 de RadioSure.
+Cette extension a été testé avec la version  2.2 de RadioSure. Les versions inférieures ne sont pas supportées.
 
 ++ Configuration à respecter ++
 Aucune configuration particulière.
@@ -208,9 +211,54 @@ Il a pour but d'appuyer sur le bouton "Exit".
 Cet appui entraine sur confirmation de l'utilisateur,la fermeture de la fenêtre et l'arrêt de l'application RadioSure.
 
 
+
++ Activation du menu contextuel de l'entête des colonnes de la liste des stations +[HDR14]
+RadioSure permet de filtrer les stations  en utilisant le menu contextuel de l'entête de chaque colonne de la liste des stations.
+
+mais cela nécessite un ensemble de manoeuvres pénibles que les scripts suivant suppriment:
+- "KEY_Filter_Title": activer le menu contextuel de l'entête de la colonne "Titre".
+- "KEY_Filter_Country": activer le menu contextuel de l'entête de la colonne "Pays".
+- "KEY_Filter_Genre": activer le menu contextuel de l'entête de la colonne "Genre".
+- "KEY_Filter_Language": activer le menu contextuel de l'entête de la colonne "Langue".
+
+
+
+Ces gestes de commandes sont modifiables à l'aide du dialogue "Gestes de commande" de NVDA.
+
+Note: quand un filtre est appliqué,  RadioSure le signale en précédant le libellé de l'entête de la colonne  par un "*". Plusieurs filtres peuvent être appliqués en même temps.
+
+
 + Appui sur un bouton avec la barre d'espace +[HDR13]
 Dans RadioSure, la barre d'espace est prévue par défaut pour activer les boutons, mais pas la touche "Entrée".
 
 Maintenant pour appuyer sur les boutons, vous pouvez utiliser la touche "Entrée" ou la barre d'espace.
 
 Cette extension apporte cette possibilité sans empêcher le fonctionnement  dans toutes les autres situations.
+
++ Désactivation du suivi des barre de progression +[HDR15]
+Au démarrage d'une station, RadioSure signale visuellement la progression  et NVDA    annonce les changements de cette progression suivant la configuration de l'option Suivi des barres de progression" se trouvant dans la catégorie "Présentation des objets" des paramètres de NVDA.
+
+Cela n'est pas d'un très grand intéret et assez désagréable à la longue.
+
+Bien qu'il soit possible  en configurant  manuellement cette option et seulement pour RadioSure en utilisant un profil de configuration,  de désactiver toute annonce, l'extension  propose de le faire par défaut.
+
+Il est évidemment possible de retrouver le fonctionnement normal en décochant la case à cocher "Désactiver le suivi des barres de progression"   située dans la catégorie "Options" des paramètre de l'extension.
+
+
++ Lecture aléatoire d'une station +[HDR16]
+Ce script  se déclanche   par le geste de commande "KEY_Random_Playback".
+
+Il choisit  au hasard  dans les stations de la liste des stations , une station et lance sa lecture. Si la liste des stations n'est pas affichée, il l'affiche en appuyant sur le bouton "Expand".
+
+Pour s'assurer que la lecture    commence bien, il surveille l'état de connexion de la station pendant le temps configuré  dans le groupe "Lecture aléatoire" de la liste déroulante "Temps d'attente de connexion" de la catégorie "Options" des paramètres de l'extension.
+
+
+Au bout de ce temps et si la connexion n'a pas été réussie, il recommence avec une autre station le nombre de fois configuré dans la liste déroulante "Nombre de stations à essayer" placé dans le groupe "Lecture aléatoire" de la catégorie "Options".
+
+Par défaut, il mémorise les stations en défaut de connexion pour les exclure virtuellement de la liste des stations et ainsi ne pas les choisir de nouveau. Ce fonctionnement peut être désactivé en décochant la case à cocher "Sauter les stations en défaut de connexion" du groupe "Lecture aléatoire" de la catégorie "Options" des paramètres de l'extension.
+
+Ce groupe propose aussi un bouton pour effacer  toutes les stations mémorisées.
+
+Pour raccourcir le temps de recherche d'une bonne station, il est préférable d'avoir dans la liste un maximum de stations qui se connectent.
+
+

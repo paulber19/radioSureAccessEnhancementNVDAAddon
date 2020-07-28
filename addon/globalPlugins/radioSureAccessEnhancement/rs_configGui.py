@@ -10,9 +10,11 @@ addonHandler.initTranslation()
 from logHandler import log
 import wx
 import gui
-from gui.settingsDialogs import SettingsDialog
+from gui.settingsDialogs import SettingsDialog, MultiCategorySettingsDialog, SettingsPanel
 import os
 import sys
+import queueHandler
+import speech
 _curAddon = addonHandler.getCodeAddon()
 _addonSummary = _curAddon.manifest['summary']
 path = os.path.join(_curAddon.path, "shared")
@@ -21,47 +23,131 @@ from rs_addonConfigManager import _addonConfigManager
 del sys.path[-1]
 
 
-class RadioSureSettingsDialog(SettingsDialog):
-	# Translators: This is the label for the RadioSure settings  dialog.
-	title = _("%s - settings")%_addonSummary
+class OptionsSettingsPanel(SettingsPanel):
+	# Translators: This is the label for the Audacity settings  dialog.
+	title = _("Options")
+	
+	
 	
 	def makeSettings(self, settingsSizer):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
-		# Translators: This is the label for a group of editing options in the RadioSure settings panel.
-		groupText = _("Update")
+		# Translators: This is the label for a checkbox in the Options Settings panel.
+		labelText = _("Desactivate progress &bars update")
+		self.desactivateProgressBarsUpdateBox=sHelper.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
+		self.desactivateProgressBarsUpdateBox.SetValue(_addonConfigManager.toggleDesactivateProgressBarsUpdateOption(False))
+		
+		# Translators: This is the label for a group of editing options in the Options settings panel.
+		groupText = _("Random playing")
 		group = gui.guiHelper.BoxSizerHelper(self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=groupText), wx.VERTICAL))
 		sHelper.addItem(group)
-		# Translators: This is the label for a checkbox in the RadioSure SettingsDialog.
+		# Translators: This is the label for a choice in the Options settings panel.
+		labelText=_("&Maximum stations to check:")
+		choice = [x for x in reversed (list(range(1, 11)))]
+		self.maxStationsToCheckBox= group.addLabeledControl(labelText, wx.Choice, choices= [str(x) for x in choice])
+		self.maxStationsToCheckBox.SetSelection(choice.index(_addonConfigManager.getMaxStationsToCheck()))
+		# Translators: This is the label for a choice in the Options settings panel.
+		labelText=_("&Maximum delay for waiting connexion (in seconds):")
+		choice = [x for x in reversed (list(range(1, 16)))]
+		self.maxDelayForConnexionBox= group.addLabeledControl(labelText, wx.Choice, choices= [str(x) for x in choice])
+		self.maxDelayForConnexionBox.SetSelection(choice.index(_addonConfigManager.getMaxDelayForConnexion()))		
+		# Translators: This is the label for a checkbox in the Options Settings panel.
+		labelText = _("&Skip stations without connexion")
+		self.skipStationsWithoutConnexionBox=group.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
+		self.skipStationsWithoutConnexionBox.SetValue(_addonConfigManager.toggleSkipStationsWithoutConnexionOption(False))
+		# translators: label for a button in Options settings panel.
+		labelText = _("&Clear history of stations without connexion")
+		clearHistoryButton= wx.Button(self, label=labelText)
+		group.addItem (clearHistoryButton)
+		clearHistoryButton.Bind(wx.EVT_BUTTON,self.onClearHistoryButton)
+		
+	
+	def onClearHistoryButton(self, evt):
+		res = gui.messageBox(_("Are you sure you want  to clearthe history of stations without connexion?"),_("Warning"), wx.YES_NO|wx.NO_DEFAULT|wx.ICON_WARNING) 
+		if res == wx.YES:
+			_addonConfigManager.clearBadStationsHistory()
+
+	
+	def postInit(self):
+		self.AutomaticSelectionChangeReportBox.SetFocus()
+	
+	def saveSettingChanges (self):
+		if self.desactivateProgressBarsUpdateBox.IsChecked() != _addonConfigManager .toggleDesactivateProgressBarsUpdateOption(False):
+			_addonConfigManager .toggleDesactivateProgressBarsUpdateOption(True)
+		value= self.maxStationsToCheckBox.GetStringSelection()
+		_addonConfigManager.setMaxStationsToCheck(int(value))
+		value= self.maxDelayForConnexionBox.GetStringSelection()
+		_addonConfigManager.setMaxDelayForConnexion(int(value))
+		if self.skipStationsWithoutConnexionBox.IsChecked() != _addonConfigManager .toggleSkipStationsWithoutConnexionOption(False):
+			_addonConfigManager .toggleSkipStationsWithoutConnexionOption(True)
+
+	
+	def postSave(self):
+		pass
+
+	
+	def onSave(self):
+		self.saveSettingChanges()
+
+
+
+class UpdateSettingsPanel(SettingsPanel):
+	# Translators: This is the label for the Advanced settings panel.
+	title = _("Update")
+	
+	def __init__(self, parent ):
+		super(UpdateSettingsPanel, self).__init__(parent)
+	
+	
+	def makeSettings(self, settingsSizer):
+		sHelper = gui.guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: This is the label for a checkbox in the Update Settings panel.
 		labelText = _("Automatically check for &updates ")
-		self.autoCheckForUpdatesCheckBox=group.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
+		self.autoCheckForUpdatesCheckBox=sHelper.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
 		self.autoCheckForUpdatesCheckBox.SetValue(_addonConfigManager.toggleAutoUpdateCheck(False))
-		# Translators: This is the label for a checkbox in the RadioSure settings panel.
+		# Translators: This is the label for a checkbox in the Update settings panel.
 		labelText = _("Update also release versions to &developpement versions")
-		self.updateReleaseVersionsToDevVersionsCheckBox=group.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
+		self.updateReleaseVersionsToDevVersionsCheckBox=sHelper.addItem (wx.CheckBox(self,wx.ID_ANY, label= labelText))
 		self.updateReleaseVersionsToDevVersionsCheckBox.SetValue(_addonConfigManager.toggleUpdateReleaseVersionsToDevVersions     (False))
-		# translators: label for a button in RadioSure settings panel.
+		# translators: label for a button in Update settings panel.
 		labelText = _("&Check for update")
 		checkForUpdateButton= wx.Button(self, label=labelText)
-		group.addItem (checkForUpdateButton)
+		sHelper.addItem (checkForUpdateButton)
 		checkForUpdateButton.Bind(wx.EVT_BUTTON,self.onCheckForUpdate)
 	
 	def onCheckForUpdate(self, evt):
 		from .updateHandler import addonUpdateCheck
 		releaseToDevVersion = self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked() # or toggleUpdateReleaseVersionsToDevVersionsGeneralOptions(False)
 		wx.CallAfter(addonUpdateCheck, auto = False, releaseToDev =releaseToDevVersion  )
-
 		self.Close()
-	
-	def postInit(self):
-		self.autoCheckForUpdatesCheckBox.SetFocus()
-	
+
+
+
 	def saveSettingChanges (self):
 		if self.autoCheckForUpdatesCheckBox.IsChecked() != _addonConfigManager .toggleAutoUpdateCheck(False):
 			_addonConfigManager .toggleAutoUpdateCheck(True)
-		
 		if self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked() != _addonConfigManager .toggleUpdateReleaseVersionsToDevVersions     (False):
-			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions     (True)
+			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions     (True)			
 	
-	def onOk(self,evt):
+	def postSave(self):
+		pass
+	
+	def onSave(self):
 		self.saveSettingChanges()
-		super(RadioSureSettingsDialog, self).onOk(evt)
+
+
+
+class AddonSettingsDialog(MultiCategorySettingsDialog):
+	# translators: title of the dialog.
+	dialogTitle = _("Settings")
+	title = "%s - %s"%(_curAddon.manifest["summary"], dialogTitle)
+	INITIAL_SIZE = (1000, 480)
+	MIN_SIZE = (470, 240) # Min height required to show the OK, Cancel, Apply buttons
+	
+	categoryClasses=[
+		OptionsSettingsPanel,
+		UpdateSettingsPanel,
+		]
+	
+	def __init__(self, parent, initialCategory=None):
+		super(AddonSettingsDialog,self).__init__(parent, initialCategory)
+		

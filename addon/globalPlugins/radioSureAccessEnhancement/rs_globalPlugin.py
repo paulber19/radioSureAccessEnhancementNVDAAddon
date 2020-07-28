@@ -29,9 +29,9 @@ class RadioSureGlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def installSettingsMenu(self):
 		self.preferencesMenu= gui.mainFrame.sysTrayIcon.preferencesMenu
-		from .rs_configGui import RadioSureSettingsDialog
+		from .rs_configGui import AddonSettingsDialog
 		self.menu = self.preferencesMenu.Append(wx.ID_ANY,
-			RadioSureSettingsDialog.title + " ...",
+			AddonSettingsDialog.title + " ...",
 			"")
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onMenu, self.menu)
 	
@@ -49,5 +49,5 @@ class RadioSureGlobalPlugin(globalPluginHandler.GlobalPlugin):
 	
 	
 	def onMenu(self, evt):
-		from .rs_configGui import RadioSureSettingsDialog
-		gui.mainFrame._popupSettingsDialog(RadioSureSettingsDialog)
+		from .rs_configGui import AddonSettingsDialog
+		wx.CallAfter(gui.mainFrame._popupSettingsDialog, AddonSettingsDialog)
