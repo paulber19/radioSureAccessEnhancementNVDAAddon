@@ -1,4 +1,4 @@
-ADDON_SUMMARY - manuel utilisateur
+ADDON_SUMMARY - user's manual
 Author: ADDON_AUTHOR_NAME
 
 %!includeconf: ../addon_userManual.t2tconf
@@ -6,15 +6,16 @@ Author: ADDON_AUTHOR_NAME
 %!includeconf: addon_keys.t2tconf
 URL: ADDON_AUTHOR_URL
 
+GitHub repository: [ADDON_REPOSITORY]
 
-Download: 
-- [ stable version ADDON_VERSION download server 1 ADDON_DOWNLOAD_SERVER1] 
-- [Development Version ADDON_DEV_URL] 
+Download:
+- [ stable version ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
+- [Development Version ADDON_DEV_URL]
 
 
-Compatibility: 
-- minimum version of NVDA supported: MINIMUM_NVDA_VERSION 
-- latest version of NVDA tested: LAST_TESTED_NVDA_VERSION 
+Compatibility:
+- minimum version of NVDA supported: MINIMUM_NVDA_VERSION
+- latest version of NVDA tested: LAST_TESTED_NVDA_VERSION
 
 
 = Sommaire =[toc]
@@ -22,50 +23,60 @@ Compatibility:
 
 
 + Introduction +
-This module improves the accessibility of RadioSure software with NVDA.
+This add-on improves the accessibility of RadioSure software with NVDA.
 
 ++ Features ++
-This additional module provides:
+This add-on provides:
 
-- [a script to start or stop the current station without moving focus # HDR2],
-- [a script to launch the previous or next station from the list of stations already played, (without moving focus) # HDR4],
-- [a script to increase or decrease the volume without moving focus # HDR1],
-- [a script to cut or reset the volume without moving focus # HDR3],
-- [a script to read the volume level # HDR5],
-- [a script to start or stop the recording of the current station without moving focus # HDR6],
-- [a script to display the list of favorite stations # HDR7],
-- [a script to display the RadioSure # HDR8 options window],
-- [a script to read the name of the current station and the status line # HDR9],
-- [a script to read the read buffer # HDR10],
-- [a script to show or hide the search area and the list of radio stations # HDR11],
-- [a script to go to the edit radio station search area # HDR20],
-- [a script to go to the list of radio stations (search result) # HDR21],
-- [a script to press the Top button # HDR22],
-- [a script to quit the application # HDR12],
-- [scripts to activate the contextual menu of each column header of the station list to filter the list # HDR14],
-- [the possible use of the space bar or the "Enter" key to press a button # HDR13].
-- [configurable deactivation of   progress bars tracking # HDR15],
-- [a script to start playing a station chosen at random from the list of stations # HDR16].
-
-
-
-++ update ++ 
-The update of the extension is, by default, automatically a short time after the start of NVDA (about 10 seconds) and a maximum of once per day. 
-It is possible to disable this update by unchecking the option "automatically check for updates" placed in "Update" category of the extension settings. 
-
-The version of the extension can be: 
-- a stable version: its version number is "1.0" for example. 
-- either a development version: the version number is of the type "1.0-dev1", or "1.0-rc1", or "1.0-beta2". 
+- [a script to start or stop the current station without moving focus #HDR2],
+- [a script to launch the previous or next station from the list of stations already played without moving focus #HDR4],
+- [a script to increase or decrease the volume without moving focus #HDR1],
+- [a script to cut or reset the volume without moving focus #HDR3],
+- [a script to read the volume level without moving focus #HDR5],
+- [a script to start or stop the recording of the current station without moving focus #HDR6],
+- [a script to display the list of favorite stations #HDR7],
+- [a script to display the RadioSure options window #HDR8],
+- [a script to read the name of the current station and the status line #HDR9],
+- [a script to read the read buffer #HDR10],
+- [a script to show or hide the search area and the list of radio stations #HDR11],
+- [a script to go to the edit radio station search area #HDR20],
+- [a script to go to the list of radio stations (search result) #HDR21],
+- [a script to press the Top button #HDR22],
+- [a script to quit the application #HDR12],
+- [scripts to activate the contextual menu of each column header of the station list to filter the list #HDR14],
+- [the possible use of the space bar or the "Enter" key to press a button #HDR13],
+- [configurable deactivation of progress bars tracking #HDR15],
+- [a script to start playing a station chosen at random from the list of stations #HDR16].
 
 
-By default, the stable version is updated with a stable version more recent (higher version number). 
 
-But it is possible to update the stable version running with a development version of the next stable version. Just check the  "Update also release versions to developpement versions"checkBox  located in the "Update" category of extension settings. 
+++ update ++
+The update of the add-on is, by default, automatically a short time after the start of NVDA (about 10 seconds) and a maximum of once per day.
+It is possible to disable this update by unchecking the option "automatically check for updates" placed in "Update" category of the add-on settings.
 
-A development version is updated with a development version more recent or stable version. 
+The version of the add-on can be:
+- a stable version: its version number is "1.0" for example.
+- either a development version: the version number is of the type "1.0-dev1", or "1.0-rc1", or "1.0-beta2".
 
-The button "Search for update" placed in the "Update" category of extension settings allows you to search immediately for an update. 
 
+By default, the stable version is updated with a stable version more recent (higher version number).
+
+
+But it is possible to update the stable version running with a development version of the next stable version. Just check the "Update also release versions to development versions"checkBox located in the "Update" category of add-on settings.
+
+A development version is updated:
+- with a more recent development version,
+- with its stable version,
+- or with the latest stable version if the previous option is not checked.
+
+The button "Search for update" placed in the "Update" category of add-on settings allows you to search immediately for an update.
+
+In the case of an automatic update and if a new version is detected, the "Update" dialog box is displayed to suggest:
+- either the immediate installation of the new version,
+- or to postpone the update until later. In this case, the search will be restarted at least one hour later.
+
+
+The "What's new" button offers the possibility of opening, in the browser, the history of the extension and thus being able to know the new features of the proposed version.
 
 ++ Compatibility ++
 This module has been tested with version 2.2 of RadioSure. Lowest versions are not supported.
@@ -73,6 +84,14 @@ This module has been tested with version 2.2 of RadioSure. Lowest versions are n
 ++ Configuration to be respected ++
 No special configuration.
 
+++ Special adaptation ++
+For some keyboard configuration, the basic input gestures using the "alt + control" modifier combination are not suitable.
+
+For that, an option allows to use instead the combination "shift+ control" combination.
+
+
+++ History ++
+The version history of this add-on is in the ["changes.html" file changes.html]
 
 + Script to start or stop playback of the current station +[hdr2]
 
@@ -211,7 +230,7 @@ Its purpose is to press the "Exit" button.
 This press results in user confirmation, closing the window and stopping the RadioSure application.
 
 
-+ Activation of the contextual menu of the header of the columns of the station list + [HDR14]
++ Activation of the contextual menu of the header of the columns of the station list +[HDR14]
 RadioSure allows you to filter stations using the contextual menu of the header of each column of the station list.
 
 but this requires a set of painful maneuvers that the following scripts remove:
@@ -222,36 +241,38 @@ but this requires a set of painful maneuvers that the following scripts remove:
 
 
 
-These input  gestures can be modified using the NVDA "Input gestures" dialog.
+These input gestures can be modified using the NVDA "Input gestures" dialog.
 
 Note: when a filter is applied, RadioSure signals this by preceding the label of the column header with a "*". Several filters can be applied at the same time.
 
-+ Press a button with the space bar + [HDR13]
+
++ Press a button with the space bar +[HDR13]
 In RadioSure, the space bar is provided by default to activate the buttons, but not the "Enter" key.
 
 Now to press the buttons, you can use the "Enter" key or the space bar.
 
 The module provides this possibility without preventing operation in all other situations.
 
-+ Disabling  progress bars tracking  + [HDR15]
++ Disabling progress bars tracking +[HDR15]
 When starting a station, RadioSure visually reports the progress and NVDA announces the changes of this progress according to the configuration of the choice "Progress bar output " of "Object Presentation" category of NVDA settings.
 
 This is not of great interest and quite unpleasant in the long run.
 
-Although it is possible by manually configuring this option and only for RadioSure using a configuration profile, to deactivate any announcement, the extension offers to do so by default.
+Although it is possible by manually configuring this option and only for RadioSure using a configuration profile, to deactivate any announcement, the add-on offers to do so by default.
 
-It is obviously possible to return to normal operation by unchecking the  "Disable  progress bars update" checkbox located in the "Options" category of extension settings.
-+  play of a station randomly + [HDR16]
-This script is triggered by the "KEY_Random_Playback" command gesture.
+It is obviously possible to return to normal operation by unchecking the "Disable progress bars update" checkbox located in the "Options" category of add-on settings.
+
++ play of a station randomly +[HDR16]
+This script is triggered by the "KEY_Random_Playback" input gesture.
 
 It randomly chooses a station from among the stations in the station list and starts playing it. If the station list is not displayed, it is displayed by pressing the "Expand" button.
 
-To ensure that the playback starts correctly, it monitors the connection status of the station for the time configured in the "Random playing"group   of the "Maximum delay for waiting connexion" comboBox  of the "Options" category of extension settings.
+To ensure that the playback starts correctly, it monitors the connection status of the station for the time configured in the "Random playing"group of the "Maximum delay for waiting connection" comboBox of the "Options" category of add-on settings.
 
 
-At the end of this time and if the connection has not been successful, it starts over with another station the number of times configured in the  "Maximum stations to check" comboBox placed in the "Random playing" group of the "Options" category of extension settings.
+At the end of this time and if the connection has not been successful, it starts over with another station the number of times configured in the "Maximum stations to check" comboBox placed in the "Random playing" group of the "Options" category of add-on settings.
 
-By default, it memorizes stations with connection faults to exclude them virtually from the list of stations and thus do not choose them again. This operation can be deactivated by unchecking the "Skip stations without connection" check box in the "Random playing" group of the "Options" category of the extension settings.
+By default, it memorizes stations with connection faults to exclude them virtually from the list of stations and thus do not choose them again. This operation can be deactivated by unchecking the "Skip stations without connection" check box in the "Random playing" group of the "Options" category of the add-on settings.
 
 This group also offers a button to delete all the stored stations.
 

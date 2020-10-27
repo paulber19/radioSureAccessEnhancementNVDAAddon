@@ -1,4 +1,4 @@
- ADDON_SUMMARY - Historique
+ADDON_SUMMARY - Historique
 Auteur: ADDON_AUTHOR_NAME
 
 
@@ -6,23 +6,29 @@ Auteur: ADDON_AUTHOR_NAME
 %!includeconf: addon_informations.t2tconf
 URL: ADDON_AUTHOR_URL
 
-+ v2.0 (07/16/2020) +
-- compatibility with NVDA 2020.2
-- addition of scripts to activate the contextual menu of each column of the header of the station list.
-- configurable deactivation of progress bar tracking.
+Dépot GitHub: [ADDON_REPOSITORY]
+
++ v2.1 (27/10/2020) +
+- compatibilité avec NVDA 2020.3.
+- changement des gestes "control+flèche gauche et droite" par "alt+flèche gauche et droite".
+- possibilité de choisir la combinaison "majuscule+control" à la place de "alt+control" pour les gestes de commandes.
+- nettoyage du code avec validation Flake8.
+- ajout du bouton "Quoi de neuf" dans le dialogue proposant l'installation d'une nouvelle mise à jour.
 
 
-+ v2.0 (16/07/2020) +
++ v2.0 (07/06/2020) +
 - compatibilité avec NVDA 2020.2
-- ajout des scripts pour activer le menu contextuel de  chaque colonne de l'entête   de la liste des stations.
-- désactivation configurable du suivi des barres de progression.
-
+- ajout de scripts pour activer le menu contextuel de chaque colonne de l'en-tête de la liste des stations.
+- désactivation configurable du suivi de la barre de progression.
 
 
 + v1.1.2 (28/04/2020) +
 Ajout de la traduction TR
+
+
 + v1.1.1 (06/04/2020) +
 Ajout de la traduction AR
+
 
 + v1.1 (03/04/2020) +
 -mise en compatibilité avec NVDA 2020.1,
@@ -32,7 +38,7 @@ Ajout de la traduction AR
 + v1.0 (19/02/2020) +
 L'extension change de nom et repart à la version 1.0.
 
-Mise en compatibilité avec NVDA 2019.3 et avec les  versions supérieures à la 2019.1.
+Mise en compatibilité avec NVDA 2019.3 et avec les versions supérieures à la 2019.1.
 
 
 + v1.4. (19 Juin 2014) +
@@ -42,7 +48,7 @@ Mise en compatibilité avec NVDA 2019.3 et avec les  versions supérieures à la
 
 + v1.3 (17 Juin 2014) +
 
-- ajout des commandes clavier  pour déplacer le focus à la zone de recherche et la liste des stations
+- ajout des commandes clavier pour déplacer le focus à la zone de recherche et la liste des stations
 - modification du script clickExpandButton pour mettre le focus sur la liste des stations
 
 

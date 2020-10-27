@@ -6,15 +6,41 @@ Autor: ADDON_AUTHOR_NAME
 %!includeconf: addon_informations.t2tconf
 URL: ADDON_AUTHOR_URL
 
+Repositorio en  GitHub: ADDON_REPOSITORY
+
+
++ v2.1 (27/10/2020) +
+- compatibilidad con NVDA 2020.3.
+- cambio de los  gestos de entrada "control+flecha izquierda y derecha" con "alt+flecha izquierda y derecha".
+- posibilidad de elegir  la combinación "mayúscula+control" en lugar de  "alt+control" para las órdenes de los gestos de entrada.
+- limpieza del código con validación Flake8.
+- añadido el botón "Qué hay de nuevo" en el  cuadro de diálogo proponiendo la instalación de una nueva actualización.
+
+
++ v2.0 (07/06/2020) +
+- compatibilidad con NVDA 2020.2
+- se añade los scripts para habilitar el menú contextual para cada encabezado de columna de la lista de emisoras.
+- desactivación configurable del seguimiento de la barra de progreso.
+
 
 + v1.1.2 (28/04/2020) + 
-Se añade la traducción TR 
+Se añade la traducción TR
+
+
 + v1.1.1 (06/04/2020) + 
-Además de la traducción AR
+Se añade la traducción AR
+
+
++ v1.1 (03/04/2020) +
+- puesta en compatibilidad con NVDA 2020.1,
+- puesta en conformidad para la prueba de compatibilidad de un complemento con NVDA.
+
+
 + v1.0 (19/02/2020) +
 El complemento cambia de nombre y pasa a la versión 1.0.
 
-Compatibilidad con NVDA 2019.3 y con versiones superiores a 2019.1.
+Puesta en compatibilidad con NVDA 2019.3 y con versiones superiores a 2019.1.
+
 
 + v1.4 (19 Junio 2014) +
 

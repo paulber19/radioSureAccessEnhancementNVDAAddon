@@ -1,4 +1,4 @@
- ADDON_SUMMARY - Historique
+ ADDON_SUMMARY - History
 Author: ADDON_AUTHOR_NAME
 
 
@@ -6,12 +6,25 @@ Author: ADDON_AUTHOR_NAME
 %!includeconf: addon_informations.t2tconf
 URL: ADDON_AUTHOR_URL
 
+GitHub repository: [ADDON_REPOSITORY]
+
++ v2.1 (27/10/2020) +
+- compatibility with NVDA 2020.3.
+- change of gestures "control + left and right arrow" by "alt + left and right arrow".
+- possibility of choosing the combination "shift+control" instead of "alt + control" for input gestures.
+- addition of the "What's new" button in the dialog proposing the installation of a new update.
 
 
-+ v1.1.2 (28/04/2020) + 
-Adding TR  translation
-+ v1.1.1 (06/04/2020) + 
-Adding AR  translation
++ v2.0 (07/16/2020) +
+- compatibility with NVDA 2020.2
+- addition of scripts to activate the contextual menu of each column of the header of the station list.
+- configurable deactivation of progress bar tracking.
+
+
++ v1.1.2 (28/04/2020) +
+Adding TR translation
++ v1.1.1 (06/04/2020) +
+Adding AR translation
 
 + v1.1 (03/04/2020) +
 - compatibility with NVDA 2020.1,
@@ -19,7 +32,7 @@ Adding AR  translation
 
 
 + v1.0 (12/02/2020) +
-The  extension has changed  its name and goes back to version 1.0.
+The extension has changed its name and goes back to version 1.0.
 
 Compatibility with NVDA 2019.3 and with versions higher than 2019.1.
 

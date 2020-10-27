@@ -1,16 +1,16 @@
-%!PostProc (html): KEY_DEC_3 control+shift+flecha abajo
-%!PostProc (html): KEY_INC_3 control+shift+flecha arriba
-%!PostProc (html): KEY_DEC_5 Control+shift+Flecha izquierda
-%!PostProc (html): KEY_INC_5 Control+shift+Flecha derecha
-%!PostProc (html): KEY_DEC_20 Control+shift+retroceso de página
-%!PostProc (html): KEY_INC_20 Control+shift+avance de página
-%!PostProc (html): KEY_MIDDLE Control+shift+m"
+%!PostProc (html): KEY_DEC_3 control+mayúscula+flecha abajo
+%!PostProc (html): KEY_INC_3 control+mayúscula+flecha arriba
+%!PostProc (html): KEY_DEC_5 Control+mayúscula+Flecha izquierda
+%!PostProc (html): KEY_INC_5 Control+mayúscula+Flecha derecha
+%!PostProc (html): KEY_DEC_20 Control+mayúscula+retroceso de página
+%!PostProc (html): KEY_INC_20 Control+mayúscula+avance de página
+%!PostProc (html): KEY_MIDDLE Control+mayúscula+m"
 %!PostProc (html): KEY_PLAY Control+p
 %!PostProc (html): KEY_MUTE Control+m
 %!PostProc (html): KEY_REC Control+r
 %!PostProc (html): KEY_EXPAND Control+e
-%!PostProc (html): KEY_BACK Control+flecha izquierda
-%!PostProc (html): KEY_NEXT Control+flecha derecha
+%!PostProc (html): KEY_BACK alt+flecha izquierda
+%!PostProc (html): KEY_NEXT alt+flecha derecha
 %!PostProc (html): KEY_FAV Control+f
 %!PostProc (html): KEY_OPTIONS Control+o
 %!PostProc (html): KEY_TOP Control+t
@@ -25,5 +25,5 @@
 %!PostProc (html): KEY_Filter_Country alt+control+c
 %!PostProc (html): KEY_Filter_Genre alt+control+g
 %!PostProc (html): KEY_Filter_Language alt+control+l
-
+%!PostProc (html): KEY_Random_Playback alt+control+r
 

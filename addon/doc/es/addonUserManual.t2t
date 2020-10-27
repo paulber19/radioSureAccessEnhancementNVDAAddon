@@ -5,6 +5,9 @@ Autor: ADDON_AUTHOR_NAME
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
 URL: ADDON_AUTHOR_URL
+
+Repositorio en GitHub: ADDON_REPOSITORY
+
 Descargar:
 - [versión estable ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
 - [Versión de desarrollo ADDON_DEV_URL]
@@ -39,7 +42,10 @@ Este complemento proporciona:
 - [un script para ir a la lista de emisoras de radio (resultado de la búsqueda) #HDR21],
 - [un script para pulsar en el botón Top #HDR22],
 - [un script para salir de la aplicación  #HDR12],
+- [los scripts para habilitar el menú contextual de cada encabezado de columna de la lista de emisoras para filtrar la  lista #HDR14],
 - [el posible uso de la barra espaciadora o la tecla "Intro" para pulsar en un botón #HDR13].
+- [desactivación configurable del seguimiento de las barras de progreso #HDR15],
+- [un script para iniciar la reproducción de una emisora seleccionada al azar en la lista de emisoras #HDR16].
 
 
 
@@ -54,29 +60,45 @@ La versión del complemento puede ser:
 Por defecto, una versión estable se actualiza con la última versión estable (Número de versión superior).
 Sin embargo, es posible actualizar la versión actual estable con una versión de desarrollo de la próxima versión estable. Simplemente marcando la opción "Actualizar también versiones estable hacia versiones de desarrollo" situado en las opciones del complemento, elemento de menú "Actualización".
 
-Una versión de desarrollo se actualiza con una versión de desarrollo más reciente o con su versión estable.
+Una versión de desarrollo se actualiza:
+- con una versión de desarrollo más reciente,
+- con su versión estable,
+- o la última versión estable si la opción anterior no está marcada.
+
 
 El botón "Buscar actualización" situado en las opciones del complemento, elemento de menú "Actualización", permite buscar inmediatamente una actualización
 
+En el caso de una actualización automática, y si se detecta una nueva versión, el cuadro de diálogo "Actualización" aparece para proponer:
+- ya sea la instalación inmediata de la nueva versión,
+- ya sea para posponer la actualización a más tarde. En este caso, la búsqueda se reiniciará como mínimo una hora más tarde.
 
+
+El botón "Qué hay de nuevo" ofrece la posibilidad, de abrir en el navegador, el historial del complemento y asi poder conocer las novedades de la versión propuesta.
 
 ++ Compatibilidad ++
-Este complemento ha sido probado con la versión 2.0 y 2.2 de RadioSure.
-
-++ Historial ++
-El historial de las versiones del complemento está en el archivo ["change.html" change.html]
+Este complemento ha sido probado con la versión 2.2 de RadioSure. Las versiones anteriores no son compatibles.
 
 
 ++ Configuración a respetar ++
 Ninguna configuración especial.
 
 
+++ Adaptación especial ++
+Para algunas configuraciones de teclado, los Gestos de Entrada previstos usando  la combinación "Alt+Control" de las órdenes básicas no son adecuados.
+
+Para ello, una opción permite usar  en lugar de las órdenes básicas la combinación "mayúscula+control".
+
+
+++ Historial ++
+El historial de las versiones del complemento está en el archivo ["changes.html" changes.html]
+
 + Script para iniciar  o detener la reproducción de la emisora actual +[hdr2]
 
 Este script se lanza mediante las órdenes de teclado "KEY_PLAY".
-Tiene como objetivo de pulsar en el botón "Play" sin necesidad de mover el foco.
-Al presionar este botón se inicia o se detiene la reproducción de la emisora actual.
 
+Tiene como objetivo de pulsar en el botón "Play" sin necesidad de mover el foco.
+
+Al presionar este botón se inicia o se detiene la reproducción de la emisora actual.
 
 + Scripts para reproducir la emisora anterior o siguiente +[hdr4]
 RadioSure mantiene el historial de emisoras jugadas y muestra los botones "Back" y "Next" para moverse en este historial.
@@ -99,7 +121,6 @@ Estos script se lanzan mediante las órdenes de teclado siguientes:
 - "KEY_INC_20": aumentar fuertemente el volumen en incrementos de 20%,
 - "KEY_DEC_20": disminuir fuertemente el volumen en incrementos de 20%,
 - "KEY_MIDDLE": ajustar el volumen en el nivel medio (50%)
-
 
 
 + Script para silenciar o restablecer el volumen +[hdr3]
@@ -188,7 +209,53 @@ Tiene como objetivo de pulsar en el botón "Exit".
 Esta pulsación provoca la confirmación del usuario, cierra la ventana y detendra la aplicación RadioSure.
 
 
++ Activación del menú contextual de los encabezados de las columnas de la lista de emisoras +[HDR14]
+RadioSure permite filtrar las emisoras mediante el menú contextual del encabezado de cada columna en la lista de emisoras.
+
+pero esto requiere un conjunto de maniobras difíciles que los scripts siguientes suprimen:
+- "KEY_Filter_Title": habilitar el menú contextual del encabezado de la columna "Título".
+- "KEY_Filter_Country": habilitar el menú contextual del encabezado de la columna "País".
+- "KEY_Filter_Genre": habilitar el menú contextual del encabezado de la columna "Género".
+- "KEY_Filter_Language": habilitar el menú contextual del encabezado de la columna "Idioma".
+
+
+
+Estos gestos de entrada son modificables mediante el diálogo "Gestos de entrada" de NVDA.
+
+Nota: cuando se aplica un filtro,  RadioSure lo indica precediendo el texto del encabezado de la columna  con  un "*". Varios filtros se pueden aplicar de forma simultánea.
+
+
 + Pulsar en un botón con la barra espaciadora +[HDR13]
 En RadioSure, la barra espaciadora está previsto por defecto para activar los botones, pero no la tecla "Intro".
 Ahora para pulsar los botones, puedes utilizar la tecla "Intro" o la barra espaciadora.
 El complemento  proporciona esta posibilidad sin impedir el funcionamiento en todas las demás situaciones.
+
+
++ Desactivación del seguimiento de las barras de progreso +[HDR15]
+Al iniciar una emisora, RadioSure indica visualmente el progreso y NVDA anuncia los cambios de progresión dependiendo de la configuración en  la opción "Salida en las Barras de Progreso" que se encuentra en  la categoría "Presentación de objetos" del cuadro de diálogo Opciones de NVDA.
+
+Esto no es de un muy gran interés y bastante desagradable a largo plazo.
+
+Aunque es posible configurando manualmente esta opción y sólo para RadioSure utilizando un perfil de configuración, de desactivar cualquier anuncio, el complemento se propone de hacerlo de forma predeterminada.
+
+Evidentemente, es posible recuperar el funcionamiento normal desactivando la casilla de verificación "Deshabilitar el seguimiento de las barras de progreso" situado en la categoría "Opciones" en Opciones de configuración del complemento.
+
+
++ Reproducción aleatoria de una emisora +[HDR16]
+Este script se lanza mediante  el gesto de entrada "KEY_Random_Playback".
+
+Este selecciona al azar en las emisoras en la lista de emisoras, una emisora y inicia su reproducción. Si no se muestra la lista de emisoras, lo muestra pulsando en el botón "Expand".
+
+Para asegurar que la reproducción se inicie  correctamente, este supervisa el estado de la conexión de la emisora durante  el tiempo configurado   en el grupo "Reproducción aleatoria" en la lista desplegable "Tiempo de espera máximo de conexión" situado en la categoría "Opciones" en Opciones de configuración del complemento.
+
+
+Después de este tiempo, si la conexión no se ha realizado correctamente, se inicia con otra emisora el número de veces configurado en la lista desplegable "Número máximo de emisoras a comprobar" colocado en el grupo de "Reproducción aleatoria" en la categoría "Opciones".
+
+Por defecto, este almacena las emisoras sin conexión para excluirlas virtualmente de la lista de emisoras y así no elegirlas de nuevo. Este funcionamiento se puede desactivar desmarcando la casilla de verificación "Saltar las emisoras sin conexión" en el grupo "Reproducción aleatoria" situado en la categoría "Opciones" en Opciones de configuración del complemento.
+
+Este grupo también proporciona un botón para borrar todas las emisoras almacenadas.
+
+Para acortar el tiempo para buscar una emisora buena, lo mejor es tener en la lista un máximo de emisoras que se conectan.
+
+
+

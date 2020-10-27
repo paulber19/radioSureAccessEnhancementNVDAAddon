@@ -1,11 +1,9 @@
-#appModules\radiosure\rs_translations.py
-#A part of radioSureAccessEnhancement add-on
-#Copyright (C) 2020, paulber19
-#This file is covered by the GNU General Public License.
-
+# appModules\radiosure\rs_translations.py
+# A part of radioSureAccessEnhancement add-on
+# Copyright (C) 2020, paulber19
+# This file is covered by the GNU General Public License.
 
 import addonHandler
-addonHandler.initTranslation()
 from logHandler import log
 import os
 import sys
@@ -15,25 +13,30 @@ from . import psutil
 _curAddon = addonHandler.getCodeAddon()
 path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
-from rs_py3Compatibility import py3
+from rs_py3Compatibility import py3  # noqa:E402
 del sys.path[-1]
 
 if py3:
-	from .utilitiesPy3  import xmltodict
+	from .utilitiesPy3 import xmltodict
 else:
-	from .utilitiesPy2  import xmltodict
+	from .utilitiesPy2 import xmltodict
+
+addonHandler.initTranslation()
+
 # dictionnary to store radiosure translations of current language
 _translations = None
+
 
 def getRadioSureFullPath():
 	focus = api.getFocusObject()
 	pid = focus.processID
 	for p in psutil.process_iter():
 		if p.pid == pid:
-			radioSurePath =psutil.Process(pid).cmdline()[0]
+			radioSurePath = psutil.Process(pid).cmdline()[0]
 			path = os.path.dirname(radioSurePath)
 			return path if py3 else path.decode("mbcs")
 	return None
+
 
 def getTranslations():
 	languageFilePath = getRadioSureLanguage()
@@ -61,18 +64,18 @@ def getRadioSureLanguage():
 			radiosureXML = xmltodict.parse(fd.read(), process_namespaces=True)
 	fd.close()
 	try:
-		languageFileName=  radiosureXML["XMLConfigSettings"]["General"]["Language"]
-	except:
+		languageFileName = radiosureXML["XMLConfigSettings"]["General"]["Language"]
+	except:  # noqa:E722
 		languageFileName = "english.lng"
 	languageFilePath = os.path.join(radioSureDirPath, "Lang", languageFileName)
 	return languageFilePath
 
 
-
 def getPlayingTranslation():
 	playing = _translations["XMLConfigSettings"]["Radio"]["Playing"]
 	return playing
-	
+
+
 def initialize():
 	global _translations
 	if _translations is None:
