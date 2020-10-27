@@ -6,7 +6,7 @@ Auteur: ADDON_AUTHOR_NAME
 %!includeconf: addon_keys.t2tconf
 URL: ADDON_AUTHOR_URL
 
-Dépot GitHub: [ADDON_REPOSITORY]
+Dépot GitHub: [ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Téléchargement:
 - [Version stable ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
