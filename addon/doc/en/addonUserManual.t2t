@@ -1,15 +1,16 @@
 ADDON_SUMMARY - user's manual
 Author: ADDON_AUTHOR_NAME
 
+
 %!includeconf: ../addon_userManual.t2tconf
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
 URL: ADDON_AUTHOR_URL
 
-GitHub repository: [ADDON_REPOSITORY ADDON_REPOSITORY]
+[GitHub repository: ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Download:
-- [ stable version ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
+-  [stable version ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
 - [Development Version ADDON_DEV_URL]
 
 
@@ -17,6 +18,9 @@ Compatibility:
 - minimum version of NVDA supported: MINIMUM_NVDA_VERSION
 - latest version of NVDA tested: LAST_TESTED_NVDA_VERSION
 
+
+
+Sorry, but this document is an automatic translation from french language.
 
 = Sommaire =[toc]
 %%toc
@@ -70,6 +74,8 @@ A development version is updated:
 - or with the latest stable version if the previous option is not checked.
 
 The button "Search for update" placed in the "Update" category of add-on settings allows you to search immediately for an update.
+
+The "View history" button, placed in this same category, allows you to display the history of the current version in the browser.
 
 In the case of an automatic update and if a new version is detected, the "Update" dialog box is displayed to suggest:
 - either the immediate installation of the new version,

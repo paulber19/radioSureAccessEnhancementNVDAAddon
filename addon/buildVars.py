@@ -29,7 +29,7 @@ addon_info = {
 	See user manual for more informations.
 	"""),
 	# version
-	"addon_version": "2.1",
+	"addon_version": "2.2",
 	# Author(s)
 	"addon_author": "paulber19",
 	# URL for the add-on documentation support
@@ -40,7 +40,7 @@ addon_info = {
 	"addon_minimumNVDAVersion": "2019.1",
 	# Last NVDA version supported/tested
 	# (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2020.3",
+	"addon_lastTestedNVDAVersion": "2020.4",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel": None,
 }
@@ -65,3 +65,8 @@ i18nSources = pythonSources
 # Paths are relative to the addon directory,
 # not to the root directory of your addon sources.
 excludedFiles = []
+
+# Base language for the NVDA add-on
+# If your add-on is written in a language other than english, modify this variable.
+# For example, set baseLanguage to "es" if your add-on is primarily written in spanish.
+baseLanguage = "en"

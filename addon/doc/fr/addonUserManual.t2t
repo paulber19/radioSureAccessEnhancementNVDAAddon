@@ -1,15 +1,16 @@
 ADDON_SUMMARY - manuel utilisateur
 Auteur: ADDON_AUTHOR_NAME
 
+
 %!includeconf: ../addon_userManual.t2tconf
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
 URL: ADDON_AUTHOR_URL
 
-Dépot GitHub: [ADDON_REPOSITORY ADDON_REPOSITORY]
+[Dépot GitHub: ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Téléchargement:
-- [Version stable ADDON_VERSION ADDON_DOWNLOAD_SERVER1]
+- [Version stable ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
 - [Version de développement ADDON_DEV_URL]
 
 
@@ -68,6 +69,8 @@ Une version de développement est mise à jour:
 
 
 Le bouton "Rechercher une mise à jour" placé dans les paramètres de l'extension, élément de menu "Mise à jour", permet de rechercher immédiatement une mise à jour.
+
+Le bouton "Voir l'historique", placé dans cette même catégorie,  vous permet d'afficher l'historique  de la version actuelle dans le navigateur.
 
 Dans le cas d'une mise à jour automatique et si une nouvelle version est détectée, la boite de dialogue "Mise à jour" s'affiche pour proposer:
 - soit l'installation immédiate de la nouvelle version,

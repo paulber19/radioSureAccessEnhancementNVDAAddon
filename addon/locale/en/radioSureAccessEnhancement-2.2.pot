@@ -3,24 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: radio_sure 1.4\n"
+"Project-Id-Version: radioSureAccessEnhancement 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2020-12-06 11:26+0200\n"
-"PO-Revision-Date: 2020-12-06 11:27+0200\n"
-"Last-Translator: wafiqtaher <wafiqtaher@gmail.com>\n"
-"Language-Team: paulber007 <wafiqtaher@gmail.com>\n"
-"Language: ar\n"
+"POT-Creation-Date: 2020-12-28 08:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../../..\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Poedit-SearchPath-0: .\n"
 
 #. Add-on summary,
 #. usually the user visible name of the addon.
@@ -28,7 +23,7 @@ msgstr ""
 #. on installation and add-on information.
 #: buildVars.py:22
 msgid "radioSure Internet Radio Player: accessibility enhancement"
-msgstr "تحسين إمكانية الوصول لبرنامج radioSure Internet Radio Player:"
+msgstr ""
 
 #. noqa:E501
 #. Add-on description
@@ -43,53 +38,47 @@ msgid ""
 "\tSee user manual for more informations.\n"
 "\t"
 msgstr ""
-"تعمل هذه الوظيفة الإضافية على تحسين إمكانية الوصول إلى RadioSure ومشغل راديو "
-"الإنترنت مع NVDA.\n"
-"\t Compatible مع RadioSure 2.2.\n"
-"\t Lower الإصدارات غير معتمدة.\n"
-"\\ دليل المستخدم tSee لمزيد من المعلومات.\n"
-"\t"
 
 #. Translators: the label of a message box dialog
 #. to ask the user if he wants keep current configuration settings.
 #: installTasks.py:63
 msgid "Do you want to keep current add-on configuration settings ?"
-msgstr "هل تريد الاحتفاظ بإعدادات تكوين الوظيفة الإضافية الحالية؟"
+msgstr ""
 
 #. Translators: the title of a message box dialog.
 #: installTasks.py:65
 #, python-format
 msgid "%s - installation"
-msgstr "%s التثبيت"
+msgstr ""
 
 #. Translators: the label of a dialog box message.
 #: appModules\radioSure\rs_utils.py:27
 #, python-format
 msgid "%s dialog is allready open"
-msgstr "%sمفتوح بالفعل"
+msgstr ""
 
 #. Translators:  title of all add-on dialog boxs.
 #: appModules\radioSure\rs_utils.py:36
 msgid "{addonSummary}'s add-on - {dialogTitle}"
-msgstr "{addonSummary}'s الإضافة - {dialogTitle}"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:221 appModules\radioSure\__init__.py:488
 #, python-format
 msgid "%s percent"
-msgstr "%s بالمئةِ"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:245
 msgid "Stations"
-msgstr "محطات"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:246
 msgid "Search"
-msgstr "بحث"
+msgstr ""
 
 #. Translators: message to ask the user if he want quit RadioSure.
 #: appModules\radioSure\__init__.py:293
 msgid "Are you sure you want  to quit RadioSure?"
-msgstr "هل أنت متأكد أنك تريد إنهاء RadioSure؟"
+msgstr ""
 
 #. Translators: dialog's title.
 #. noqa:E501
@@ -97,183 +86,176 @@ msgstr "هل أنت متأكد أنك تريد إنهاء RadioSure؟"
 #: appModules\radioSure\__init__.py:295
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:104
 msgid "Warning"
-msgstr "تحذير"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:315
 msgid "Move focus to Exit button and click it to exit the application"
-msgstr "انقل التركيز إلى زر \"إنهاء\" وانقر فوقه للخروج من التطبيق"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:324
 msgid ""
 "Without moving focus, click on  Play button to play or stop the current "
 "station"
 msgstr ""
-"دون تحريك التركيز ، انقر فوق الزر \"تشغيل\" لتشغيل أو إيقاف المحطة الحالية"
 
 #: appModules\radioSure\__init__.py:335
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
-"بدون تحريك التركيز ، انقر فوق الزر \"السابق\" لتشغيل محطة التشغيل السابقة"
 
 #: appModules\radioSure\__init__.py:346
 msgid ""
 "Without moving focus, click on  Next button to play the next played station"
-msgstr "دون تحريك التركيز ، انقر فوق الزر \"التالي\" لتشغيل المحطة التالية"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:356
 msgid "Without moving focus, click on  Rec button to start or stop record"
-msgstr "دون تحريك التركيز ، انقر على زر Rec لبدء أو إيقاف السجل"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:374
 msgid "Search edit box and Stations list are not more visible"
-msgstr "مربع تحرير البحث وقائمة المحطات ليست أكثر وضوحًا"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:382
 msgid ""
 "Without moving focus, click  on Expand button to  show or mask stations list"
 msgstr ""
-"دون تحريك التركيز ، انقر فوق الزر \"توسيع\" لإظهار أو إخفاء قائمة المحطات"
 
 #: appModules\radioSure\__init__.py:394
 msgid "Move focus to Options button and click it to open Options dialog"
-msgstr "انقل التركيز إلى الزر \"خيارات\" وانقر فوقه لفتح مربع الحوار \"خيارات\""
+msgstr ""
 
 #: appModules\radioSure\__init__.py:407
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
-msgstr "انقل التركيز إلى زر Fav وانقر فوقه لإظهار قائمة محطة المفضلة"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:416
 msgid "Without moving focus, click on Top buttonto ???"
-msgstr "دون تحريك التركيز ، انقر فوق الزر العلوي لـ ؟؟؟"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:426
-msgid "Without moving focus, click on Mute butt button to Mute volume on or off"
-msgstr "دون تحريك التركيز ، انقر على زر كتم الصوت لكتم الصوت أو إيقاف تشغيله"
+msgid ""
+"Without moving focus, click on Mute butt button to Mute volume on or off"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:433
 msgid "Decrease slightly the volume(down 3%)"
-msgstr "انخفاض طفيف في حجم الصوت(3%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:440
 msgid "Increase slightly the volume(up 3%)"
-msgstr "زيادة طفيفة في حجم الصوت(3%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:448
 msgid "Decrease the volume(down 5%)"
-msgstr "خفض حجم الصوت (أسفل 5%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:455
 msgid "Increase the volume(up 5%)"
-msgstr "زيادة حجم الصوت (فوق 5%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:462
 msgid "Increase strongly  the volume(up 20%)"
-msgstr "زيادة بقوة حجم الصوت (فوق 20%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:469
 msgid "Decrease strongly the volume(down -20%)"
-msgstr "انخفاض بقوة حجمالصوت  (أسفل -20%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:480
 msgid "Set volume to middle( 50%)"
-msgstr "ضبط مستوى الصوت على الوسط (50%)"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:490
 msgid "Say volume"
-msgstr "قل مستوى الصوت"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:497
 msgid "Informations copied to clipboard"
-msgstr "تم نسخ المعلومات إلى الحافظة"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:507
 msgid ""
 "Say the name   of current station and the status line. Twice, copy these "
 "informations  to clipboard"
 msgstr ""
-"قل اسم المحطة الحالية وسطر الحالة. مرتين ، انسخ هذه المعلومات إلى الحافظة"
 
 #: appModules\radioSure\__init__.py:526
 msgid "Say buffer"
-msgstr "قل متعادل"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:535
 msgid "You are in stations list window"
-msgstr "أنت في نافذة قائمة المحطات"
+msgstr ""
 
 #. impossible to display list
 #: appModules\radioSure\__init__.py:544 appModules\radioSure\__init__.py:650
 #: appModules\radioSure\__init__.py:729
 msgid "Stations list not found"
-msgstr "قائمة المحطات غير موجودة"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:550
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
 msgstr ""
-"نقل التركيز إلى قائمة المحطات. إذا كانت قائمة المحطات غير مرئية ، انقر فوق "
-"الزر \"توسيع\" أولا."
 
 #. impossible to display search edit box
 #: appModules\radioSure\__init__.py:570 appModules\radioSure\__init__.py:594
 msgid "Search edit box not found"
-msgstr "لم يتم العثور على مربع تحرير البحث"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:584
 msgid "You are in search edit field"
-msgstr "أنت في مجال تحرير البحث"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:598
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
 msgstr ""
-"إنقل التركيز إلى مربع تحرير البحث. إذا لم يكن مربع تحرير البحث مرئيًا ، فانقر "
-"فوق الزر \"توسيع\" أولا."
 
 #. Translators: message to user
 #. when there are none or one station in the list.
 #: appModules\radioSure\__init__.py:654
 msgid "Not available because the station list is empty or has only one station"
-msgstr "غير متوفر لأن قائمة المحطة فارغة أو تحتوي على محطة واحدة فقط"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:665
 msgid "Activate context menu to sort stations list by title"
-msgstr "تفعيل قائمة السياق لفرز قائمة المحطات حسب العنوان"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:674
 msgid "Activate context menu to sort stations list by country"
-msgstr "تفعيل قائمة السياق لفرز قائمة المحطات حسب البلد"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:683
 msgid "Activate context menu to sort stations list by genre"
-msgstr "تفعيل قائمة السياق لفرز قائمة المحطات حسب النوع"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:692
 msgid "Activate context menu to sort stations list by language"
-msgstr "تفعيل قائمة السياق لفرز قائمة المحطات حسب اللغة"
+msgstr ""
 
 #. Translators: message to user
 #: appModules\radioSure\__init__.py:759
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
-msgstr "لا يمكن توصيل أي من محطات %s المختارة عشوائيا"
+msgstr ""
 
 #. Translators: message to user there is no stations in list.
 #: appModules\radioSure\__init__.py:773
 msgid "No station in list"
-msgstr "لا توجد محطات في القائمة"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:779
 msgid "Station search running"
-msgstr "البحث عن محطة قيد التشغيل"
+msgstr ""
 
 #: appModules\radioSure\__init__.py:785
 msgid "Start a station randomly"
-msgstr "تبدأ محطة عشوائيا"
+msgstr ""
 
 #. Translators: A message asking the user if they wish to restart NVDA
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:28
@@ -281,222 +263,172 @@ msgid ""
 "Some Changes have been made . You must save the configuration and restart "
 "NVDA for these changes to take effect. Would you like to do it now?"
 msgstr ""
-"قد تم إجراء بعض التغييرات . يجب حفظ التكوين وإعادة تشغيل NVDA لهذه التغييرات "
-"نافذة المفعول. تريد أن تفعل ذلك الآن ؟ "
 
 #. Translators: A message  to user
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:36
 msgid "Don't forget to save the configuration for the changes to take effect !"
-msgstr "لا تنس حفظ التكوين حتى تصبح التغييرات نافذة المفعول !"
+msgstr ""
 
 #. Translators: This is the label for the Audacity settings  dialog.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:43
 msgid "Options"
-msgstr "الخيارات"
+msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:48
 msgid "Desactivate progress &bars update"
-msgstr "إل&غاء تنشيط تحديث أشرطة التقدم"
+msgstr ""
 
 #. Translators: This is the label for a group of editing options
 #. in Options settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:55
 msgid "Random playing"
-msgstr "تشغيل عشوائي"
+msgstr ""
 
 #. Translators: This is the label for a choice in the Options settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:63
 msgid "&Maximum stations to check:"
-msgstr "ال&حد الأقصى للتحقق من المحطات:"
+msgstr ""
 
 #. Translators: This is the label for a choice in the Options settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:72
 msgid "&Maximum delay for waiting connexion (in seconds):"
-msgstr "أ&قصى تأخير لانتظار للإتصال (في ثوان):"
+msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:81
 msgid "&Skip stations without connexion"
-msgstr "ت&خطي المحطات دون اتصال"
+msgstr ""
 
 #. translators: label for a button in Options settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:87
 msgid "&Clear history of stations without connexion"
-msgstr "&حذف المحفوظات  للمحطات دون اتصال"
+msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:92
 msgid "&Use \"shift+control\" instead of \"alt+control\" for input gestures"
-msgstr "ا&ستخدم \"shift + control\" بدلا من \"alt + control\" لإيماءات الإدخال"
+msgstr ""
 
 #. Translators:  message to ask the user
 #. if  he wants to clear  stations's history.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:102
 msgid ""
 "Are you sure you want  to clearthe history of stations without connexion?"
-msgstr "هل أنت متأكد من أنك تريد مسح المحفوظات  للمحطات دون اتصال؟"
+msgstr ""
 
 #. Translators: This is the label for the Advanced settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:135
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:107
 msgid "Update"
-msgstr "تحديث"
+msgstr ""
 
 #. Translators: This is the label for a checkbox in the Update Settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:143
 msgid "Automatically check for &updates "
-msgstr "البح&ث عن التحديث تلقائيا"
+msgstr ""
 
 #. Translators: This is the label for a checkbox in the Update settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:149
 msgid "Update also release versions to &developpement versions"
-msgstr "تحديث إصدارات الت&طوير"
+msgstr ""
 
 #. translators: label for a button in Update settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:155
 msgid "&Check for update"
-msgstr "&البحث عن  التحديثات"
+msgstr ""
 
 #. translators: this is a label for a button in update settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:160
 msgid "View &history"
-msgstr "&عرض السجل"
+msgstr ""
 
 #. translators: title of the dialog.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:196
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:198
 msgid "Settings"
-msgstr "الإعدادات"
+msgstr ""
 
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:60
 msgid ""
-"The update is not compatible with this version of NVDA. Minimum NVDA version: "
-"{minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+"The update is not compatible with this version of NVDA. Minimum NVDA "
+"version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
-"التحديث غير متوافق مع هذا الإصدار من NVDA. الحد الأدنى من إصدار NVDA: "
-"{minYear} {minMajor} ، آخر اختبار: {testingYear}. {testingMajor}."
 
 #. Translators: The progress message
 #. indicating the name of the add-on being downloaded.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:110
 msgid "Downloading {name}"
-msgstr "تنزيل {name}"
+msgstr ""
 
 #. Translators: A message indicating that an error occurred
 #. while downloading an update to NVDA.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:125
 msgid "Error downloading update for {name}."
-msgstr "حدث خطأ أثناء تنزيل التحديث لـ {name}."
+msgstr ""
 
 #. Translators: message to user
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:184
 msgid "Cannot update {name} - missing file or invalid file format"
-msgstr "لا يمكن تحديث {name} - ملف مفقود أو تنسيق ملف غير صالح"
+msgstr ""
 
 #. Translators: The title of the dialog
 #. presented while an Addon is being updated.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:220
 msgid "Updating"
-msgstr "تحديث"
+msgstr ""
 
 #. Translators: The message displayed while an addon is being updated.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:222
 msgid "Please wait while the add-on is being updated."
-msgstr "الرجاء الانتظار حتى يتم تحديث الوظيفة الإضافية."
+msgstr ""
 
 #. Translators: The message displayed when an error occurs
 #. when installing an add-on package.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:233
 msgid "Failed to update {name} add-on"
-msgstr "فشل تحديث الوظيفة الإضافية {name}"
+msgstr ""
 
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:291
 msgid "{summary} - update"
-msgstr "ملخص التحديث {summary}"
+msgstr ""
 
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:301
 msgid "The service is temporarily under maintenance. Please, try again later."
-msgstr "الخدمة قيد الصيانة مؤقتًا. الرجاء معاودة المحاولة في وقت لاحق."
+msgstr ""
 
 #. Translators: message to user to report a new version.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:348
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:354
 #, python-format
 msgid "New version available, version %s. Do you want download it now?"
-msgstr "الإصدار الجديد متاح ، الإصدار %s. هل تريد تنزيله الآن؟"
+msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:365
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:371
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
-msgstr "لا يوجد تحديث  %s هو آخر إصدار"
+msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:372
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:378
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
-"يا الله! حدثت مشكلة في التحقق من وجود تحديثات. الرجاء إعادة المحاولة لاحقًا"
-
-#. Translators: This is a label of a button appearing
-#. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:550
-msgid "&Yes"
-msgstr "&نعم"
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:555
+msgid "&Yes"
+msgstr ""
+
+#. Translators: This is a label of a button appearing
+#. on UpdateCheckResult dialog.
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:560
 msgid "&No"
-msgstr "&لا"
+msgstr ""
 
 #. Translators: The label of a button to remind the user later
 #. about performing some action.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:560
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:565
 msgid "&Later"
-msgstr "&في وقت لاحق"
+msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:564
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:569
 msgid "Wha&t's new"
-msgstr "ما  ال&جديد"
-
-#~ msgid "radioSure Internet Radio Player : accessibility enhancement"
-#~ msgstr "تحسين إمكانية الوصول لبرنامج :radioSure"
-
-#~ msgid ""
-#~ "This add-on Improves the accessibility of RadioSure, Internet Radio Player "
-#~ "with NVDA.\n"
-#~ "\t"
-#~ msgstr ""
-#~ "الوظيفة الإضافية تعمل على تحسين إمكانية الوصول إلى RadioSure ، وراديو "
-#~ "راديو الإنترنت مع NVDA. \n"
-#~ " \v\t"
-
-#~ msgid "{name} {state}"
-#~ msgstr "اسم {name}الحالة {state}"
-
-#~ msgid "{name} {state} {live}"
-#~ msgstr "الإسم {name}الحالة  {state} مباشر {live}"
-
-#~ msgid "{0}%"
-#~ msgstr "{0}بالمئةِ"
-
-#~ msgid "Decrease slightly the volume (down 3%)"
-#~ msgstr "خفض مستوى الصوت قليلاً (بنسبة 3%)"
-
-#~ msgid "Increase slightly the volume (up 3%)"
-#~ msgstr "زيادة حجم الصوت قليلا (بزيادة 3%)"
-
-#~ msgid "Decrease the volume (down 5%)"
-#~ msgstr "خفض مستوى الصوت (بنسبة 5%)"
-
-#~ msgid "Increase the volume (up 5%)"
-#~ msgstr "زيادة مستوى الصوت (بنسبة 5%)"
-
-#~ msgid "Increase strongly  the volume (up 20%)"
-#~ msgstr "زيادة حجم قوة الصوت (بزيادة 20%)"
-
-#~ msgid "Decrease strongly the volume (down -20%)"
-#~ msgstr "خفض الصوت بنسبة 20%"
-
-#~ msgid "%s - settings"
-#~ msgstr "إعدادات %s"
-
-#~ msgid "The update is not compatible with this version of Windows."
-#~ msgstr "التحديث غير متوافق مع هذا الإصدار من Windows."
+msgstr ""

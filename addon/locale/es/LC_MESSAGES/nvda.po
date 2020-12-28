@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: radiosure 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-12 10:46+0200\n"
-"PO-Revision-Date: 2020-10-12 10:55+0200\n"
+"POT-Creation-Date: 2020-12-05 18:53+0100\n"
+"PO-Revision-Date: 2020-12-05 18:53+0100\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -314,7 +314,7 @@ msgstr ""
 "¿Estás seguro que deseas borrar el historial de las emisoras sin conexión?"
 
 #: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:135
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:105
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:107
 msgid "Update"
 msgstr "Actualización"
 
@@ -330,11 +330,15 @@ msgstr "Actualizar también versiones estable hacia versiones de &desarrollo"
 msgid "&Check for update"
 msgstr "&Buscar actualización"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:181
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:160
+msgid "View &history"
+msgstr "Ver &historial"
+
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:196
 msgid "Settings"
 msgstr "Opciones de configuración"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:58
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:60
 #, python-brace-format
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
@@ -343,76 +347,76 @@ msgstr ""
 "La actualización no es compatible con esta versión de NVDA. Versión mínima "
 "de NVDA: {minYear}.{minMajor}, última probada: {testedYear}.{testedMajor}."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:108
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:110
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Descargando {name}"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:123
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:125
 #, python-brace-format
 msgid "Error downloading update for {name}."
 msgstr "Error al descargar la actualización de {name}."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:182
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:184
 #, python-brace-format
 msgid "Cannot update {name} - missing file or invalid file format"
 msgstr ""
 "No se puede actualizar {name} - archivo ausente o formato de archivo no "
 "válido"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:218
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:220
 msgid "Updating"
 msgstr "Actualizando"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:220
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:222
 msgid "Please wait while the add-on is being updated."
 msgstr "Por favor, espera mientras se actualiza el complemento."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:231
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:233
 #, python-brace-format
 msgid "Failed to update {name} add-on"
 msgstr "Fallo al actualizar el complemento {name}"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:289
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:291
 #, python-brace-format
 msgid "{summary} - update"
 msgstr "{summary} - actualización"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:299
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:301
 msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr ""
 "El servicio está actualmente en mantenimiento. Por favor, inténtelo de nuevo "
 "más tarde."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:347
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:348
 #, python-format
 msgid "New version available, version %s. Do you want download it now?"
 msgstr "Nueva versión disponible: versión %s. ¿Quieres descargarla ahora?"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:364
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:365
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr "Estás al día, %s es la versión más reciente."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:371
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:372
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 "¡Huy! Hubo un problema al buscar las actualizaciones. Por favor, inténtelo "
 "de nuevo más tarde"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:547
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:550
 msgid "&Yes"
 msgstr "&Sí"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:552
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:555
 msgid "&No"
 msgstr "&No"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:557
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:560
 msgid "&Later"
 msgstr "&Más tarde"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:561
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:564
 msgid "Wha&t's new"
 msgstr "Qué hay &de nuevo"
 
