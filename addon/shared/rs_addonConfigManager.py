@@ -1,6 +1,6 @@
 # shared\rs_configManager.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright 2019,paulber19
+# Copyright 2021,paulber19
 # This file is covered by the GNU General Public License.
 
 from logHandler import log
@@ -9,14 +9,9 @@ import os
 import globalVars
 import config
 from configobj import ConfigObj
-# ConfigObj 5.1.0 and later integrates validate module.
-try:
-	from configobj.validate import Validator
-except ImportError:
-	from validate import Validator
+from configobj.validate import Validator
+from io import StringIO
 
-from rs_py3Compatibility import importStringIO
-StringIO = importStringIO()
 addonHandler.initTranslation()
 
 # config section

@@ -1,6 +1,6 @@
 # appModules\radiosure\rs_translations.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2020, paulber19
+# Copyright (C) 2020-2021, paulber19
 # This file is covered by the GNU General Public License.
 
 import addonHandler
@@ -10,16 +10,7 @@ import sys
 import api
 from . import psutil
 
-_curAddon = addonHandler.getCodeAddon()
-path = os.path.join(_curAddon.path, "shared")
-sys.path.append(path)
-from rs_py3Compatibility import py3  # noqa:E402
-del sys.path[-1]
-
-if py3:
-	from .utilitiesPy3 import xmltodict
-else:
-	from .utilitiesPy2 import xmltodict
+from .utilities import xmltodict
 
 addonHandler.initTranslation()
 
@@ -34,18 +25,14 @@ def getRadioSureFullPath():
 		if p.pid == pid:
 			radioSurePath = psutil.Process(pid).cmdline()[0]
 			path = os.path.dirname(radioSurePath)
-			return path if py3 else path.decode("mbcs")
+			return path
 	return None
 
 
 def getTranslations():
 	languageFilePath = getRadioSureLanguage()
-	if py3:
-		with open(languageFilePath, encoding="utf8") as fd:
-			translations = xmltodict.parse(fd.read(), process_namespaces=True)
-	else:
-		with open(languageFilePath, ) as fd:
-			translations = xmltodict.parse(fd.read(), process_namespaces=True)
+	with open(languageFilePath, encoding="utf8") as fd:
+		translations = xmltodict.parse(fd.read(), process_namespaces=True)
 	fd.close()
 	return translations
 
@@ -56,12 +43,8 @@ def getRadioSureLanguage():
 		log.error("Cannot retrive radioSure directory path")
 		return
 	radioSureXMLFilePath = os.path.join(radioSureDirPath, "RadioSure.xml")
-	if py3:
-		with open(radioSureXMLFilePath, encoding="utf8") as fd:
-			radiosureXML = xmltodict.parse(fd.read(), process_namespaces=True)
-	else:
-		with open(radioSureXMLFilePath, ) as fd:
-			radiosureXML = xmltodict.parse(fd.read(), process_namespaces=True)
+	with open(radioSureXMLFilePath, encoding="utf8") as fd:
+		radiosureXML = xmltodict.parse(fd.read(), process_namespaces=True)
 	fd.close()
 	try:
 		languageFileName = radiosureXML["XMLConfigSettings"]["General"]["Language"]

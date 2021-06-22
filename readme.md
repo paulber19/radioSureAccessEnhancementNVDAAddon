@@ -4,15 +4,15 @@
 * URL : paulber19@laposte.net
 * Download:
 	* [stable version][1]
-	* [developpement' versions][2]
+	* [developpement versions][2]
 * Compatibility:
-	* Minimum required NVDA version: 2019.1
-	* Last NVDA version tested: 2020.4
+	* Minimum required NVDA version: 2019.3
+	* Last NVDA version tested: 2021.1
 
 This add-on Improves the accessibility of RadioSure, Internet Radio Player with NVDA
 Compatible with RadioSure 2.2 . Lower versions are not supported.
 See user guide for more informations.
 
 
-[1]: https://github.com/paulber007/AllMyNVDAAddons/raw/master/radioSureAccessEnhancement/radioSureAccessEnhancement-2.2.nvda-addon
+[1]: https://github.com/paulber007/AllMyNVDAAddons/raw/master/radioSureAccessEnhancement/radioSureAccessEnhancement-2.3.nvda-addon
 [2]: https://github.com/paulber007/AllMyNVDAAddons/tree/master/radioSureAccessEnhancement/dev

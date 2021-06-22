@@ -1,6 +1,6 @@
 # appModules\radiosure\rs_utils.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2020 paulber19
+# Copyright (C) 2021 paulber19
 # This file is covered by the GNU General Public License.
 
 
@@ -82,3 +82,24 @@ def MouseWheelForward():
 
 def MouseWheelBack():
 	winUser.mouse_event(MOUSEEVENTF_WHEEL, 0, 0, -120, None)
+
+def getSpeechMode():
+	try:
+		# for nvda  version >= 2021.1
+		return speech.getState().speechMode
+	except AttributeError:
+		return speech.speechMode
+
+def setSpeechMode(mode):
+	try:
+		# for nvda version >= 2021.1
+		speech.setSpeechMode(mode)
+	except AttributeError:
+		speech.speechMode = mode
+
+def setSpeechMode_off():
+	try:
+		# for nvda version >= 2021.1
+		speech.setSpeechMode(speech.SpeechMode.off)
+	except AttributeError:
+		speech.speechMode = speech.speechMode_off

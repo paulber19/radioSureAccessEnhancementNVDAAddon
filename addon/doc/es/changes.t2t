@@ -14,6 +14,12 @@ Descarga:
 - [Versiones de desarrollo ADDON_DEV_URL]
 
 
+
++ v2.3 (22/06/2021) +
+- Compatibilidad con NVDA 2021.1. Las versiones de NVDA anteriores a la 2019.3 ya no son soportadas.
+- eliminado código relativo a Python 2.7.
+
+
 + v2.2 (19/12/2020) +
 - compatibilidad con NVDA 2020.4.
 - añadido el botón "Ver historial" que se encuentra en la categoría "Actualización" en las "Opciones" del complemento.

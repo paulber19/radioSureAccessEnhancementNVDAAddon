@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: radiosure 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-05 18:52+0100\n"
-"PO-Revision-Date: 2020-12-05 18:52+0100\n"
+"POT-Creation-Date: 2021-05-23 10:35+0200\n"
+"PO-Revision-Date: 2021-05-23 10:35+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: paulber007\n"
 "Language: fr_FR\n"
@@ -20,33 +20,33 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: appModules/radiosure/__init__.py:221 appModules/radiosure/__init__.py:488
+#: appModules/radiosure/__init__.py:222 appModules/radiosure/__init__.py:489
 #, python-format
 msgid "%s percent"
 msgstr "%s pourcent"
 
-#: appModules/radiosure/__init__.py:245
+#: appModules/radiosure/__init__.py:246
 msgid "Stations"
 msgstr "Stations"
 
-#: appModules/radiosure/__init__.py:246
+#: appModules/radiosure/__init__.py:247
 msgid "Search"
 msgstr "Recherche"
 
-#: appModules/radiosure/__init__.py:293
+#: appModules/radiosure/__init__.py:294
 msgid "Are you sure you want  to quit RadioSure?"
 msgstr "Êtes vous sûr de vouloir quitter RadioSure ?"
 
-#: appModules/radiosure/__init__.py:295
+#: appModules/radiosure/__init__.py:296
 #: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:104
 msgid "Warning"
 msgstr "Avertissement"
 
-#: appModules/radiosure/__init__.py:315
+#: appModules/radiosure/__init__.py:316
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr "Presser le bouton Exit pour quitter l'application."
 
-#: appModules/radiosure/__init__.py:324
+#: appModules/radiosure/__init__.py:325
 msgid ""
 "Without moving focus, click on  Play button to play or stop the current "
 "station"
@@ -54,95 +54,95 @@ msgstr ""
 "Sans déplacer le focus, presser le bouton Play pour jouer ou arrêter la "
 "station en cours."
 
-#: appModules/radiosure/__init__.py:335
+#: appModules/radiosure/__init__.py:336
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 "Sans déplacer le focus, presser le bouton Back pour lancer la station "
 "précédente dans la liste des stations déjà jouées."
 
-#: appModules/radiosure/__init__.py:346
+#: appModules/radiosure/__init__.py:347
 msgid ""
 "Without moving focus, click on  Next button to play the next played station"
 msgstr ""
 "Sans déplacer le focus, presser le bouton Next pour lancer la station "
 "suivante dans la liste des stations déjà jouées."
 
-#: appModules/radiosure/__init__.py:356
+#: appModules/radiosure/__init__.py:357
 msgid "Without moving focus, click on  Rec button to start or stop record"
 msgstr ""
 "Sans déplacer le focus, presser le bouton Rec pour lancer ou arrêter "
 "l'enregistrement de la station courante."
 
-#: appModules/radiosure/__init__.py:374
+#: appModules/radiosure/__init__.py:375
 msgid "Search edit box and Stations list are not more visible"
 msgstr "La zone de recherche et la liste des stations ne sont plus visibles"
 
-#: appModules/radiosure/__init__.py:382
+#: appModules/radiosure/__init__.py:383
 msgid ""
 "Without moving focus, click  on Expand button to  show or mask stations list"
 msgstr ""
 "Sans déplacer le focus, presser le bouton Expand pour afficher ou masquer la "
 "liste des stations."
 
-#: appModules/radiosure/__init__.py:394
+#: appModules/radiosure/__init__.py:395
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 "Presser le bouton Options pour afficher la boite de dialogue de "
 "configuration des options."
 
-#: appModules/radiosure/__init__.py:407
+#: appModules/radiosure/__init__.py:408
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr "Presser le bouton Fav pour ouvrir la liste des stations favorites."
 
-#: appModules/radiosure/__init__.py:416
+#: appModules/radiosure/__init__.py:417
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr "Sans déplacer le focus, presser le bouton Top pour???"
 
-#: appModules/radiosure/__init__.py:426
+#: appModules/radiosure/__init__.py:427
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 "Sans déplacer le focus, presser le bouton Mute pour mettre ou couper le son."
 
-#: appModules/radiosure/__init__.py:433
+#: appModules/radiosure/__init__.py:434
 msgid "Decrease slightly the volume(down 3%)"
 msgstr "Diminuer faiblement le volume (moins 3%)"
 
-#: appModules/radiosure/__init__.py:440
+#: appModules/radiosure/__init__.py:441
 msgid "Increase slightly the volume(up 3%)"
 msgstr "Augmenter faiblement le volume (plus 3%)"
 
-#: appModules/radiosure/__init__.py:448
+#: appModules/radiosure/__init__.py:449
 msgid "Decrease the volume(down 5%)"
 msgstr "Diminuer moyennement le volume (moins 5%)"
 
-#: appModules/radiosure/__init__.py:455
+#: appModules/radiosure/__init__.py:456
 msgid "Increase the volume(up 5%)"
 msgstr "Augmenter moyennement le volume (plus 5%)"
 
-#: appModules/radiosure/__init__.py:462
+#: appModules/radiosure/__init__.py:463
 msgid "Increase strongly  the volume(up 20%)"
 msgstr "Augmenter fortement le volume (plu 20%)"
 
-#: appModules/radiosure/__init__.py:469
+#: appModules/radiosure/__init__.py:470
 msgid "Decrease strongly the volume(down -20%)"
 msgstr "Diminuer fortement le volume (moins 20%)"
 
-#: appModules/radiosure/__init__.py:480
+#: appModules/radiosure/__init__.py:481
 msgid "Set volume to middle( 50%)"
 msgstr "Mettre le volume au milieu (50%)"
 
-#: appModules/radiosure/__init__.py:490
+#: appModules/radiosure/__init__.py:491
 msgid "Say volume"
 msgstr "Annoncer le niveau du volume"
 
-#: appModules/radiosure/__init__.py:497
+#: appModules/radiosure/__init__.py:498
 msgid "Informations copied to clipboard"
 msgstr "Les informations sont copiées dans le presse-papier."
 
-#: appModules/radiosure/__init__.py:507
+#: appModules/radiosure/__init__.py:508
 msgid ""
 "Say the name   of current station and the status line. Twice, copy these "
 "informations  to clipboard"
@@ -150,20 +150,20 @@ msgstr ""
 "Annoncer le nom de la station et l'information de la ligne d'état. Le second "
 "appui copie ces informations dans le presse-papier."
 
-#: appModules/radiosure/__init__.py:526
+#: appModules/radiosure/__init__.py:527
 msgid "Say buffer"
 msgstr "Annoncer la taille du tampon de lecture."
 
-#: appModules/radiosure/__init__.py:535
+#: appModules/radiosure/__init__.py:536
 msgid "You are in stations list window"
 msgstr "Vous êtes déjà dans la liste des stations"
 
-#: appModules/radiosure/__init__.py:544 appModules/radiosure/__init__.py:650
-#: appModules/radiosure/__init__.py:729
+#: appModules/radiosure/__init__.py:545 appModules/radiosure/__init__.py:651
+#: appModules/radiosure/__init__.py:730
 msgid "Stations list not found"
 msgstr "Impossible de trouver la liste des stations"
 
-#: appModules/radiosure/__init__.py:550
+#: appModules/radiosure/__init__.py:551
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
@@ -171,15 +171,15 @@ msgstr ""
 "Déplacer le focus dans la liste des stations. Si cell-ci n'est pas visible, "
 "presser le bouton \"Expand\" pour la faire apparaitre."
 
-#: appModules/radiosure/__init__.py:570 appModules/radiosure/__init__.py:594
+#: appModules/radiosure/__init__.py:571 appModules/radiosure/__init__.py:595
 msgid "Search edit box not found"
 msgstr "Impossible de trouver la zone d'édition  de recherche de station."
 
-#: appModules/radiosure/__init__.py:584
+#: appModules/radiosure/__init__.py:585
 msgid "You are in search edit field"
 msgstr "Vous êtes déjà dans la zone d'édition de recherche de station."
 
-#: appModules/radiosure/__init__.py:598
+#: appModules/radiosure/__init__.py:599
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
@@ -187,40 +187,40 @@ msgstr ""
 "Déplacer le focus dans la zone d'édition de recherche de station. Si cell-ci "
 "n'est pas visible, presser le bouton \"Expand\" pour la faire apparaitre."
 
-#: appModules/radiosure/__init__.py:654
+#: appModules/radiosure/__init__.py:655
 msgid "Not available because the station list is empty or has only one station"
 msgstr "Impossible: la liste des stations est vide ou n'a qu'une seule station"
 
-#: appModules/radiosure/__init__.py:665
+#: appModules/radiosure/__init__.py:666
 msgid "Activate context menu to sort stations list by title"
 msgstr "Activer le menu contextuel pour trier les stations par titre"
 
-#: appModules/radiosure/__init__.py:674
+#: appModules/radiosure/__init__.py:675
 msgid "Activate context menu to sort stations list by country"
 msgstr "Activer le menu contextuel pour trier les stations par pays"
 
-#: appModules/radiosure/__init__.py:683
+#: appModules/radiosure/__init__.py:684
 msgid "Activate context menu to sort stations list by genre"
 msgstr "Activer le menu contextuel pour trier les stations par genre"
 
-#: appModules/radiosure/__init__.py:692
+#: appModules/radiosure/__init__.py:693
 msgid "Activate context menu to sort stations list by language"
 msgstr "Activer le menu contextuel pour trier les stations par langue"
 
-#: appModules/radiosure/__init__.py:759
+#: appModules/radiosure/__init__.py:760
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr "Aucune station des %s stations sélectionnées n'a pu être connectée. "
 
-#: appModules/radiosure/__init__.py:773
+#: appModules/radiosure/__init__.py:774
 msgid "No station in list"
 msgstr "Aucune station dans la liste"
 
-#: appModules/radiosure/__init__.py:779
+#: appModules/radiosure/__init__.py:780
 msgid "Station search running"
 msgstr "Recherch  d'une station"
 
-#: appModules/radiosure/__init__.py:785
+#: appModules/radiosure/__init__.py:786
 msgid "Start a station randomly"
 msgstr ""
 "Lancer la lecture d'une station choisie  au hasard dans la liste des stations"
@@ -332,7 +332,7 @@ msgstr "&Rechercher une mise à jour"
 msgid "View &history"
 msgstr "&Voir l'historique"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:196
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:198
 msgid "Settings"
 msgstr "Paramètres"
 
@@ -340,7 +340,7 @@ msgstr "Paramètres"
 #, python-brace-format
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
-"version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+"version: {minYear}.{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
 "La mise à jour n'est pas compatible avec cette version de NVDA. Version "
 "minimum de NVDA : {minYear}.{minMajor}, dernière version testée : "
@@ -386,45 +386,45 @@ msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr ""
 "le service est momentanément en maintenance. Veuillez réessayer plus tard."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:348
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:354
 #, python-format
-msgid "New version available, version %s. Do you want download it now?"
+msgid "New version%s is available. Do you want to download it now?"
 msgstr ""
-"Une nouvelle version est disponible: version %s. Voulez-vous la télécharger "
-"maintenant ?"
+"La nouvelle version %s est disponible. Voulez-vous la télécharger "
+"maintenant ?"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:365
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:371
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr "Vous êtes à jour, %s est la dernière version."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:372
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:378
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 "Oups! Il y a un problème pour rechercher les mises à jour. Réessayer "
 "ultérieurement."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:550
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:535
 msgid "&Yes"
 msgstr "&Oui"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:555
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:540
 msgid "&No"
 msgstr "&Non"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:560
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:545
 msgid "&Later"
 msgstr "&Plus tard"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:564
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:549
 msgid "Wha&t's new"
 msgstr "Quoi &de neuf"
 
-#: installTasks.py:63
+#: installTasks.py:58
 msgid "Do you want to keep current add-on configuration settings ?"
 msgstr "Voulez vous conserver les paramètres  actuels de l'extension ?"
 
-#: installTasks.py:65
+#: installTasks.py:60
 #, python-format
 msgid "%s - installation"
 msgstr "%s - installation"

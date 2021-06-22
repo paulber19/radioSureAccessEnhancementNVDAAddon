@@ -1,6 +1,6 @@
 # appModules\radioSure\__init__.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019-2020, Paulber19
+# Copyright (C) 2019-2021, Paulber19
 # This file is covered by the GNU General Public License.
 # Released under GPL 2
 
@@ -32,6 +32,7 @@ import tones
 from keyboardHandler import KeyboardInputGesture
 from oleacc import *  # noqa:F403
 import sys
+from .rs_utils import getSpeechMode, setSpeechMode, setSpeechMode_off
 _curAddon = addonHandler.getCodeAddon()
 debugToolsPath = os.path.join(_curAddon.path, "debugTools")
 sys.path.append(debugToolsPath)
@@ -45,9 +46,9 @@ except ImportError:
 del sys.path[-1]
 path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
-from rs_py3Compatibility import _unicode  # noqa:E402
 from rs_addonConfigManager import _addonConfigManager  # noqa:E402
 del sys.path[-1]
+
 addonHandler.initTranslation()
 # winUser constants
 WM_KEYUP = 0x0101
@@ -57,7 +58,7 @@ WM_SETFOCUS = 0x0007
 _addonSummary = _curAddon.manifest['summary']
 _addonVersion = _curAddon.manifest['version']
 _addonName = _curAddon.manifest['name']
-_scriptCategory = _unicode(_addonSummary)
+_scriptCategory = str(_addonSummary)
 
 # pour getWindow function
 firstWindow = 0
@@ -148,26 +149,26 @@ def clickButton(window):
 	obj = findWindowNVDAObject(window)
 	if obj is None:
 		return None
-	oldSpeechMode = speech.speechMode
-	speech.speechMode = speech.speechMode_off
+	oldSpeechMode = getSpeechMode()
+	setSpeechMode_off()
 	obj.IAccessibleObject.accDoDefaultAction(0)
 	eventHandler.queueEvent("gainFocus", obj)
 	time.sleep(0.1)
 	api.processPendingEvents()
-	speech.speechMode = oldSpeechMode
+	setSpeechMode(oldSpeechMode)
 	return obj.name
 
 
 def clickButtonWithoutMoving(window):
-	oldSpeechMode = speech.speechMode
-	speech.speechMode = speech.speechMode_off
+	oldSpeechMode = setSpeechMode()
+	setSpeechMode_off()
 	currentObj = api.getFocusObject()
 	name = clickButton(window)
 	currentObj.setFocus()
 	eventHandler.queueEvent("gainFocus", currentObj)
 	time.sleep(0.1)
 	api.processPendingEvents()
-	speech.speechMode = oldSpeechMode
+	setSpeechMode(oldSpeechMode)
 	return name
 
 
@@ -293,15 +294,15 @@ class AppModule(AppModule):
 				_("Are you sure you want  to quit RadioSure?"),
 				# Translators: dialog's title.
 				_("Warning"), wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING) == wx.YES:
-				oldSpeechMode = speech.speechMode
-				speech.speechMode = speech.speechMode_off
+				oldSpeechMode = getSpeechMode()
+				setSpeechMode_off()
 				winUser.setForegroundWindow(h)
 				obj.setFocus()
 				eventHandler.queueEvent("gainFocus", obj)
 				time.sleep(0.1)
 				api.processPendingEvents()
 				clickButton("exitButton")
-				speech.speechMode = oldSpeechMode
+				setSpeechMode(oldSpeechMode)
 			else:
 				winUser.setForegroundWindow(h)
 				time.sleep(0.5)
@@ -700,8 +701,8 @@ class AppModule(AppModule):
 			obj = stationsListObject .getChild(stationID)
 			if obj.name not in self.badStations:
 				break
-		oldMode = speech.speechMode
-		speech.speechMode = speech.speechMode_off
+		oldSpeechMode = getSpeechMode()
+		setSpeechMode_off()
 		obj.setFocus()
 		api.setFocusObject(obj)
 		time.sleep(0.5)
@@ -709,7 +710,7 @@ class AppModule(AppModule):
 		time.sleep(0.2)
 		KeyboardInputGesture.fromName("enter").send()
 		api.processPendingEvents()
-		speech.speechMode = oldMode
+		setSpeechMode(oldSpeechMode)
 		return obj
 
 	def script_startStationRandomly(self, gesture):

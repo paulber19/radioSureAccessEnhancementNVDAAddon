@@ -1,22 +1,22 @@
 ADDON_SUMMARY - manuel utilisateur
-Auteur: ADDON_AUTHOR_NAME
+Auteur : ADDON_AUTHOR_NAME
 
 
 %!includeconf: ../addon_userManual.t2tconf
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
-URL: ADDON_AUTHOR_URL
+URL : ADDON_AUTHOR_URL
 
-[Dépot GitHub: ADDON_REPOSITORY ADDON_REPOSITORY]
+[Dépot GitHub : ADDON_REPOSITORY ADDON_REPOSITORY]
 
-Téléchargement:
+Téléchargement :
 - [Version stable ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
 - [Version de développement ADDON_DEV_URL]
 
 
-Compatibilité:
-- version minimum de NVDA supportée: MINIMUM_NVDA_VERSION
-- dernière version de NVDA testée: LAST_TESTED_NVDA_VERSION
+Compatibilité :
+- version minimum de NVDA supportée : MINIMUM_NVDA_VERSION
+- dernière version de NVDA testée : LAST_TESTED_NVDA_VERSION
 
 
 = Sommaire =[toc]
@@ -26,7 +26,7 @@ Compatibilité:
 Cette extension améliore l'accessibilité du logiciel RadioSure avec NVDA.
 
 ++ Fonctionnalités ++
-Cette extension apporte:
+Cette extension apporte :
 
 - [un script pour lancer ou arrêter la station courante sans déplacement de focus #HDR2],
 - [un script pour lancer la station précédente ou suivante de la liste des stations déjà jouées, (sans déplacement de focus) #HDR4],
@@ -53,9 +53,9 @@ Cette extension apporte:
 ++ mise à jour ++
 La mise à jour de l'extension se fait, par défaut, automatiquement peu de temps après le démarrage de NVDA (entre 20 et 600 secondes) et au maximum une fois par jour.
 Il est possible de désactiver cette mise à jour en décochant l'option "Rechercher automatiquement les mises à jour" se trouvant dans la catégorie "Mise à jour" des paramètres de l'extension.
-La version de l'extension peut être:
-- soit une version stable: son numéro de version est du type "1.0" par exemple.
-- soit une version de développement: son numéro de version est alors du type "1.0-dev1", ou "1.0-rc1", ou "1.0-beta2".
+La version de l'extension peut être :
+- soit une version stable : son numéro de version est du type "1.0" par exemple.
+- soit une version de développement : son numéro de version est alors du type "1.0-dev1", ou "1.0-rc1", ou "1.0-beta2".
 
 
 Par défaut, une version stable est mise à jour avec une version stable plus récente (numéro de version supérieur).
@@ -72,7 +72,7 @@ Le bouton "Rechercher une mise à jour" placé dans les paramètres de l'extensi
 
 Le bouton "Voir l'historique", placé dans cette même catégorie,  vous permet d'afficher l'historique  de la version actuelle dans le navigateur.
 
-Dans le cas d'une mise à jour automatique et si une nouvelle version est détectée, la boite de dialogue "Mise à jour" s'affiche pour proposer:
+Dans le cas d'une mise à jour automatique et si une nouvelle version est détectée, la boite de dialogue "Mise à jour" s'affiche pour proposer :
 - soit l'installation immédiate de la nouvelle version,
 - soit de reporter la mise à jour à plus tard. Dans ce cas, la recherche se relancera au minimum une heure plus tard.
 
@@ -109,24 +109,24 @@ RadioSure maintient l'historique des stations jouées et présente les boutons "
 
 Ces scripts permettent d'appuyer sur ces boutons sans bouger le focus.
 
-Ces script se lance par les commandes clavier suivantes:
+Ces script se lance par les commandes clavier suivantes :
 
-- "KEY_BACK": passe à la précédente station déjà jouée et lance sa lecture
-- "KEY_NEXT": passe à la station suivante déjà jouée et lance sa lecture
+- "KEY_BACK" : passe à la précédente station déjà jouée et lance sa lecture
+- "KEY_NEXT" : passe à la station suivante déjà jouée et lance sa lecture
 
 
 + Scripts pour augmenter ou diminuer le volume +[hdr1]
 
 Ces scripts permettent de modifier le niveau du volume sans aucun déplacement de focus.
-Ces scripts se lancent par les commandes clavier suivantes:
+Ces scripts se lancent par les commandes clavier suivantes :
 
-- "KEY_INC_3": augmenter légèrement le Volume par palier de 3%,
-- "KEY_DEC_3": diminuer légèrement le Volume par palier de 3%,
-- "KEY_INC_5": augmenter le volume par palier de 5%,
-- "KEY_DEC_5": diminuer le volume par palier de 5%,
-- "KEY_INC_20": augmenter fortement le volume par palier de 20%,
-- "KEY_DEC_20": diminuer fortement le volume par palier de 20%,
-- "KEY_MIDDLE": fixer le volume au niveau moyen (50%)
+- "KEY_INC_3" : augmenter légèrement le Volume par palier de 3%,
+- "KEY_DEC_3" : diminuer légèrement le Volume par palier de 3%,
+- "KEY_INC_5" : augmenter le volume par palier de 5%,
+- "KEY_DEC_5" : diminuer le volume par palier de 5%,
+- "KEY_INC_20" : augmenter fortement le volume par palier de 20%,
+- "KEY_DEC_20" : diminuer fortement le volume par palier de 20%,
+- "KEY_MIDDLE" : fixer le volume au niveau moyen (50%)
 
 
 
@@ -171,7 +171,7 @@ Ce script se lance par la commande clavier "KEY_TOP".
 + Script pour lire le nom de la station courante et la ligne de statu +[hdr9]
 Ce script se lance par la commande clavier "KEY_SAY_INFO".
 
-Il permet d'annoncer les informations de la station courante affichées par RadioSure comme:
+Il permet d'annoncer les informations de la station courante affichées par RadioSure comme :
 - le nom de la station,
 - l'état de lecture lancé ou arrêté,
 - l'encodage utilisé.
@@ -179,7 +179,7 @@ Il permet d'annoncer les informations de la station courante affichées par Radi
 
 Appuyez Deux fois, il va copier ces informations dans le presse-papiers.
 
-Par Exemple:
+Par Exemple :
 
 http://www.maxfm.rs Lecture (00:14) MP3, 160 kbps
 
@@ -188,7 +188,7 @@ http://www.maxfm.rs Lecture (00:14) MP3, 160 kbps
 Ce script se lance par la commande clavier "KEY_SAY_BUFFER".
 
 il annonce le tampon de lecture( information affichée par RadioSure).
-Par Exemple: tampon 100%
+Par Exemple : tampon 100%
 
 
 + Script pour afficher ou masquer la zone de recherche et la liste des stations de radio +[hdr11]
@@ -217,7 +217,7 @@ Si la commande clavier est tapée quand le focus est déjà dans la zone, le scr
 Ce script se lance par la commande clavier KEY_GOTO_STATIONSLIST.
 
 Il a pour but de mettre le focus dans la liste des stations de radio qui contient le résultat de la recherche.
-Le focus se place sur La station de radio précédemment sélectionnée et celle-ci est annoncée, comme par exemple:
+Le focus se place sur La station de radio précédemment sélectionnée et celle-ci est annoncée, comme par exemple :
 
 #Musik.12punks on RauteMusik.FM; Pays: Germany; Genre: Rock-Punk; Langue: German
 
@@ -237,17 +237,17 @@ Cet appui entraine sur confirmation de l'utilisateur,la fermeture de la fenêtre
 + Activation du menu contextuel de l'entête des colonnes de la liste des stations +[HDR14]
 RadioSure permet de filtrer les stations en utilisant le menu contextuel de l'entête de chaque colonne de la liste des stations.
 
-mais cela nécessite un ensemble de manoeuvres pénibles que les scripts suivant suppriment:
-- "KEY_Filter_Title": activer le menu contextuel de l'entête de la colonne "Titre".
-- "KEY_Filter_Country": activer le menu contextuel de l'entête de la colonne "Pays".
-- "KEY_Filter_Genre": activer le menu contextuel de l'entête de la colonne "Genre".
-- "KEY_Filter_Language": activer le menu contextuel de l'entête de la colonne "Langue".
+mais cela nécessite un ensemble de manoeuvres pénibles que les scripts suivant suppriment :
+- "KEY_Filter_Title" : activer le menu contextuel de l'entête de la colonne "Titre".
+- "KEY_Filter_Country" : activer le menu contextuel de l'entête de la colonne "Pays".
+- "KEY_Filter_Genre" : activer le menu contextuel de l'entête de la colonne "Genre".
+- "KEY_Filter_Language" : activer le menu contextuel de l'entête de la colonne "Langue".
 
 
 
 Ces gestes de commandes sont modifiables à l'aide du dialogue "Gestes de commande" de NVDA.
 
-Note: quand un filtre est appliqué, RadioSure le signale en précédant le libellé de l'entête de la colonne par un "*". Plusieurs filtres peuvent être appliqués en même temps.
+Note : quand un filtre est appliqué, RadioSure le signale en précédant le libellé de l'entête de la colonne par un "*". Plusieurs filtres peuvent être appliqués en même temps.
 
 
 + Appui sur un bouton avec la barre d'espace +[HDR13]

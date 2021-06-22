@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # install.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright 2019 paulber19
+# Copyright 2021 paulber19
 # This file is covered by the GNU General Public License.
 
 
@@ -39,12 +39,7 @@ def onInstall():
 	import globalVars
 	import wx
 	import gui
-	import sys
-	if sys.version.startswith("3"):
-		curPath = os.path.dirname(__file__)
-	else:
-		curPath = os.path.dirname(__file__).decode("mbcs")
-
+	curPath = os.path.dirname(__file__)
 	addon = _availableAddons[curPath]
 	addonName = addon.manifest["name"]
 	addonSummary = addon.manifest["summary"]
@@ -82,10 +77,7 @@ def deleteFile(theFile):
 def deleteAddonConfig():
 	import globalVars
 	import sys
-	if sys.version.startswith("3"):
-		curPath = os.path.dirname(__file__)
-	else:
-		curPath = os.path.dirname(__file__).decode("mbcs")
+	curPath = os.path.dirname(__file__)
 	sys.path.append(curPath)
 	import buildVars
 	addonName = buildVars.addon_info["addon_name"]

@@ -164,6 +164,7 @@ class UpdateSettingsPanel(SettingsPanel):
 
 	def onCheckForUpdate(self, evt):
 		from .updateHandler import addonUpdateCheck
+		self.saveSettingChanges()
 		releaseToDevVersion = self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked()  # noqa:E501
 		wx.CallAfter(addonUpdateCheck, auto=False, releaseToDev=releaseToDevVersion)
 		self.Close()
