@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: radiosure 1.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2020-10-13 09:35+0200\n"
-"PO-Revision-Date: 2020-10-13 12:26+0300\n"
+"POT-Creation-Date: 2021-06-22 12:47+0200\n"
+"PO-Revision-Date: 2021-06-22 15:44+0300\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -50,12 +50,12 @@ msgstr ""
 
 #. Translators: the label of a message box dialog
 #. to ask the user if he wants keep current configuration settings.
-#: installTasks.py:63
+#: installTasks.py:58
 msgid "Do you want to keep current add-on configuration settings ?"
 msgstr "Eklentinin mevcut ayarlarını korumak istiyor musun?"
 
 #. Translators: the title of a message box dialog.
-#: installTasks.py:65
+#: installTasks.py:60
 #, python-format
 msgid "%s - installation"
 msgstr "%s - Kurulumu"
@@ -71,37 +71,37 @@ msgstr "%s iletişim kutusu zaten açık"
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr "{addonSummary} eklentisi - {dialogTitle}"
 
-#: appModules\radioSure\__init__.py:221 appModules\radioSure\__init__.py:488
+#: appModules\radioSure\__init__.py:222 appModules\radioSure\__init__.py:489
 #, python-format
 msgid "%s percent"
 msgstr "yüzde %s"
 
-#: appModules\radioSure\__init__.py:245
+#: appModules\radioSure\__init__.py:246
 msgid "Stations"
 msgstr "İstasyonlar"
 
-#: appModules\radioSure\__init__.py:246
+#: appModules\radioSure\__init__.py:247
 msgid "Search"
 msgstr "Ara"
 
 #. Translators: message to ask the user if he want quit RadioSure.
-#: appModules\radioSure\__init__.py:293
+#: appModules\radioSure\__init__.py:294
 msgid "Are you sure you want  to quit RadioSure?"
 msgstr "RadioSure'dan çıkmak istediğinizden emin misiniz?"
 
 #. Translators: dialog's title.
 #. noqa:E501
 #. Translators: title of message box.
-#: appModules\radioSure\__init__.py:295
+#: appModules\radioSure\__init__.py:296
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:104
 msgid "Warning"
 msgstr "Uyarı"
 
-#: appModules\radioSure\__init__.py:315
+#: appModules\radioSure\__init__.py:316
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr "Odağı Çıkış düğmesine taşı ve uygulamadan çıkmak için tıkla"
 
-#: appModules\radioSure\__init__.py:324
+#: appModules\radioSure\__init__.py:325
 msgid ""
 "Without moving focus, click on  Play button to play or stop the current "
 "station"
@@ -109,95 +109,95 @@ msgstr ""
 "Odağı değiştirmeden, geçerli istasyonu çalmak veya durdurmak için Oynat "
 "düğmesine tıkla"
 
-#: appModules\radioSure\__init__.py:335
+#: appModules\radioSure\__init__.py:336
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 "Odağı değiştirmeden, dinlenen önceki istasyonu çalmak için Geri düğmesine "
 "tıkla"
 
-#: appModules\radioSure\__init__.py:346
+#: appModules\radioSure\__init__.py:347
 msgid ""
 "Without moving focus, click on  Next button to play the next played station"
 msgstr ""
 "Odağı değiştirmeden, dinlenen istasyon listesindeki sonraki istasyona geçmek "
 "için Sonraki düğmesine tıkla"
 
-#: appModules\radioSure\__init__.py:356
+#: appModules\radioSure\__init__.py:357
 msgid "Without moving focus, click on  Rec button to start or stop record"
 msgstr ""
 "Odağı değiştirmeden, kaydı başlatmak veya durdurmak için Rec düğmesine tıkla"
 
-#: appModules\radioSure\__init__.py:374
+#: appModules\radioSure\__init__.py:375
 msgid "Search edit box and Stations list are not more visible"
 msgstr "Arama düzenleme kutusu ve İstasyonlar listesi görünür değil"
 
-#: appModules\radioSure\__init__.py:382
+#: appModules\radioSure\__init__.py:383
 msgid ""
 "Without moving focus, click  on Expand button to  show or mask stations list"
 msgstr ""
 "Odağı değiştirmeden, istasyon listesini göstermek veya gizlemek için "
 "Genişlet düğmesine tıkla"
 
-#: appModules\radioSure\__init__.py:394
+#: appModules\radioSure\__init__.py:395
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 "Odağı Seçenekler düğmesine taşı ve Seçenekler iletişim kutusunu açmak için "
 "tıkla"
 
-#: appModules\radioSure\__init__.py:407
+#: appModules\radioSure\__init__.py:408
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr ""
 "Odağı Fav düğmesine taşı ve sık kullanılanlar listesini göstermek için tıkla"
 
-#: appModules\radioSure\__init__.py:416
+#: appModules\radioSure\__init__.py:417
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr "Odağı değiştirmeden, top düğmesine tıkla ???"
 
-#: appModules\radioSure\__init__.py:426
+#: appModules\radioSure\__init__.py:427
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 "Odağı değiştirmeden, Sesi kapatmak veya açmak için Sustur düğmesine tıkla"
 
-#: appModules\radioSure\__init__.py:433
+#: appModules\radioSure\__init__.py:434
 msgid "Decrease slightly the volume(down 3%)"
 msgstr "Sesi hafifçe azalt (%3)"
 
-#: appModules\radioSure\__init__.py:440
+#: appModules\radioSure\__init__.py:441
 msgid "Increase slightly the volume(up 3%)"
 msgstr "Sesi hafifçe artır (%3)"
 
-#: appModules\radioSure\__init__.py:448
+#: appModules\radioSure\__init__.py:449
 msgid "Decrease the volume(down 5%)"
 msgstr "Sesi azalt (%5)"
 
-#: appModules\radioSure\__init__.py:455
+#: appModules\radioSure\__init__.py:456
 msgid "Increase the volume(up 5%)"
 msgstr "Sesi artır (%5)"
 
-#: appModules\radioSure\__init__.py:462
+#: appModules\radioSure\__init__.py:463
 msgid "Increase strongly  the volume(up 20%)"
 msgstr "Sesi yüksek oranda artır (%20)"
 
-#: appModules\radioSure\__init__.py:469
+#: appModules\radioSure\__init__.py:470
 msgid "Decrease strongly the volume(down -20%)"
 msgstr "Sesi yüksek oranda azalt (-%20)"
 
-#: appModules\radioSure\__init__.py:480
+#: appModules\radioSure\__init__.py:481
 msgid "Set volume to middle( 50%)"
 msgstr "Ses seviyesini ortala (%50)"
 
-#: appModules\radioSure\__init__.py:490
+#: appModules\radioSure\__init__.py:491
 msgid "Say volume"
 msgstr "Ses seviyesini seslendir"
 
-#: appModules\radioSure\__init__.py:497
+#: appModules\radioSure\__init__.py:498
 msgid "Informations copied to clipboard"
 msgstr "Bilgiler panoya kopyalandı"
 
-#: appModules\radioSure\__init__.py:507
+#: appModules\radioSure\__init__.py:508
 msgid ""
 "Say the name   of current station and the status line. Twice, copy these "
 "informations  to clipboard"
@@ -205,21 +205,21 @@ msgstr ""
 "Mevcut istasyonun adını ve durum satırını seslendir. İki kez, bu bilgileri "
 "panoya kopyala"
 
-#: appModules\radioSure\__init__.py:526
+#: appModules\radioSure\__init__.py:527
 msgid "Say buffer"
 msgstr "Arabelleği seslendir"
 
-#: appModules\radioSure\__init__.py:535
+#: appModules\radioSure\__init__.py:536
 msgid "You are in stations list window"
 msgstr "İstasyon listesindesin"
 
 #. impossible to display list
-#: appModules\radioSure\__init__.py:544 appModules\radioSure\__init__.py:650
-#: appModules\radioSure\__init__.py:729
+#: appModules\radioSure\__init__.py:545 appModules\radioSure\__init__.py:651
+#: appModules\radioSure\__init__.py:730
 msgid "Stations list not found"
 msgstr "İstasyon listesi bulunamadı"
 
-#: appModules\radioSure\__init__.py:550
+#: appModules\radioSure\__init__.py:551
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
@@ -228,15 +228,15 @@ msgstr ""
 "düğmesine tıkla."
 
 #. impossible to display search edit box
-#: appModules\radioSure\__init__.py:570 appModules\radioSure\__init__.py:594
+#: appModules\radioSure\__init__.py:571 appModules\radioSure\__init__.py:595
 msgid "Search edit box not found"
 msgstr "Ara yazı alanı bulunamadı"
 
-#: appModules\radioSure\__init__.py:584
+#: appModules\radioSure\__init__.py:585
 msgid "You are in search edit field"
 msgstr "Ara yazı alanındasın"
 
-#: appModules\radioSure\__init__.py:598
+#: appModules\radioSure\__init__.py:599
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
@@ -246,44 +246,44 @@ msgstr ""
 
 #. Translators: message to user
 #. when there are none or one station in the list.
-#: appModules\radioSure\__init__.py:654
+#: appModules\radioSure\__init__.py:655
 msgid "Not available because the station list is empty or has only one station"
 msgstr ""
 "İstasyon listesi boş olduğu veya yalnızca bir istasyon olduğu için "
 "kullanılamıyor"
 
-#: appModules\radioSure\__init__.py:665
+#: appModules\radioSure\__init__.py:666
 msgid "Activate context menu to sort stations list by title"
 msgstr "İstasyon listesini konuya göre sıralamak için bağlam menüsünü aç"
 
-#: appModules\radioSure\__init__.py:674
+#: appModules\radioSure\__init__.py:675
 msgid "Activate context menu to sort stations list by country"
 msgstr "İstasyon listesini ülkelere göre sıralamak için bağlam menüsünü aç"
 
-#: appModules\radioSure\__init__.py:683
+#: appModules\radioSure\__init__.py:684
 msgid "Activate context menu to sort stations list by genre"
 msgstr "İstasyon listesini türe göre sıralamak için bağlam menüsünü aç"
 
-#: appModules\radioSure\__init__.py:692
+#: appModules\radioSure\__init__.py:693
 msgid "Activate context menu to sort stations list by language"
 msgstr "İstasyon listesinin dile göre sıralanması için bağlam menüsünü aç"
 
 #. Translators: message to user
-#: appModules\radioSure\__init__.py:759
+#: appModules\radioSure\__init__.py:760
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr "rastgele seçilen %s istasyonlarının hiçbirine bağlanılamadı"
 
 #. Translators: message to user there is no stations in list.
-#: appModules\radioSure\__init__.py:773
+#: appModules\radioSure\__init__.py:774
 msgid "No station in list"
 msgstr "Listede istasyon yok"
 
-#: appModules\radioSure\__init__.py:779
+#: appModules\radioSure\__init__.py:780
 msgid "Station search running"
 msgstr "İstasyon arama çalışıyor"
 
-#: appModules\radioSure\__init__.py:785
+#: appModules\radioSure\__init__.py:786
 msgid "Start a station randomly"
 msgstr "Rastgele bir istasyon başlat"
 
@@ -354,7 +354,7 @@ msgstr ""
 
 #. Translators: This is the label for the Advanced settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:135
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:105
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:107
 msgid "Update"
 msgstr "Güncelleme"
 
@@ -373,73 +373,82 @@ msgstr "Ana &sürümleri geliştirme sürümleriyle de güncelle"
 msgid "&Check for update"
 msgstr "&Güncellemeleri denetle"
 
+#. translators: this is a label for a button in update settings panel.
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:160
+msgid "View &history"
+msgstr "Geçmişi g&örüntüle"
+
 #. translators: title of the dialog.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:181
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:199
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:58
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:60
+#| msgid ""
+#| "The update is not compatible with this version of NVDA. Minimum NVDA "
+#| "version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
-"version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+"version: {minYear}.{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
-"Güncelleme NVDA'nın bu sürümüyle uyumlu değil. Minimum NVDA sürümü: {minYear}"
-"{minMajor}, son test edilen: {testedYear}.{testedMajor}."
+"Güncelleme, NVDA'nın bu sürümüyle uyumlu değil. Minimum NVDA sürümü: "
+"{minYear}.{minMajor}, son sınama: {testedYear}.{testedMajor}."
 
 #. Translators: The progress message
 #. indicating the name of the add-on being downloaded.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:108
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:110
 msgid "Downloading {name}"
 msgstr "{name} indiriliyor"
 
 #. Translators: A message indicating that an error occurred
 #. while downloading an update to NVDA.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:123
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:125
 msgid "Error downloading update for {name}."
 msgstr "{name} İçin güncelleme indirilirken hata oluştu."
 
 #. Translators: message to user
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:182
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:184
 msgid "Cannot update {name} - missing file or invalid file format"
 msgstr "{name} Güncellenemiyor - eksik dosya veya geçersiz dosya biçimi"
 
 #. Translators: The title of the dialog
 #. presented while an Addon is being updated.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:218
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:220
 msgid "Updating"
 msgstr "Güncelleniyor"
 
 #. Translators: The message displayed while an addon is being updated.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:220
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:222
 msgid "Please wait while the add-on is being updated."
 msgstr "Eklenti güncellenirken lütfen bekleyin."
 
 #. Translators: The message displayed when an error occurs
 #. when installing an add-on package.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:231
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:233
 msgid "Failed to update {name} add-on"
 msgstr "{name} eklentisi güncellenemedi"
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:289
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:291
 msgid "{summary} - update"
 msgstr "{summary} - güncelleme"
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:299
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:301
 msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr "Hizmet geçici olarak bakımda. Lütfen daha sonra tekrar dene."
 
 #. Translators: message to user to report a new version.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:348
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:354
 #, python-format
-msgid "New version available, version %s. Do you want download it now?"
-msgstr "Yeni sürüm mevcut, sürüm %s. Şimdi indirmek ister misin?"
+#| msgid "New version available, version %s. Do you want download it now?"
+msgid "New version%s is available. Do you want to download it now?"
+msgstr "Yeni sürüm, %s mevcut. Şimdi indirmek ister misiniz?"
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:369
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:371
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr "Güncelsin. %s en son sürüm."
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:376
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:378
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 "Hata! Güncellemeler kontrol edilirken bir sorun oluştu. Lütfen daha sonra "
@@ -447,23 +456,23 @@ msgstr ""
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:551
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:535
 msgid "&Yes"
 msgstr "&Evet"
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:556
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:540
 msgid "&No"
 msgstr "&Hayır"
 
 #. Translators: The label of a button to remind the user later
 #. about performing some action.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:561
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:545
 msgid "&Later"
 msgstr "&Sonra"
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:565
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:549
 msgid "Wha&t's new"
 msgstr "Ne &yeni"
 
