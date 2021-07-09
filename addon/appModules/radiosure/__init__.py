@@ -160,7 +160,7 @@ def clickButton(window):
 
 
 def clickButtonWithoutMoving(window):
-	oldSpeechMode = setSpeechMode()
+	oldSpeechMode = getSpeechMode()
 	setSpeechMode_off()
 	currentObj = api.getFocusObject()
 	name = clickButton(window)

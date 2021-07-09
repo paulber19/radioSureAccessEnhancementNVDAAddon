@@ -15,6 +15,11 @@ Téléchargement :
 - [versions de développement ADDON_DEV_URL]
 
 
++ v2.3.2 (09/07/2021) +
+Correction de bogues:
+- certains gestes de commandes comme "control+p", "control+m", ne marchaient pas.
+
+
 + v2.3.1 (25/06/2021) +
 Ajout de la traduction turque.
 

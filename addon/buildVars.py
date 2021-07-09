@@ -29,7 +29,7 @@ addon_info = {
 	See user manual for more informations.
 	"""),
 	# version
-	"addon_version": "2.3.1",
+	"addon_version": "2.3.2",
 	# Author(s)
 	"addon_author": "paulber19",
 	# URL for the add-on documentation support

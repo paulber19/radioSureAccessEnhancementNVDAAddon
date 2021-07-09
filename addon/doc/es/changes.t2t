@@ -14,8 +14,14 @@ Descarga:
 - [Versiones de desarrollo ADDON_DEV_URL]
 
 
++ v2.3.2 (09/07/2021) +
+Corrección de fallos:
+- algunos gestos de entrada como "control+p", "control+m", no funcionaba.
+
+
 + v2.3.1 (25/06/2021) +
 Se añade traducción al turco
+
 
 + v2.3 (22/06/2021) +
 - Compatibilidad con NVDA 2021.1. Las versiones de NVDA anteriores a la 2019.3 ya no son soportadas.
