@@ -14,6 +14,9 @@ Descarga:
 - [Versiones de desarrollo ADDON_DEV_URL]
 
 
++ v2.4 (01/11/2021) +
+Compatibilidad con NVDA 2021.3.
+
 + v2.3.2 (09/07/2021) +
 Corrección de fallos:
 - algunos gestos de entrada como "control+p", "control+m", no funcionaba.

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: radioSureAccessEnhancement 2.3.2\n"
+"Project-Id-Version: radioSureAccessEnhancement 2.4\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2021-07-09 19:39+0200\n"
+"POT-Creation-Date: 2021-11-01 10:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,155 +62,155 @@ msgstr ""
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:222 appModules\radioSure\__init__.py:489
+#: appModules\radioSure\__init__.py:233 appModules\radioSure\__init__.py:500
 #, python-format
 msgid "%s percent"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:246
+#: appModules\radioSure\__init__.py:257
 msgid "Stations"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:247
+#: appModules\radioSure\__init__.py:258
 msgid "Search"
 msgstr ""
 
 #. Translators: message to ask the user if he want quit RadioSure.
-#: appModules\radioSure\__init__.py:294
+#: appModules\radioSure\__init__.py:305
 msgid "Are you sure you want  to quit RadioSure?"
 msgstr ""
 
 #. Translators: dialog's title.
 #. noqa:E501
 #. Translators: title of message box.
-#: appModules\radioSure\__init__.py:296
+#: appModules\radioSure\__init__.py:307
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:104
 msgid "Warning"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:316
+#: appModules\radioSure\__init__.py:327
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:325
+#: appModules\radioSure\__init__.py:336
 msgid ""
 "Without moving focus, click on  Play button to play or stop the current "
 "station"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:336
+#: appModules\radioSure\__init__.py:347
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:347
+#: appModules\radioSure\__init__.py:358
 msgid ""
 "Without moving focus, click on  Next button to play the next played station"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:357
+#: appModules\radioSure\__init__.py:368
 msgid "Without moving focus, click on  Rec button to start or stop record"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:375
+#: appModules\radioSure\__init__.py:386
 msgid "Search edit box and Stations list are not more visible"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:383
+#: appModules\radioSure\__init__.py:394
 msgid ""
 "Without moving focus, click  on Expand button to  show or mask stations list"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:395
+#: appModules\radioSure\__init__.py:406
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:408
+#: appModules\radioSure\__init__.py:419
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:417
+#: appModules\radioSure\__init__.py:428
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:427
+#: appModules\radioSure\__init__.py:438
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:434
+#: appModules\radioSure\__init__.py:445
 msgid "Decrease slightly the volume(down 3%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:441
+#: appModules\radioSure\__init__.py:452
 msgid "Increase slightly the volume(up 3%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:449
+#: appModules\radioSure\__init__.py:460
 msgid "Decrease the volume(down 5%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:456
+#: appModules\radioSure\__init__.py:467
 msgid "Increase the volume(up 5%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:463
+#: appModules\radioSure\__init__.py:474
 msgid "Increase strongly  the volume(up 20%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:470
+#: appModules\radioSure\__init__.py:481
 msgid "Decrease strongly the volume(down -20%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:481
+#: appModules\radioSure\__init__.py:492
 msgid "Set volume to middle( 50%)"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:491
+#: appModules\radioSure\__init__.py:502
 msgid "Say volume"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:498
+#: appModules\radioSure\__init__.py:509
 msgid "Informations copied to clipboard"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:508
+#: appModules\radioSure\__init__.py:519
 msgid ""
 "Say the name   of current station and the status line. Twice, copy these "
 "informations  to clipboard"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:527
+#: appModules\radioSure\__init__.py:538
 msgid "Say buffer"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:536
+#: appModules\radioSure\__init__.py:547
 msgid "You are in stations list window"
 msgstr ""
 
 #. impossible to display list
-#: appModules\radioSure\__init__.py:545 appModules\radioSure\__init__.py:651
-#: appModules\radioSure\__init__.py:730
+#: appModules\radioSure\__init__.py:556 appModules\radioSure\__init__.py:662
+#: appModules\radioSure\__init__.py:741
 msgid "Stations list not found"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:551
+#: appModules\radioSure\__init__.py:562
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
 msgstr ""
 
 #. impossible to display search edit box
-#: appModules\radioSure\__init__.py:571 appModules\radioSure\__init__.py:595
+#: appModules\radioSure\__init__.py:582 appModules\radioSure\__init__.py:606
 msgid "Search edit box not found"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:585
+#: appModules\radioSure\__init__.py:596
 msgid "You are in search edit field"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:599
+#: appModules\radioSure\__init__.py:610
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
@@ -218,42 +218,42 @@ msgstr ""
 
 #. Translators: message to user
 #. when there are none or one station in the list.
-#: appModules\radioSure\__init__.py:655
+#: appModules\radioSure\__init__.py:666
 msgid "Not available because the station list is empty or has only one station"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:666
+#: appModules\radioSure\__init__.py:677
 msgid "Activate context menu to sort stations list by title"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:675
+#: appModules\radioSure\__init__.py:686
 msgid "Activate context menu to sort stations list by country"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:684
+#: appModules\radioSure\__init__.py:695
 msgid "Activate context menu to sort stations list by genre"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:693
+#: appModules\radioSure\__init__.py:704
 msgid "Activate context menu to sort stations list by language"
 msgstr ""
 
 #. Translators: message to user
-#: appModules\radioSure\__init__.py:760
+#: appModules\radioSure\__init__.py:771
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr ""
 
 #. Translators: message to user there is no stations in list.
-#: appModules\radioSure\__init__.py:774
+#: appModules\radioSure\__init__.py:785
 msgid "No station in list"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:780
+#: appModules\radioSure\__init__.py:791
 msgid "Station search running"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:786
+#: appModules\radioSure\__init__.py:797
 msgid "Start a station randomly"
 msgstr ""
 

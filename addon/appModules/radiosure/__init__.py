@@ -20,7 +20,18 @@ import winUser
 from winUser import getWindow, getControlID
 from winUser import VK_DOWN, VK_UP, sendMessage
 from winUser import VK_NEXT, VK_PRIOR, VK_LEFT, VK_RIGHT
-import controlTypes
+try:
+	# for nvda version >= 2021.2
+	from controlTypes.role import Role
+	ROLE_BUTTON = Role.BUTTON
+	ROLE_COMBOBOX = Role.COMBOBOX
+	ROLE_LISTITEM = Role.LISTITEM
+except ImportError:
+	# for nvda version < 2021.2
+	import controlTypes
+	ROLE_BUTTON = controlTypes.ROLE_BUTTON
+	ROLE_COMBOBOX = controlTypes.ROLE_COMBOBOX
+	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
 from NVDAObjects import NVDAObject
 import review
 import textInfos
@@ -266,7 +277,7 @@ class AppModule(AppModule):
 			obj.parent.name = self._stationsListName
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if obj.role == controlTypes.ROLE_BUTTON:
+		if obj.role == ROLE_BUTTON:
 			clsList.insert(0, Button)
 
 	def event_appModule_gainFocus(self):
@@ -554,7 +565,7 @@ class AppModule(AppModule):
 		foreground = api.getForegroundObject()
 		for i in range(0, foreground.childCount):
 			o = foreground.getChild(i)
-			if o.windowControlID == 1019 and o.role == controlTypes.ROLE_COMBOBOX:
+			if o.windowControlID == 1019 and o.role == ROLE_COMBOBOX:
 				return o
 		return None
 
@@ -611,7 +622,7 @@ class AppModule(AppModule):
 			info.collapse(True)
 			api.setReviewPosition(info)
 			curObject = api.getNavigatorObject()
-			if curObject .role == controlTypes.ROLE_LISTITEM:
+			if curObject .role == ROLE_LISTITEM:
 				info = baseInfo.copy()
 				info.collapse()
 				api.setReviewPosition(info)
