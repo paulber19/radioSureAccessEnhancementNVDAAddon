@@ -2,11 +2,13 @@
 
 import os.path
 
+
 # Build customizations
 # Change this file instead of sconstruct or manifest files, whenever possible.
 # Full getext (please don't change)
 def _(arg):
 	return arg
+
 
 # Add-on information variables
 addon_info = {
@@ -19,7 +21,7 @@ addon_info = {
 	# usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown
 	# on installation and add-on information.
-	"addon_summary": _("radioSure Internet Radio Player: accessibility enhancement"),  # noqa:E501
+	"addon_summary": _("radioSure Internet Radio Player: accessibility enhancement"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on
 	# on add-on information from add-ons manager
@@ -29,7 +31,7 @@ addon_info = {
 	See user manual for more informations.
 	"""),
 	# version
-	"addon_version": "2.4",
+	"addon_version": "2.5",
 	# Author(s)
 	"addon_author": "paulber19",
 	# URL for the add-on documentation support
@@ -37,10 +39,10 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName": "addonUserManual.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
-	"addon_minimumNVDAVersion": "2019.3",
+	"addon_minimumNVDAVersion": "2020.4",
 	# Last NVDA version supported/tested
 	# (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2021.3",
+	"addon_lastTestedNVDAVersion": "2022.1",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel": None,
 }
@@ -55,7 +57,7 @@ pythonSources = [
 	os.path.join(
 		"addon", "globalPlugins", "radioSureAccessEnhancement",
 		"updateHandler", "*.py"),
-	]
+]
 
 # Files that contain strings for translation.
 # Usually your python sources

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: radiosure 1.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-05 18:53+0100\n"
-"PO-Revision-Date: 2020-12-05 18:53+0100\n"
+"POT-Creation-Date: 2022-01-21 19:53+0100\n"
+"PO-Revision-Date: 2022-01-21 19:59+0100\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz\n"
 "Language: es_ES\n"
@@ -20,33 +20,34 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: appModules/radiosure/__init__.py:221 appModules/radiosure/__init__.py:488
+#: appModules/radiosure/__init__.py:236 appModules/radiosure/__init__.py:509
 #, python-format
 msgid "%s percent"
 msgstr "%s por ciento"
 
-#: appModules/radiosure/__init__.py:245
+#: appModules/radiosure/__init__.py:260
 msgid "Stations"
 msgstr "Emisoras"
 
-#: appModules/radiosure/__init__.py:246
+#: appModules/radiosure/__init__.py:261
 msgid "Search"
 msgstr "Búsqueda"
 
-#: appModules/radiosure/__init__.py:293
+#: appModules/radiosure/__init__.py:308
 msgid "Are you sure you want  to quit RadioSure?"
 msgstr "¿Estás seguro de que quieres salir de RadioSure?\" "
 
-#: appModules/radiosure/__init__.py:295
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:104
+#: appModules/radiosure/__init__.py:310
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:107
+#: shared/rs_addonConfigManager.py:185
 msgid "Warning"
 msgstr "Advertencia"
 
-#: appModules/radiosure/__init__.py:315
+#: appModules/radiosure/__init__.py:330
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr "Haga clic en el botón Exit para salir de la aplicación."
 
-#: appModules/radiosure/__init__.py:324
+#: appModules/radiosure/__init__.py:340
 msgid ""
 "Without moving focus, click on  Play button to play or stop the current "
 "station"
@@ -54,96 +55,96 @@ msgstr ""
 "Sin mover el foco, haga clic en el botón Play para reproducir o detener la "
 "emisora actual."
 
-#: appModules/radiosure/__init__.py:335
+#: appModules/radiosure/__init__.py:352
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 "Sin mover el foco, haga clic en el botón Back para reproducir la emisora "
 "anterior en la lista de las emisoras ya jugadas."
 
-#: appModules/radiosure/__init__.py:346
+#: appModules/radiosure/__init__.py:364
 msgid ""
 "Without moving focus, click on  Next button to play the next played station"
 msgstr ""
 "Sin mover el foco, haga clic en el botón Next para reproducir la emisora "
 "siguiente en la lista de las emisoras ya jugadas."
 
-#: appModules/radiosure/__init__.py:356
+#: appModules/radiosure/__init__.py:374
 msgid "Without moving focus, click on  Rec button to start or stop record"
 msgstr ""
 "Sin mover el foco, haga clic en el botón Rec para iniciar o detener la "
 "grabación de la emisora actual."
 
-#: appModules/radiosure/__init__.py:374
+#: appModules/radiosure/__init__.py:392
 msgid "Search edit box and Stations list are not more visible"
 msgstr "El cuadro de búsqueda y la lista de emisoras ya no son visibles"
 
-#: appModules/radiosure/__init__.py:382
+#: appModules/radiosure/__init__.py:401
 msgid ""
 "Without moving focus, click  on Expand button to  show or mask stations list"
 msgstr ""
 "Sin mover el foco, haga clic en el botón Expand para mostrar o ocultar la "
 "lista de emisoras."
 
-#: appModules/radiosure/__init__.py:394
+#: appModules/radiosure/__init__.py:413
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 "Haga clic en el botón Options para mostrar el cuadro de diálogo de "
 "configuración de opciones."
 
-#: appModules/radiosure/__init__.py:407
+#: appModules/radiosure/__init__.py:427
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr "Haga clic en el botón Fav para abrir la lista de emisoras favoritas."
 
-#: appModules/radiosure/__init__.py:416
+#: appModules/radiosure/__init__.py:436
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr "Sin mover el foco, haga clic en el botón  Top para???"
 
-#: appModules/radiosure/__init__.py:426
+#: appModules/radiosure/__init__.py:447
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 "Sin mover el foco, haga clic en el botón Mute para poner o silenciar el "
 "sonido."
 
-#: appModules/radiosure/__init__.py:433
+#: appModules/radiosure/__init__.py:454
 msgid "Decrease slightly the volume(down 3%)"
 msgstr "Disminuya ligeramente el volumen ( menos 3%)"
 
-#: appModules/radiosure/__init__.py:440
+#: appModules/radiosure/__init__.py:461
 msgid "Increase slightly the volume(up 3%)"
 msgstr "Aumenta ligeramente el volumen (más 3%)"
 
-#: appModules/radiosure/__init__.py:448
+#: appModules/radiosure/__init__.py:469
 msgid "Decrease the volume(down 5%)"
 msgstr "Disminuya medianamente el volumen ( menos 5%)"
 
-#: appModules/radiosure/__init__.py:455
+#: appModules/radiosure/__init__.py:476
 msgid "Increase the volume(up 5%)"
 msgstr "Aumenta medianamente el volumen (más 5%)"
 
-#: appModules/radiosure/__init__.py:462
+#: appModules/radiosure/__init__.py:483
 msgid "Increase strongly  the volume(up 20%)"
 msgstr "Aumenta fuertemente el volumen (más 20%)"
 
-#: appModules/radiosure/__init__.py:469
+#: appModules/radiosure/__init__.py:490
 msgid "Decrease strongly the volume(down -20%)"
 msgstr "Disminuya fuertemente el volumen (menoss 20%)"
 
-#: appModules/radiosure/__init__.py:480
+#: appModules/radiosure/__init__.py:501
 msgid "Set volume to middle( 50%)"
 msgstr "Poner el volumen al medio (50%)"
 
-#: appModules/radiosure/__init__.py:490
+#: appModules/radiosure/__init__.py:511
 msgid "Say volume"
 msgstr "Anuncia el nivel del volumen"
 
-#: appModules/radiosure/__init__.py:497
+#: appModules/radiosure/__init__.py:518
 msgid "Informations copied to clipboard"
 msgstr "Las informaciones se copian al Portapapeles."
 
-#: appModules/radiosure/__init__.py:507
+#: appModules/radiosure/__init__.py:529
 msgid ""
 "Say the name   of current station and the status line. Twice, copy these "
 "informations  to clipboard"
@@ -151,20 +152,20 @@ msgstr ""
 "Anuncia el nombre de la emisora y la información de la línea de estado. La "
 "segunda pulsación copia estas informaciones al Portapapeles."
 
-#: appModules/radiosure/__init__.py:526
+#: appModules/radiosure/__init__.py:548
 msgid "Say buffer"
 msgstr "Anuncia la talla del búfer de reproducción."
 
-#: appModules/radiosure/__init__.py:535
+#: appModules/radiosure/__init__.py:557
 msgid "You are in stations list window"
 msgstr "Ya estás en la lista de emisoras"
 
-#: appModules/radiosure/__init__.py:544 appModules/radiosure/__init__.py:650
-#: appModules/radiosure/__init__.py:729
+#: appModules/radiosure/__init__.py:566 appModules/radiosure/__init__.py:674
+#: appModules/radiosure/__init__.py:753
 msgid "Stations list not found"
 msgstr "No se pudo encontrar la lista de emisoras"
 
-#: appModules/radiosure/__init__.py:550
+#: appModules/radiosure/__init__.py:573
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
@@ -172,15 +173,15 @@ msgstr ""
 "Se mueve el foco en la lista de emisoras. Si no está visible, haga clic en "
 "el botón Expand para que aparezca."
 
-#: appModules/radiosure/__init__.py:570 appModules/radiosure/__init__.py:594
+#: appModules/radiosure/__init__.py:593 appModules/radiosure/__init__.py:617
 msgid "Search edit box not found"
 msgstr "No se pudo encontrar el cuadro de edición de búsqueda de la emisora."
 
-#: appModules/radiosure/__init__.py:584
+#: appModules/radiosure/__init__.py:607
 msgid "You are in search edit field"
 msgstr "Ya estás en el cuadro de edición de búsqueda de la emisora."
 
-#: appModules/radiosure/__init__.py:598
+#: appModules/radiosure/__init__.py:622
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
@@ -188,42 +189,42 @@ msgstr ""
 "Se mueve el foco en el cuadro de edición de búsqueda de la emisora. Si no "
 "está visible, haga clic en el botón Expand para que aparezca."
 
-#: appModules/radiosure/__init__.py:654
+#: appModules/radiosure/__init__.py:678
 msgid "Not available because the station list is empty or has only one station"
 msgstr "Imposible: la lista de emisoras está vacía o tiene sólo una emisora"
 
-#: appModules/radiosure/__init__.py:665
+#: appModules/radiosure/__init__.py:689
 msgid "Activate context menu to sort stations list by title"
 msgstr "Habilitar el menú contextual para ordenar las emisoras por título"
 
-#: appModules/radiosure/__init__.py:674
+#: appModules/radiosure/__init__.py:698
 msgid "Activate context menu to sort stations list by country"
 msgstr "Habilitar el menú contextual para ordenar las emisoras por país"
 
-#: appModules/radiosure/__init__.py:683
+#: appModules/radiosure/__init__.py:707
 msgid "Activate context menu to sort stations list by genre"
 msgstr "Habilitar el menú contextual para ordenar las emisoras por género"
 
-#: appModules/radiosure/__init__.py:692
+#: appModules/radiosure/__init__.py:716
 msgid "Activate context menu to sort stations list by language"
 msgstr "Habilitar el menú contextual para ordenar las emisoras por idioma"
 
-#: appModules/radiosure/__init__.py:759
+#: appModules/radiosure/__init__.py:783
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr ""
 "Ninguna emisora de las %s emisoras seleccionadas al azar  no se pueden "
 "conectar."
 
-#: appModules/radiosure/__init__.py:773
+#: appModules/radiosure/__init__.py:797
 msgid "No station in list"
 msgstr "No hay ninguna emisora en la lista"
 
-#: appModules/radiosure/__init__.py:779
+#: appModules/radiosure/__init__.py:803
 msgid "Station search running"
 msgstr "Búsqueda de una emisora en curso"
 
-#: appModules/radiosure/__init__.py:785
+#: appModules/radiosure/__init__.py:809
 msgid "Start a station randomly"
 msgstr ""
 "Iniciar la reproducción de una emisora seleccionada al azar en la lista de "
@@ -239,12 +240,12 @@ msgstr "El diálogo %s ya está abierto"
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr "{addonSummary} - {dialogTitle}"
 
-#: buildVars.py:22
+#: buildVars.py:24
 msgid "radioSure Internet Radio Player: accessibility enhancement"
 msgstr ""
 "Reproductor de radio por internet RadioSure: complemento de accesibilidad"
 
-#: buildVars.py:26
+#: buildVars.py:28
 msgid ""
 "This add-on Improves the accessibility of RadioSure, Internet Radio Player "
 "with NVDA.\n"
@@ -260,7 +261,7 @@ msgstr ""
 "\tVéase el manual del usuario para obtener más información.\n"
 "\t"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:28
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:29
 msgid ""
 "Some Changes have been made . You must save the configuration and restart "
 "NVDA for these changes to take effect. Would you like to do it now?"
@@ -268,166 +269,182 @@ msgstr ""
 "Se han hecho algunos cambios. Debes guardar la configuración y reiniciar "
 "NVDA para que estos cambios tengan efecto. ¿Te gustaría reiniciar ahora?"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:36
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:39
 msgid "Don't forget to save the configuration for the changes to take effect !"
 msgstr ""
 "¡No olvide guardar la configuración para que los cambios surtan efecto!"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:43
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:46
 msgid "Options"
 msgstr "Opciones"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:48
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:51
 msgid "Desactivate progress &bars update"
 msgstr "Deshabilitar el seguimiento de las &barras de progreso"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:55
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:58
 msgid "Random playing"
 msgstr "Reproducción aleatoria"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:63
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:66
 msgid "&Maximum stations to check:"
 msgstr "&Número máximo de emisoras a comprobar:"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:72
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:75
 msgid "&Maximum delay for waiting connexion (in seconds):"
 msgstr "&Tiempo de espera máximo de conexión (en segundos):"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:81
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:84
 msgid "&Skip stations without connexion"
 msgstr "&Saltar las emisoras sin conexión"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:87
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:90
 msgid "&Clear history of stations without connexion"
 msgstr "Borrar el historial de emisoras sin &conexión"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:92
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:95
 msgid "&Use \"shift+control\" instead of \"alt+control\" for input gestures"
 msgstr ""
 "&Usar \"Mayúscula+Control\" en lugar de \"Alt+Control\" para las órdenes de "
 "los gestos de entrada"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:102
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:105
 msgid ""
 "Are you sure you want  to clearthe history of stations without connexion?"
 msgstr ""
 "¿Estás seguro que deseas borrar el historial de las emisoras sin conexión?"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:135
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:107
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:141
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:112
 msgid "Update"
 msgstr "Actualización"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:143
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:149
 msgid "Automatically check for &updates "
 msgstr "Buscar automáticamente &actualizaciones"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:149
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:155
 msgid "Update also release versions to &developpement versions"
 msgstr "Actualizar también versiones estable hacia versiones de &desarrollo"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:155
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:161
 msgid "&Check for update"
 msgstr "&Buscar actualización"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:160
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:166
 msgid "View &history"
 msgstr "Ver &historial"
 
-#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:196
+#: globalPlugins/radioSureAccessEnhancement/rs_configGui.py:206
 msgid "Settings"
 msgstr "Opciones de configuración"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:60
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:63
 #, python-brace-format
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
-"version: {minYear}{minMajor}, last tested: {testedYear}.{testedMajor}."
+"version: {minYear}.{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
 "La actualización no es compatible con esta versión de NVDA. Versión mínima "
 "de NVDA: {minYear}.{minMajor}, última probada: {testedYear}.{testedMajor}."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:110
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:115
 #, python-brace-format
 msgid "Downloading {name}"
 msgstr "Descargando {name}"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:125
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:130
 #, python-brace-format
 msgid "Error downloading update for {name}."
 msgstr "Error al descargar la actualización de {name}."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:184
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:189
 #, python-brace-format
 msgid "Cannot update {name} - missing file or invalid file format"
 msgstr ""
 "No se puede actualizar {name} - archivo ausente o formato de archivo no "
 "válido"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:220
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:225
 msgid "Updating"
 msgstr "Actualizando"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:222
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:227
 msgid "Please wait while the add-on is being updated."
 msgstr "Por favor, espera mientras se actualiza el complemento."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:233
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:246
 #, python-brace-format
 msgid "Failed to update {name} add-on"
 msgstr "Fallo al actualizar el complemento {name}"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:291
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:306
 #, python-brace-format
 msgid "{summary} - update"
 msgstr "{summary} - actualización"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:301
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:316
 msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr ""
 "El servicio está actualmente en mantenimiento. Por favor, inténtelo de nuevo "
 "más tarde."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:348
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:369
 #, python-format
-msgid "New version available, version %s. Do you want download it now?"
-msgstr "Nueva versión disponible: versión %s. ¿Quieres descargarla ahora?"
+msgid "New version%s is available. Do you want to download it now?"
+msgstr "La nueva versión %s está disponible. ¿Quieres descargarla ahora?"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:365
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:386
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr "Estás al día, %s es la versión más reciente."
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:372
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:393
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 "¡Huy! Hubo un problema al buscar las actualizaciones. Por favor, inténtelo "
 "de nuevo más tarde"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:550
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:548
 msgid "&Yes"
 msgstr "&Sí"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:555
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:553
 msgid "&No"
 msgstr "&No"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:560
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:558
 msgid "&Later"
 msgstr "&Más tarde"
 
-#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:564
+#: globalPlugins/radioSureAccessEnhancement/updateHandler/update_check.py:562
 msgid "Wha&t's new"
 msgstr "Qué hay &de nuevo"
 
-#: installTasks.py:63
+#: installTasks.py:61
 msgid "Do you want to keep current add-on configuration settings ?"
 msgstr "¿Quieres conservar la configuración actual del complemento?"
 
-#: installTasks.py:65
+#: installTasks.py:63 installTasks.py:68
 #, python-format
 msgid "%s - installation"
 msgstr "%s - instalación"
+
+#: installTasks.py:66
+msgid ""
+"Are you sure you don't want to keep the current add-on configuration "
+"settings?"
+msgstr ""
+"¿Estás seguro de que no deseas conservar las opciones de configuración del "
+"complemento actual?"
+
+#: shared/rs_addonConfigManager.py:182
+msgid ""
+"The configuration file of the add-on contains errors. The configuration has "
+"been reset to factory defaults"
+msgstr ""
+"El archivo de la configuración del complemento contiene errores. La "
+"configuración se ha restablecido a los valores predeterminados"
 
 #~ msgid "{name} {state}"
 #~ msgstr "{name} {state}"

@@ -1,6 +1,6 @@
 # globalPlugins\radioSureAccessEnhancement\rs_globalPlugin.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019 Paulber19
+# Copyright (C) 2019-2022 Paulber19
 # This file is covered by the GNU General Public License.
 
 
@@ -13,7 +13,7 @@ import sys
 addon = addonHandler.getCodeAddon()
 path = os.path.join(addon.path, "shared")
 sys.path.append(path)
-from rs_addonConfigManager import _addonConfigManager  # noqa:E402
+from rs_addonConfigManager import _addonConfigManager
 del sys.path[-1]
 addonHandler.initTranslation()
 
@@ -24,7 +24,7 @@ class RadioSureGlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.installSettingsMenu()
 		from . updateHandler import autoUpdateCheck
 		if _addonConfigManager.toggleAutoUpdateCheck(False):
-			autoUpdateCheck(releaseToDev=_addonConfigManager.toggleUpdateReleaseVersionsToDevVersions(False))  # noqa:E501
+			autoUpdateCheck(releaseToDev=_addonConfigManager.toggleUpdateReleaseVersionsToDevVersions(False))
 
 	def installSettingsMenu(self):
 		self.preferencesMenu = gui.mainFrame.sysTrayIcon.preferencesMenu
@@ -38,7 +38,7 @@ class RadioSureGlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def deleteSettingsMenu(self):
 		try:
 			self.preferencesMenu.Remove(self.menu)
-		except:  # noqa:E722
+		except Exception:
 			pass
 
 	def terminate(self):

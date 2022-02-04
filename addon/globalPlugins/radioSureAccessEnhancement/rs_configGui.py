@@ -1,6 +1,6 @@
 # globalPlugins\radioSureAccessEnhancement\rs_configGui.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright 2019,paulber19
+# Copyright 2019-2022,paulber19
 # This file is covered by the GNU General Public License.
 
 # manage add-on configuration dialog
@@ -16,8 +16,8 @@ _curAddon = addonHandler.getCodeAddon()
 _addonSummary = _curAddon.manifest['summary']
 path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
-from rs_addonConfigManager import _addonConfigManager  # noqa:E402  # noqa:E402
-from rs_NVDAStrings import NVDAString  # noqa:E402
+from rs_addonConfigManager import _addonConfigManager  # noqa:E402
+from rs_NVDAStrings import NVDAString
 del sys.path[-1]
 addonHandler.initTranslation()
 
@@ -25,7 +25,10 @@ addonHandler.initTranslation()
 def askForNVDARestart():
 	if gui.messageBox(
 		# Translators: A message asking the user if they wish to restart NVDA
-		_("Some Changes have been made . You must save the configuration and restart NVDA for these changes to take effect. Would you like to do it now?"),  # noqa:E501
+		_(
+			"Some Changes have been made . "
+			"You must save the configuration and restart NVDA for these changes to take effect. "
+			"Would you like to do it now?"),
 		"%s - %s" % (_addonSummary, NVDAString("Restart NVDA")),
 		wx.YES | wx.NO | wx.ICON_WARNING) == wx.YES:
 		_addonConfigManager.saveSettings(True)
@@ -89,7 +92,7 @@ class OptionsSettingsPanel(SettingsPanel):
 		group.addItem(clearHistoryButton)
 		clearHistoryButton.Bind(wx.EVT_BUTTON, self.onClearHistoryButton)
 		# Translators: This is the label for a checkbox in Options Settings panel.
-		labelText = _("""&Use "shift+control" instead of "alt+control" for input gestures""")  # noqa:E501
+		labelText = _("""&Use "shift+control" instead of "alt+control" for input gestures""")
 		self.useShiftControlGesturesCheckbox = sHelper.addItem(
 			wx.CheckBox(self, wx.ID_ANY, label=labelText))
 		self.useShiftControlGesturesCheckbox.SetValue(
@@ -99,7 +102,7 @@ class OptionsSettingsPanel(SettingsPanel):
 		if gui.messageBox(
 			# Translators:  message to ask the user
 			# if  he wants to clear  stations's history.
-			_("Are you sure you want  to clearthe history of stations without connexion?"),  # noqa:E501
+			_("Are you sure you want  to clearthe history of stations without connexion?"),
 			# Translators: title of message box.
 			_("Warning"),
 			wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING) == wx.YES:
@@ -110,17 +113,20 @@ class OptionsSettingsPanel(SettingsPanel):
 
 	def saveSettingChanges(self):
 		self.restartNVDA = False
-		if self.desactivateProgressBarsUpdateBox.IsChecked() != _addonConfigManager .toggleDesactivateProgressBarsUpdateOption(False):  # noqa:E501
+		if self.desactivateProgressBarsUpdateBox.IsChecked() != (
+			_addonConfigManager .toggleDesactivateProgressBarsUpdateOption(False)):
 			_addonConfigManager .toggleDesactivateProgressBarsUpdateOption(True)
 		value = self.maxStationsToCheckBox.GetStringSelection()
 		_addonConfigManager.setMaxStationsToCheck(int(value))
 		value = self.maxDelayForConnexionBox.GetStringSelection()
 		_addonConfigManager.setMaxDelayForConnexion(int(value))
-		if self.skipStationsWithoutConnexionBox.IsChecked() != _addonConfigManager .toggleSkipStationsWithoutConnexionOption(False):  # noqa:E501
+		if self.skipStationsWithoutConnexionBox.IsChecked() != (
+			_addonConfigManager .toggleSkipStationsWithoutConnexionOption(False)):
 			_addonConfigManager .toggleSkipStationsWithoutConnexionOption(True)
-		if self.useShiftControlGesturesCheckbox.IsChecked() != _addonConfigManager .toggleUseShiftControlGesturesOption(False):  # noqa:E501
+		if self.useShiftControlGesturesCheckbox.IsChecked() != (
+			_addonConfigManager .toggleUseShiftControlGesturesOption(False)):
 			self.restartNVDA = True
-			_addonConfigManager .toggleUseShiftControlGesturesOption(True)  # noqa:E501
+			_addonConfigManager .toggleUseShiftControlGesturesOption(True)
 
 	def postSave(self):
 		if self.restartNVDA:
@@ -165,7 +171,7 @@ class UpdateSettingsPanel(SettingsPanel):
 	def onCheckForUpdate(self, evt):
 		from .updateHandler import addonUpdateCheck
 		self.saveSettingChanges()
-		releaseToDevVersion = self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked()  # noqa:E501
+		releaseToDevVersion = self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked()
 		wx.CallAfter(addonUpdateCheck, auto=False, releaseToDev=releaseToDevVersion)
 		self.Close()
 
@@ -182,9 +188,10 @@ class UpdateSettingsPanel(SettingsPanel):
 		os.startfile(theFile)
 
 	def saveSettingChanges(self):
-		if self.autoCheckForUpdatesCheckBox.IsChecked() != _addonConfigManager .toggleAutoUpdateCheck(False):  # noqa:E501s
+		if self.autoCheckForUpdatesCheckBox.IsChecked() != _addonConfigManager .toggleAutoUpdateCheck(False):
 			_addonConfigManager .toggleAutoUpdateCheck(True)
-		if self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked() != _addonConfigManager .toggleUpdateReleaseVersionsToDevVersions(False):  # noqa:E501
+		if self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked() != (
+			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions(False)):
 			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions(True)
 
 	def postSave(self):
@@ -205,7 +212,7 @@ class AddonSettingsDialog(MultiCategorySettingsDialog):
 	categoryClasses = [
 		OptionsSettingsPanel,
 		UpdateSettingsPanel,
-		]
+	]
 
 	def __init__(self, parent, initialCategory=None):
 		super(AddonSettingsDialog, self).__init__(parent, initialCategory)

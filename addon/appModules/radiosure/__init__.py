@@ -1,6 +1,6 @@
 # appModules\radioSure\__init__.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019-2021, Paulber19
+# Copyright (C) 2019-2022, Paulber19
 # This file is covered by the GNU General Public License.
 # Released under GPL 2
 
@@ -41,7 +41,6 @@ import wx
 import time
 import tones
 from keyboardHandler import KeyboardInputGesture
-from oleacc import *  # noqa:F403
 import sys
 from .rs_utils import getSpeechMode, setSpeechMode, setSpeechMode_off
 _curAddon = addonHandler.getCodeAddon()
@@ -52,12 +51,16 @@ try:
 	from appModuleDebug import printDebug, toggleDebugFlag
 except ImportError:
 	from appModuleHandler import AppModule as AppModule
-	def prindDebug(msg): return
-	def toggleDebugFlag(): return
+
+	def prindDebug(msg):
+		return
+
+	def toggleDebugFlag():
+		return
 del sys.path[-1]
 path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
-from rs_addonConfigManager import _addonConfigManager  # noqa:E402
+from rs_addonConfigManager import _addonConfigManager
 del sys.path[-1]
 
 addonHandler.initTranslation()
@@ -78,26 +81,26 @@ firstChild = 5
 
 
 ctrlIdsDic = {
-		"searchEdit": 1001,
-		"favButton": 1024,
-		"optionsButton": 1041,
-		"volume": 1006,
-		"nextButton": 1039,
-		"backButton": 1038,
-		"playButton": 1000,
-		"pauseButton": 1017,
-		"recButton": 1051,
-		"expandButton": 1076,
-		"topButton": 1077,
-		"exitButton": 1,
-		"stationsList": 1016,
-		"searchCombo": 1019,
-		"muteButton": 1027,
-		"copyURLButton": 1046,
-		"stateInfo": 1007,
-		"liveInfo": 1046,
-		"stationName": 1026,
-		"buffer": 1009
+	"searchEdit": 1001,
+	"favButton": 1024,
+	"optionsButton": 1041,
+	"volume": 1006,
+	"nextButton": 1039,
+	"backButton": 1038,
+	"playButton": 1000,
+	"pauseButton": 1017,
+	"recButton": 1051,
+	"expandButton": 1076,
+	"topButton": 1077,
+	"exitButton": 1,
+	"stationsList": 1016,
+	"searchCombo": 1019,
+	"muteButton": 1027,
+	"copyURLButton": 1046,
+	"stateInfo": 1007,
+	"liveInfo": 1046,
+	"stationName": 1026,
+	"buffer": 1009
 }
 # to find main window, class and control id of first child window
 firstChildWindow = (("msctls_trackbar32", 1006), ("SysListView32", 1016))
@@ -108,12 +111,12 @@ def getTopWindow(obj=None):
 		obj = api.getFocusObject()
 	i = 10
 	while i and obj:
-		i = i-1
+		i = i - 1
 		if winUser.getClassName(obj.windowHandle) == "#32770":
 			return obj.windowHandle
 		try:
 			obj = obj.parent
-		except:  # noqa:E722
+		except Exception:
 			return None
 	return None
 
@@ -127,7 +130,7 @@ def getTopWindowNVDAObject(obj=None):
 			return obj
 		if obj.parent:
 			obj = obj.parent
-		i = i-1
+		i = i - 1
 	return None
 
 
@@ -136,7 +139,7 @@ def findWindow(window):
 	id = ctrlIdsDic[window]
 	i = 70
 	while i:
-		i = i-1
+		i = i - 1
 		if getControlID(h) == id:
 			return h
 		h = getWindow(h, nextWindow)
@@ -148,7 +151,7 @@ def findWindowNVDAObject(window):
 	id = ctrlIdsDic[window]
 	i = 70
 	while i:
-		i = i-1
+		i = i - 1
 		if getControlID(h) == id:
 			obj = NVDAObjects.IAccessible.getNVDAObjectFromEvent(h, -4, 0)
 			return obj
@@ -242,7 +245,7 @@ class Button(NVDAObject):
 				time.sleep(0.1)
 				api.processPendingEvents()
 				KeyboardInputGesture.fromName("downArrow").send()
-		except:  # noqa:E722
+		except Exception:
 			gesture.send()
 
 	__gestures = {
@@ -281,12 +284,12 @@ class AppModule(AppModule):
 			clsList.insert(0, Button)
 
 	def event_appModule_gainFocus(self):
-		self.prevProgressBarOutputMode = config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"]  # noqa:E501
+		self.prevProgressBarOutputMode = config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"]
 		if _addonConfigManager.toggleDesactivateProgressBarsUpdateOption(False):
-			config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"] = "off"  # noqa:E501
+			config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"] = "off"
 
 	def event_appModule_loseFocus(self):
-		config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"] = self.prevProgressBarOutputMode  # noqa:E501
+		config.conf["presentation"]["progressBarUpdates"]["progressBarOutputMode"] = self.prevProgressBarOutputMode
 
 	def inMainWindow(self):
 		foreground = api.getForegroundObject()
@@ -324,7 +327,7 @@ class AppModule(AppModule):
 			return
 		wx.CallAfter(callback)
 
-	script_clickExitButton .__doc__ = _("Move focus to Exit button and click it to exit the application")  # noqa:E501
+	script_clickExitButton .__doc__ = _("Move focus to Exit button and click it to exit the application")
 
 	def script_clickPlayButton(self, gesture):
 		if not self.inMainWindow():
@@ -333,7 +336,8 @@ class AppModule(AppModule):
 		clickButtonWithoutMoving("playButton")
 		sayStationState()
 
-	script_clickPlayButton .__doc__ = _("Without moving focus, click on  Play button to play or stop the current station")  # noqa:E501
+	script_clickPlayButton .__doc__ = _(
+		"Without moving focus, click on  Play button to play or stop the current station")
 
 	def script_clickBackButton(self, gesture):
 		if not self.inMainWindow():
@@ -344,7 +348,8 @@ class AppModule(AppModule):
 			ui.message(name)
 		wx.CallLater(2000, sayStationName)
 
-	script_clickBackButton .__doc__ = _("Without moving focus, click on Back button to play the prior played station")  # noqa:E501
+	script_clickBackButton .__doc__ = _(
+		"Without moving focus, click on Back button to play the prior played station")
 
 	def script_clickNextButton(self, gesture):
 		if not self.inMainWindow():
@@ -355,7 +360,8 @@ class AppModule(AppModule):
 			ui.message(name)
 		wx.CallLater(2000, sayStationName)
 
-	script_clickNextButton .__doc__ = _("Without moving focus, click on  Next button to play the next played station")  # noqa:E501
+	script_clickNextButton .__doc__ = _(
+		"Without moving focus, click on  Next button to play the next played station")
 
 	def script_clickRecButton(self, gesture):
 		if not self.inMainWindow():
@@ -365,14 +371,14 @@ class AppModule(AppModule):
 		if name:
 			ui.message(name)
 
-	script_clickRecButton .__doc__ = _("Without moving focus, click on  Rec button to start or stop record")  # noqa:E501
+	script_clickRecButton .__doc__ = _("Without moving focus, click on  Rec button to start or stop record")
 
 	def script_clickExpandButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		focus = api.getFocusObject()
-		if getControlID(focus.windowHandle) in [ctrlIdsDic["stationsList"], ctrlIdsDic["searchEdit"]]:  # noqa:E501
+		if getControlID(focus.windowHandle) in [ctrlIdsDic["stationsList"], ctrlIdsDic["searchEdit"]]:
 			# focus in search edit box or stations list, we can't stay here
 			name = clickButton("expandButton")
 		else:
@@ -391,7 +397,8 @@ class AppModule(AppModule):
 				obj.setFocus()
 			eventHandler.queueEvent("gainFocus", obj)
 
-	script_clickExpandButton .__doc__ = _("Without moving focus, click  on Expand button to  show or mask stations list")  # noqa:E501
+	script_clickExpandButton .__doc__ = _(
+		"Without moving focus, click  on Expand button to  show or mask stations list")
 
 	def script_clickOptionsButton(self, gesture):
 		if not self.inMainWindow():
@@ -403,7 +410,7 @@ class AppModule(AppModule):
 			return None
 		obj.IAccessibleObject.accDoDefaultAction(0)
 
-	script_clickOptionsButton .__doc__ = _("Move focus to Options button and click it to open Options dialog")  # noqa:E501
+	script_clickOptionsButton .__doc__ = _("Move focus to Options button and click it to open Options dialog")
 
 	def script_clickFavButton(self, gesture):
 		if not self.inMainWindow():
@@ -416,7 +423,8 @@ class AppModule(AppModule):
 		api.processPendingEvents()
 		KeyboardInputGesture.fromName("downArrow").send()
 
-	script_clickFavButton.__doc__ = _("Move focus to Fav button and click it to show the list of favorites station")  # noqa:E501
+	script_clickFavButton.__doc__ = _(
+		"Move focus to Fav button and click it to show the list of favorites station")
 
 	def script_clickTopButton(self, gesture):
 		if not self.inMainWindow():
@@ -425,7 +433,7 @@ class AppModule(AppModule):
 		name = clickButtonWithoutMoving("topButton")
 		if name:
 			ui.message(name)
-	script_clickTopButton .__doc__ = _("Without moving focus, click on Top buttonto ???")  # noqa:E501
+	script_clickTopButton .__doc__ = _("Without moving focus, click on Top buttonto ???")
 
 	def script_clickMuteButton(self, gesture):
 		if not self.inMainWindow():
@@ -435,21 +443,22 @@ class AppModule(AppModule):
 		if name:
 			ui.message(name)
 
-	script_clickMuteButton .__doc__ = _("Without moving focus, click on Mute butt button to Mute volume on or off")  # noqa:E501
+	script_clickMuteButton .__doc__ = _(
+		"Without moving focus, click on Mute butt button to Mute volume on or off")
 
 	def script_decreaseSlightlyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_DOWN)
-	script_decreaseSlightlyVolume .__doc__ = _("Decrease slightly the volume(down 3%)")  # noqa:E501
+	script_decreaseSlightlyVolume .__doc__ = _("Decrease slightly the volume(down 3%)")
 
 	def script_increaseSlightlyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_UP)
-	script_increaseSlightlyVolume .__doc__ = _("Increase slightly the volume(up 3%)")  # noqa:E501
+	script_increaseSlightlyVolume .__doc__ = _("Increase slightly the volume(up 3%)")
 
 	def script_decreaseVolume(self, gesture):
 		if not self.inMainWindow():
@@ -471,14 +480,14 @@ class AppModule(AppModule):
 			gesture.send()
 			return
 		modifyVolume(VK_NEXT)
-	script_increaseStronglyVolume.__doc__ = _("Increase strongly  the volume(up 20%)")  # noqa:E501
+	script_increaseStronglyVolume.__doc__ = _("Increase strongly  the volume(up 20%)")
 
 	def script_decreaseStronglyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_PRIOR)
-	script_decreaseStronglyVolume.__doc__ = _("Decrease strongly the volume(down -20%)")  # noqa:E501
+	script_decreaseStronglyVolume.__doc__ = _("Decrease strongly the volume(down -20%)")
 
 	def script_middleVolume(self, gesture):
 		if not self.inMainWindow():
@@ -486,7 +495,7 @@ class AppModule(AppModule):
 			return
 		obj = findWindowNVDAObject("volume")
 		if obj is None:
-			returnh
+			return
 		sendMessage(obj.windowHandle, 1029, False, 47)
 		modifyVolume(VK_UP)
 	script_middleVolume .__doc__ = _("Set volume to middle( 50%)")
@@ -516,7 +525,8 @@ class AppModule(AppModule):
 			self.taskTimer.Stop()
 		wx.CallAfter(callback, getLastScriptRepeatCount())
 
-	script_sayStationInformations.__doc__ = _("Say the name   of current station and the status line. Twice, copy these informations  to clipboard")  # noqa:E501
+	script_sayStationInformations.__doc__ = _(
+		"Say the name   of current station and the status line. Twice, copy these informations  to clipboard")
 
 	def script_sayBuffer(self, gesture):
 		def callback(repeatCount):
@@ -526,7 +536,7 @@ class AppModule(AppModule):
 				return
 			text = obj.windowText
 			if repeatCount:
-				speakSpelling(text[text.find(":")+1:].strip())
+				speakSpelling(text[text.find(":") + 1:].strip())
 			else:
 				ui.message(text)
 		if self.taskTimer:
@@ -559,7 +569,8 @@ class AppModule(AppModule):
 		obj.setFocus()
 		eventHandler.queueEvent("gainFocus", obj)
 
-	script_goToStationsList.__doc__ = _("Move focus to stations list. IF stations list is not visible, click Expand button before.")  # noqa:E501
+	script_goToStationsList.__doc__ = _(
+		"Move focus to stations list. IF stations list is not visible, click Expand button before.")
 
 	def _getSearchEditComboBoxObject(self):
 		foreground = api.getForegroundObject()
@@ -593,7 +604,7 @@ class AppModule(AppModule):
 		comboObj = findWindowNVDAObject("searchCombo")
 		obj = api.getFocusObject()
 		if comboObj == obj or comboObj.firstChild == obj:
-			ui.message(_("You are in search edit field"))  # noqa:E501
+			ui.message(_("You are in search edit field"))
 			return
 		if comboObj is None or not winUser.isWindowVisible(comboObj.windowHandle):
 			# try to  display search edit box
@@ -607,7 +618,8 @@ class AppModule(AppModule):
 				return
 		# now set focus
 		comboObj.setFocus()
-	script_goToSearchEditBox.__doc__ = _("Move focus to search edit box. IF search edit box is not visible, click Expand button before.")  # noqa:E501
+	script_goToSearchEditBox.__doc__ = _(
+		"Move focus to search edit box. IF search edit box is not visible, click Expand button before.")
 
 	def clickHeaderColumn(self, column):
 		def callback(column):
@@ -629,7 +641,7 @@ class AppModule(AppModule):
 				curObject = api.getNavigatorObject()
 
 			columnHeaders = curObject.parent.children
-			columnObj = columnHeaders[column-1]
+			columnObj = columnHeaders[column - 1]
 			if columnObj is None:
 				log.error("Cannot found stations list column object:%s" % column)
 				return
@@ -638,8 +650,8 @@ class AppModule(AppModule):
 			time.sleep(0.5)
 			location = columnObj.location
 			(l, t, w, h) = location
-			i = int(l+w-10)
-			j = int(t+h/2)
+			i = int(l + w - 10)
+			j = int(t + h / 2)
 			import winUser
 			winUser.setCursorPos(i, j)
 			winUser.mouse_event(winUser.MOUSEEVENTF_RIGHTDOWN, 0, 0, None, None)
@@ -663,7 +675,7 @@ class AppModule(AppModule):
 		if stationsListNVDAObject.childCount <= 2:
 			# Translators: message to user
 			# when there are none or one station in the list.
-			ui.message(_("Not available because the station list is empty or has only one station"))  # noqa:E501
+			ui.message(_("Not available because the station list is empty or has only one station"))
 			return False
 		return True
 
@@ -674,7 +686,7 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=1)
-	script_activate_titleSortMenu.__doc__ = _("Activate context menu to sort stations list by title")  # noqa:E501
+	script_activate_titleSortMenu.__doc__ = _("Activate context menu to sort stations list by title")
 
 	def script_activate_countrySortMenu(self, gesture):
 		if not self.inMainWindow():
@@ -683,7 +695,7 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=2)
-	script_activate_countrySortMenu.__doc__ = _("Activate context menu to sort stations list by country")  # noqa:E501
+	script_activate_countrySortMenu.__doc__ = _("Activate context menu to sort stations list by country")
 
 	def script_activate_genreSortMenu(self, gesture):
 		if not self.inMainWindow():
@@ -692,7 +704,7 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=3)
-	script_activate_genreSortMenu.__doc__ = _("Activate context menu to sort stations list by genre")  # noqa:E501
+	script_activate_genreSortMenu.__doc__ = _("Activate context menu to sort stations list by genre")
 
 	def script_activate_languageSortMenu(self, gesture):
 		if not self.inMainWindow():
@@ -701,14 +713,14 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=4)
-	script_activate_languageSortMenu.__doc__ = _("Activate context menu to sort stations list by language")  # noqa:E501
+	script_activate_languageSortMenu.__doc__ = _("Activate context menu to sort stations list by language")
 
 	def startStation(self, stationsListObject):
 		from random import randint
 		i = 200
 		while i:
 			i -= 1
-			stationID = randint(0, stationsListObject.childCount-2)
+			stationID = randint(0, stationsListObject.childCount - 2)
 			obj = stationsListObject .getChild(stationID)
 			if obj.name not in self.badStations:
 				break
@@ -768,7 +780,7 @@ class AppModule(AppModule):
 						queueHandler.eventQueue,
 						speech.speakMessage,
 						# Translators: message to user
-						_("None of the %s stations selected randomly could be connected") % maxStationsToCheck)  # noqa:E501
+						_("None of the %s stations selected randomly could be connected") % maxStationsToCheck)
 					eventHandler.queueEvent("gainFocus", station)
 				else:
 					if maxStationsToCheck - stationCount:
@@ -824,7 +836,7 @@ class AppModule(AppModule):
 		"kb:alt+v": "sayVolume",
 		"kb:alt+i": "sayStationInformations",
 		"kb:alt+b": "sayBuffer",
-		}
+	}
 
 	_altControlGestures = {
 		"kb:alt+control+e": "goToSearchEditBox",
@@ -834,7 +846,7 @@ class AppModule(AppModule):
 		"kb:alt+control+g": "activate_genreSortMenu",
 		"kb:alt+control+l": "activate_languageSortMenu",
 		"kb:alt+control+r": "startStationRandomly",
-		}
+	}
 
 	_shiftControlGestures = {
 		"kb:shift+control+e": "goToSearchEditBox",
@@ -844,4 +856,4 @@ class AppModule(AppModule):
 		"kb:shift+control+g": "activate_genreSortMenu",
 		"kb:shift+control+l": "activate_languageSortMenu",
 		"kb:shift+control+r": "startStationRandomly",
-		}
+	}

@@ -1,12 +1,11 @@
 # appModules\radiosure\rs_translations.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2020-2021, paulber19
+# Copyright (C) 2020-2022, paulber19
 # This file is covered by the GNU General Public License.
 
 import addonHandler
 from logHandler import log
 import os
-import sys
 import api
 from . import psutil
 
@@ -48,7 +47,7 @@ def getRadioSureLanguage():
 	fd.close()
 	try:
 		languageFileName = radiosureXML["XMLConfigSettings"]["General"]["Language"]
-	except:  # noqa:E722
+	except Exception:
 		languageFileName = "english.lng"
 	languageFilePath = os.path.join(radioSureDirPath, "Lang", languageFileName)
 	return languageFilePath

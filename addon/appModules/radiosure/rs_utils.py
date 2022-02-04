@@ -1,6 +1,6 @@
 # appModules\radiosure\rs_utils.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2021 paulber19
+# Copyright (C) 2021-2022 paulber19
 # This file is covered by the GNU General Public License.
 
 
@@ -52,8 +52,8 @@ def messageBox(
 def getPositionXY(obj):
 	location = obj.location
 	(x, y) = (
-		int(location[0])+int(location[2]/2),
-		int(location[1])+int(location[3]/2))
+		int(location[0]) + int(location[2] / 2),
+		int(location[1]) + int(location[3] / 2))
 	return (x, y)
 
 
@@ -83,6 +83,7 @@ def MouseWheelForward():
 def MouseWheelBack():
 	winUser.mouse_event(MOUSEEVENTF_WHEEL, 0, 0, -120, None)
 
+
 def getSpeechMode():
 	try:
 		# for nvda  version >= 2021.1
@@ -90,12 +91,14 @@ def getSpeechMode():
 	except AttributeError:
 		return speech.speechMode
 
+
 def setSpeechMode(mode):
 	try:
 		# for nvda version >= 2021.1
 		speech.setSpeechMode(mode)
 	except AttributeError:
 		speech.speechMode = mode
+
 
 def setSpeechMode_off():
 	try:
