@@ -14,5 +14,5 @@ Compatible with RadioSure 2.2 . Lower versions are not supported.
 See user guide for more informations.
 
 
-[1]: https://github.com/paulber007/AllMyNVDAAddons/raw/master/radioSureAccessEnhancement/radioSureAccessEnhancement-2.5.nvda-addon
+[1]: https://github.com/paulber007/AllMyNVDAAddons/raw/master/radioSureAccessEnhancement/radioSureAccessEnhancement-2.6.nvda-addon
 [2]: https://github.com/paulber007/AllMyNVDAAddons/tree/master/radioSureAccessEnhancement/dev

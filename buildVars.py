@@ -31,7 +31,7 @@ addon_info = {
 	See user manual for more informations.
 	"""),
 	# version
-	"addon_version": "2.5",
+	"addon_version": "2.6",
 	# Author(s)
 	"addon_author": "paulber19",
 	# URL for the add-on documentation support

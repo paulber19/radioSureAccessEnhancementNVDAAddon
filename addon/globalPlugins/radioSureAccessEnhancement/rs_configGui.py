@@ -177,7 +177,8 @@ class UpdateSettingsPanel(SettingsPanel):
 
 	def onSeeHistory(self, evt):
 		addon = addonHandler.getCodeAddon()
-		from languageHandler import curLang
+		from languageHandler import getLanguage
+		curLang = getLanguage()
 		theFile = os.path.join(addon.path, "doc", curLang, "changes.html")
 		if not os.path.exists(theFile):
 			lang = curLang.split("_")[0]

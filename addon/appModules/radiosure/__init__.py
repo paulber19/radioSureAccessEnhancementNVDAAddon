@@ -646,7 +646,7 @@ class AppModule(AppModule):
 				log.error("Cannot found stations list column object:%s" % column)
 				return
 			name = columnObj.name[1:] if columnObj.name[0] == "*" else columnObj.name
-			speech.speakMessage(name)
+			ui.message(name)
 			time.sleep(0.5)
 			location = columnObj.location
 			(l, t, w, h) = location
@@ -778,7 +778,7 @@ class AppModule(AppModule):
 					# Translators: message to user there is none station with connexion.
 					queueHandler.queueFunction(
 						queueHandler.eventQueue,
-						speech.speakMessage,
+						ui.message,
 						# Translators: message to user
 						_("None of the %s stations selected randomly could be connected") % maxStationsToCheck)
 					eventHandler.queueEvent("gainFocus", station)
@@ -792,14 +792,15 @@ class AppModule(AppModule):
 			# Translators: message to user there is no station in list.
 			queueHandler.queueFunction(
 				queueHandler.eventQueue,
-				speech.speakMessage,
+				ui.message,
 				# Translators: message to user there is no stations in list.
 				_("No station in list"))
 			return
 		# Translators: message to user when station search is starting.
 		queueHandler.queueFunction(
 			queueHandler.eventQueue,
-			speech.speakMessage,
+			ui.message,
+			# Translators: message to user  to report station search running
 			_("Station search running"))
 		queueHandler.queueFunction(
 			queueHandler.eventQueue,

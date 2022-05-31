@@ -25,7 +25,7 @@ def isOpened(dialog):
 		return False
 	# Translators: the label of a dialog box message.
 	msg = _("%s dialog is allready open") % dialog.title
-	queueHandler.queueFunction(queueHandler.eventQueue, speech.speakMessage, msg)
+	queueHandler.queueFunction(queueHandler.eventQueue, ui.message, msg)
 	return True
 
 

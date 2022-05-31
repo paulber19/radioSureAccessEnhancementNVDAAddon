@@ -18,7 +18,12 @@ Download:
 Sorry, but this document is an automatic translation from french language.
 
 
-+ v2.5 (02/04/2022) +
++ v2.6 (May/31/2022) +
+- some voice messages were not displayed on the braille display.
+- fixed inability to view add-on history using the "View History" button.
+
+
++ v2.5 (February/04/2022) +
 - compatibility with NVDA 2022.1
 - reset the configuration in the event of errors in the configuration file.
 
@@ -28,35 +33,35 @@ Changes:
 - during a manual installation of the add-on, a confirmation request is requested when the user has chosen not to keep the current settings of the add-on configuration.
 
 
-+ v2.4 (11/01/2021) +
++ v2.4 (November/01/2021) +
 Compatibility with NVDA 2021.3
 
-+ v2.3.2 (07/09/2021) +
++ v2.3.2 (July/09/2021) +
 Bug fixes:
 - some input  gestures like "control + p", "control + m", didn't work.
 
 
-+ v2.3.1 (06/25/2021) +
++ v2.3.1 (June/25/2021) +
 added Turkish translation
 
-+ v2.3 (06/22/2021) +
++ v2.3 (June/22/2021) +
 - compatibility with NVDA 2021.1. Versions of NVDA prior to 2019.3 are not supported.
 - removed code specific to Python 2.7.
 
 
-+ v2.2 (19/12/2020) +
++ v2.2 (December/19/2020) +
 - compatibility with NVDA 2020.4.
 - addition of the "View history" button in the "Update" category of the add-on's parameters.
 
 
-+ v2.1 (27/10/2020) +
++ v2.1 (October/27/2020) +
 - compatibility with NVDA 2020.3.
 - change of gestures "control + left and right arrow" by "alt + left and right arrow".
 - possibility of choosing the combination "shift+control" instead of "alt + control" for input gestures.
 - addition of the "What's new" button in the dialog proposing the installation of a new update.
 
 
-+ v2.0 (07/16/2020) +
++ v2.0 (July/16/2020) +
 - compatibility with NVDA 2020.2
 - addition of scripts to activate the contextual menu of each column of the header of the station list.
 - configurable deactivation of progress bar tracking.
