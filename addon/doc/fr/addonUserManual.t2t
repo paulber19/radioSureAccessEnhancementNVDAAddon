@@ -5,9 +5,8 @@ Auteur : ADDON_AUTHOR_NAME
 %!includeconf: ../addon_userManual.t2tconf
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
-URL : ADDON_AUTHOR_URL
+URL: [ADDON_REPOSITORY ADDON_REPOSITORY]
 
-[Dépot GitHub : ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Téléchargement :
 - [Version stable ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
@@ -33,7 +32,7 @@ Cette extension apporte :
 - [un script pour augmenter ou diminuer le volume sans déplacement de focus #HDR1],
 - [un script pour couper ou remettre le volume sans déplacement de focus #HDR3],
 - [un script pour lire le niveau du volume #HDR5],
-- [un script pour lancer ou arêter l'enregistrement de la station courante sans déplacement de focus #HDR6],
+- [un script pour lancer ou arrêter l'enregistrement de la station courante sans déplacement de focus #HDR6],
 - [un script pour afficher la liste des stations favorites #HDR7],
 - [un script pour afficher la fenêtre des options de RadioSure #HDR8],
 - [un script pour lire le nom de la station courante et la ligne de statu #HDR9],
@@ -60,9 +59,9 @@ La version de l'extension peut être :
 
 Par défaut, une version stable est mise à jour avec une version stable plus récente (numéro de version supérieur).
 
-Mais il est possible de mettre à jour la version stable courante avec une version de développement de la prochaine version stable. Il suffit de cocher l'option "Mettre aussi à jour les versions stable vers les versions de développement " situé dans la catégorie "Mise à jour" des paramètres de l'extension.
+Mais il est possible de mettre à jour la version stable courante avec une version de développement de la prochaine version stable. Il suffit de cocher l'option "Mettre aussi à jour les versions stables vers les versions de développement " situé dans la catégorie "Mise à jour" des paramètres de l'extension.
 
-Une version de développement est mise à jour:
+Une version de développement est mise à jour :
 - avec une version de développement plus récente,
 - avec sa version stable,
 - ou avec la dernière version stable si l'option précédente est pas cochée.
@@ -70,7 +69,7 @@ Une version de développement est mise à jour:
 
 Le bouton "Rechercher une mise à jour" placé dans les paramètres de l'extension, élément de menu "Mise à jour", permet de rechercher immédiatement une mise à jour.
 
-Le bouton "Voir l'historique", placé dans cette même catégorie,  vous permet d'afficher l'historique  de la version actuelle dans le navigateur.
+Le bouton "Voir l'historique", placé dans cette même catégorie, vous permet d'afficher l'historique de la version actuelle dans le navigateur.
 
 Dans le cas d'une mise à jour automatique et si une nouvelle version est détectée, la boite de dialogue "Mise à jour" s'affiche pour proposer :
 - soit l'installation immédiate de la nouvelle version,
@@ -109,7 +108,7 @@ RadioSure maintient l'historique des stations jouées et présente les boutons "
 
 Ces scripts permettent d'appuyer sur ces boutons sans bouger le focus.
 
-Ces script se lance par les commandes clavier suivantes :
+Ces scripts se lance par les commandes clavier suivantes :
 
 - "KEY_BACK" : passe à la précédente station déjà jouée et lance sa lecture
 - "KEY_NEXT" : passe à la station suivante déjà jouée et lance sa lecture
@@ -145,9 +144,9 @@ Ce script se lance par la commande clavier "KEY_SAY_VOLUME".
 Sans bouger le focus, il annonce le niveau du volume en pourcentage
 
 
-+ Script pour lancer ou arêter l'enregistrement de la station courante +[hdr6]
++ Script pour lancer ou arrêter l'enregistrement de la station courante +[hdr6]
 
-Ce script se lance par la commandes clavier "KEY_REC".
+Ce script se lance par la commande clavier "KEY_REC".
 
 Il a pour but d'appuyer sur le bouton "Rec" sans bouger le focus, ce qui lance ou arrête l'enregistrement de la station courante.
 
@@ -187,7 +186,7 @@ http://www.maxfm.rs Lecture (00:14) MP3, 160 kbps
 + Script pour lire le tampon de lecture +[hdr10]
 Ce script se lance par la commande clavier "KEY_SAY_BUFFER".
 
-il annonce le tampon de lecture( information affichée par RadioSure).
+Il annonce le tampon de lecture (information affichée par RadioSure).
 Par Exemple : tampon 100%
 
 
@@ -198,7 +197,7 @@ Ce script se lance par la commande clavier "KEY_EXPAND".
 Il a pour but d'appuyer sur le bouton "Expand" sans bouger le focus.
 
 Cet appui provoque l'affichage ou le masquage de la zone de recherche et de la liste des stations.
-Si il y a affichage, le focus est placé dans la liste des stations.
+S'il y a affichage, le focus est placé dans la liste des stations.
 
 
 + script pour aller dans la zone d'édition de recherche de stations de radio +[HDR20]
@@ -206,7 +205,7 @@ Ce script se lance par la commande clavier KEY_GOTO_SEARCHEDIT.
 
 Il a pour but de mettre le focus sur la zone d'édition de recherche de station de radio.
 
-Cette zone dédition se présente sous la forme d'un champ d'édition et d'une liste déroulante mémorisant les précédents critères de recherche.
+Cette zone d'édition se présente sous la forme d'un champ d'édition et d'une liste déroulante mémorisant les précédents critères de recherche.
 Cette zone d'édition peut ne pas être affichée.
 Dans ce cas, le script provoque un appui sur le bouton Expand pour la faire apparaitre avant de déplacer le focus.
 
@@ -222,7 +221,7 @@ Le focus se place sur La station de radio précédemment sélectionnée et celle
 #Musik.12punks on RauteMusik.FM; Pays: Germany; Genre: Rock-Punk; Langue: German
 
 Cette liste peut ne pas être affichée.
-Dans ce cas,le script provoque un appui sur le bouton Expand pour la faire apparaitre avant de déplacer le focus.
+Dans ce cas, le script provoque un appui sur le bouton Expand pour la faire apparaitre avant de déplacer le focus.
 Si la commande clavier est tapée quand le focus est déjà dans la liste le script le signale.
 
 + Script pour quitter l'application +[hdr12]
@@ -230,14 +229,14 @@ Ce script se lance par la commande clavier "KEY_EXIT".
 
 Il a pour but d'appuyer sur le bouton "Exit".
 
-Cet appui entraine sur confirmation de l'utilisateur,la fermeture de la fenêtre et l'arrêt de l'application RadioSure.
+Cet appui entraine sur confirmation de l'utilisateur, la fermeture de la fenêtre et l'arrêt de l'application RadioSure.
 
 
 
 + Activation du menu contextuel de l'entête des colonnes de la liste des stations +[HDR14]
 RadioSure permet de filtrer les stations en utilisant le menu contextuel de l'entête de chaque colonne de la liste des stations.
 
-mais cela nécessite un ensemble de manoeuvres pénibles que les scripts suivant suppriment :
+Mais cela nécessite un ensemble de manœuvres pénibles que les scripts suivants suppriment :
 - "KEY_Filter_Title" : activer le menu contextuel de l'entête de la colonne "Titre".
 - "KEY_Filter_Country" : activer le menu contextuel de l'entête de la colonne "Pays".
 - "KEY_Filter_Genre" : activer le menu contextuel de l'entête de la colonne "Genre".
@@ -260,17 +259,17 @@ Cette extension apporte cette possibilité sans empêcher le fonctionnement dans
 + Désactivation du suivi des barre de progression +[HDR15]
 Au démarrage d'une station, RadioSure signale visuellement la progression et NVDA annonce les changements de cette progression suivant la configuration de l'option Suivi des barres de progression" se trouvant dans la catégorie "Présentation des objets" des paramètres de NVDA.
 
-Cela n'est pas d'un très grand intéret et assez désagréable à la longue.
+Cela n'est pas d'un très grand intérêt et assez désagréable à la longue.
 
 Bien qu'il soit possible en configurant manuellement cette option et seulement pour RadioSure en utilisant un profil de configuration, de désactiver toute annonce, l'extension propose de le faire par défaut.
 
-Il est évidemment possible de retrouver le fonctionnement normal en décochant la case à cocher "Désactiver le suivi des barres de progression" située dans la catégorie "Options" des paramètre de l'extension.
+Il est évidemment possible de retrouver le fonctionnement normal en décochant la case à cocher "Désactiver le suivi des barres de progression" située dans la catégorie "Options" des paramètres de l'extension.
 
 
 + Lecture aléatoire d'une station +[HDR16]
-Ce script se déclanche par le geste de commande "KEY_Random_Playback".
+Ce script se déclenche par le geste de commande "KEY_Random_Playback".
 
-Il choisit au hasard dans les stations de la liste des stations , une station et lance sa lecture. Si la liste des stations n'est pas affichée, il l'affiche en appuyant sur le bouton "Expand".
+Il choisit au hasard dans les stations de la liste des stations, une station et lance sa lecture. Si la liste des stations n'est pas affichée, il l'affiche en appuyant sur le bouton "Expand".
 
 Pour s'assurer que la lecture commence bien, il surveille l'état de connexion de la station pendant le temps configuré dans le groupe "Lecture aléatoire" de la liste déroulante "Temps d'attente de connexion" de la catégorie "Options" des paramètres de l'extension.
 

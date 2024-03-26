@@ -1,6 +1,6 @@
 # appModules\radioSure\__init__.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019-2022, Paulber19
+# Copyright (C) 2019-2024, Paulber19
 # This file is covered by the GNU General Public License.
 # Released under GPL 2
 
@@ -10,6 +10,7 @@ import gui
 import config
 from logHandler import log
 import NVDAObjects
+import scriptHandler
 from scriptHandler import getLastScriptRepeatCount
 from speech import speakSpelling
 import ui
@@ -20,18 +21,8 @@ import winUser
 from winUser import getWindow, getControlID
 from winUser import VK_DOWN, VK_UP, sendMessage
 from winUser import VK_NEXT, VK_PRIOR, VK_LEFT, VK_RIGHT
-try:
-	# for nvda version >= 2021.2
-	from controlTypes.role import Role
-	ROLE_BUTTON = Role.BUTTON
-	ROLE_COMBOBOX = Role.COMBOBOX
-	ROLE_LISTITEM = Role.LISTITEM
-except ImportError:
-	# for nvda version < 2021.2
-	import controlTypes
-	ROLE_BUTTON = controlTypes.ROLE_BUTTON
-	ROLE_COMBOBOX = controlTypes.ROLE_COMBOBOX
-	ROLE_LISTITEM = controlTypes.ROLE_LISTITEM
+from controlTypes.role import Role
+
 from NVDAObjects import NVDAObject
 import review
 import textInfos
@@ -42,7 +33,18 @@ import time
 import tones
 from keyboardHandler import KeyboardInputGesture
 import sys
-from .rs_utils import getSpeechMode, setSpeechMode, setSpeechMode_off
+from .rs_utils import (
+	getSpeechMode, setSpeechMode, setSpeechMode_off,
+	executeWithSpeakOnDemand,
+)
+try:
+	# NVDA >= 2024.1
+	speech.speech.SpeechMode.onDemand
+	speakOnDemand = {"speakOnDemand": True}
+except AttributeError:
+	# NVDA <= 2023.3
+	speakOnDemand = {}
+
 _curAddon = addonHandler.getCodeAddon()
 debugToolsPath = os.path.join(_curAddon.path, "debugTools")
 sys.path.append(debugToolsPath)
@@ -280,7 +282,7 @@ class AppModule(AppModule):
 			obj.parent.name = self._stationsListName
 
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
-		if obj.role == ROLE_BUTTON:
+		if obj.role == Role.BUTTON:
 			clsList.insert(0, Button)
 
 	def event_appModule_gainFocus(self):
@@ -299,13 +301,18 @@ class AppModule(AppModule):
 			return True
 		return False
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for click exit Button command.
+		description=_("Move focus to Exit button and click it to exit the application"),
+		gesture="kb:control+q",
+	)
 	def script_clickExitButton(self, gesture):
 		def callback():
 			h = winUser.getForegroundWindow()
 			obj = api.getFocusObject()
 			if gui.messageBox(
 				# Translators: message to ask the user if he want quit RadioSure.
-				_("Are you sure you want  to quit RadioSure?"),
+				_("Are you sure you want to quit RadioSure?"),
 				# Translators: dialog's title.
 				_("Warning"), wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING) == wx.YES:
 				oldSpeechMode = getSpeechMode()
@@ -327,8 +334,11 @@ class AppModule(AppModule):
 			return
 		wx.CallAfter(callback)
 
-	script_clickExitButton .__doc__ = _("Move focus to Exit button and click it to exit the application")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click play Button command.
+		description=_("Without moving focus, click on Play button to play or stop the current station"),
+		gesture="kb:control+p",
+	)
 	def script_clickPlayButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -336,9 +346,11 @@ class AppModule(AppModule):
 		clickButtonWithoutMoving("playButton")
 		sayStationState()
 
-	script_clickPlayButton .__doc__ = _(
-		"Without moving focus, click on  Play button to play or stop the current station")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click back Button command.
+		description=_("Without moving focus, click on Back button to play the prior played station"),
+		gesture="kb:alt+leftArrow",
+	)
 	def script_clickBackButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -348,9 +360,11 @@ class AppModule(AppModule):
 			ui.message(name)
 		wx.CallLater(2000, sayStationName)
 
-	script_clickBackButton .__doc__ = _(
-		"Without moving focus, click on Back button to play the prior played station")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click next Button command.
+		description=_("Without moving focus, click on Next button to play the next played station"),
+		gesture="kb:alt+rightArrow",
+	)
 	def script_clickNextButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -360,9 +374,11 @@ class AppModule(AppModule):
 			ui.message(name)
 		wx.CallLater(2000, sayStationName)
 
-	script_clickNextButton .__doc__ = _(
-		"Without moving focus, click on  Next button to play the next played station")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click rec Button command.
+		description=_("Without moving focus, click on Rec button to start or stop record"),
+		gesture="kb:control+r",
+	)
 	def script_clickRecButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -371,8 +387,11 @@ class AppModule(AppModule):
 		if name:
 			ui.message(name)
 
-	script_clickRecButton .__doc__ = _("Without moving focus, click on  Rec button to start or stop record")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click expand Button command.
+		description=_("Without moving focus, click on Expand button to show or mask stations list"),
+		gesture="kb:control+e",
+	)
 	def script_clickExpandButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -397,9 +416,11 @@ class AppModule(AppModule):
 				obj.setFocus()
 			eventHandler.queueEvent("gainFocus", obj)
 
-	script_clickExpandButton .__doc__ = _(
-		"Without moving focus, click  on Expand button to  show or mask stations list")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click option Button command.
+		description=_("Move focus to Options button and click it to open Options dialog"),
+		gesture="kb:control+o",
+	)
 	def script_clickOptionsButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -410,8 +431,11 @@ class AppModule(AppModule):
 			return None
 		obj.IAccessibleObject.accDoDefaultAction(0)
 
-	script_clickOptionsButton .__doc__ = _("Move focus to Options button and click it to open Options dialog")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click fav Button command.
+		description=_("Move focus to Fav button and click it to show the list of favorites station"),
+		gesture="kb:control+f",
+	)
 	def script_clickFavButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -423,9 +447,11 @@ class AppModule(AppModule):
 		api.processPendingEvents()
 		KeyboardInputGesture.fromName("downArrow").send()
 
-	script_clickFavButton.__doc__ = _(
-		"Move focus to Fav button and click it to show the list of favorites station")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for click stop Button command.
+		description=_("Without moving focus, click on Top buttonto ???"),
+		gesture="kb:control+t",
+	)
 	def script_clickTopButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -433,8 +459,12 @@ class AppModule(AppModule):
 		name = clickButtonWithoutMoving("topButton")
 		if name:
 			ui.message(name)
-	script_clickTopButton .__doc__ = _("Without moving focus, click on Top buttonto ???")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for click Mute Button command.
+		description=_("Without moving focus, click on Mute butt button to Mute volume on or off"),
+		gesture="kb:control+m",
+	)
 	def script_clickMuteButton(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -443,52 +473,77 @@ class AppModule(AppModule):
 		if name:
 			ui.message(name)
 
-	script_clickMuteButton .__doc__ = _(
-		"Without moving focus, click on Mute butt button to Mute volume on or off")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for decrease Slightly Volume command.
+		description=_("Decrease slightly the volume(down 3%)"),
+		gesture="kb:control+shift+downArrow",
+	)
 	def script_decreaseSlightlyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_DOWN)
-	script_decreaseSlightlyVolume .__doc__ = _("Decrease slightly the volume(down 3%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for increase Slightly Volume command.
+		description=_("Increase slightly the volume(up 3%)"),
+		gesture="kb:control+shift+upArrow",
+	)
 	def script_increaseSlightlyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_UP)
-	script_increaseSlightlyVolume .__doc__ = _("Increase slightly the volume(up 3%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for decrease Volume command.
+		description=_("Decrease the volume(down 5%)"),
+		gesture="kb:control+shift+leftArrow",
+	)
 	def script_decreaseVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_LEFT)
 
-	script_decreaseVolume .__doc__ = _("Decrease the volume(down 5%)")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for increase Volume command.
+		description=_("Increase the volume(up 5%)"),
+		gesture="kb:control+shift+rightArrow",
+	)
 	def script_increaseVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_RIGHT)
-	script_increaseVolume .__doc__ = _("Increase the volume(up 5%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for increase Strongly Volume command.
+		description=_("Increase strongly the volume(up 20%)"),
+		gesture="kb:control+shift+pageUp",
+	)
 	def script_increaseStronglyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_NEXT)
-	script_increaseStronglyVolume.__doc__ = _("Increase strongly  the volume(up 20%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for decrease Strongly Volume command.
+		description=_("Decrease strongly the volume(down -20%)"),
+		gesture="kb:control+shift+pageDown",
+	)
 	def script_decreaseStronglyVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
 			return
 		modifyVolume(VK_PRIOR)
-	script_decreaseStronglyVolume.__doc__ = _("Decrease strongly the volume(down -20%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for middle volume command.
+		description=_("Set volume to middle( 50%)"),
+		gesture="kb:control+shift+m",
+	)
 	def script_middleVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -498,8 +553,13 @@ class AppModule(AppModule):
 			return
 		sendMessage(obj.windowHandle, 1029, False, 47)
 		modifyVolume(VK_UP)
-	script_middleVolume .__doc__ = _("Set volume to middle( 50%)")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for say volume command.
+		description=_("Say volume"),
+		gesture="kb:alt+v",
+		**speakOnDemand,
+	)
 	def script_sayVolume(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -508,8 +568,14 @@ class AppModule(AppModule):
 		if volume:
 			ui.message(_("%s percent") % volume)
 
-	script_sayVolume.__doc__ = _("Say volume")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for say station informations command.
+		description=_(
+			"Say the name of current station and the status line. Twice, copy these informations to clipboard"
+		),
+		gesture="kb:alt+i",
+		**speakOnDemand,
+	)
 	def script_sayStationInformations(self, gesture):
 		def callback(repeatCount):
 			text = getPlayInfos()
@@ -523,11 +589,14 @@ class AppModule(AppModule):
 			return
 		if self.taskTimer:
 			self.taskTimer.Stop()
-		wx.CallAfter(callback, getLastScriptRepeatCount())
+		wx.CallAfter(executeWithSpeakOnDemand, callback, getLastScriptRepeatCount())
 
-	script_sayStationInformations.__doc__ = _(
-		"Say the name   of current station and the status line. Twice, copy these informations  to clipboard")
-
+	@scriptHandler.script(
+		# Translators: Input help mode message for say buffer command.
+		description=_("Say buffer"),
+		gesture="kb:alt+b",
+		**speakOnDemand,
+	)
 	def script_sayBuffer(self, gesture):
 		def callback(repeatCount):
 			self.taskTimer = None
@@ -544,9 +613,12 @@ class AppModule(AppModule):
 		if not self.inMainWindow():
 			gesture.send()
 			return
-		self.taskTimer = wx.CallLater(300, callback, getLastScriptRepeatCount())
-	script_sayBuffer.__doc__ = _("Say buffer")
+		self.taskTimer = wx.CallLater(300, executeWithSpeakOnDemand, callback, getLastScriptRepeatCount())
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for go To Stations List command.
+		description=_("Move focus to stations list. IF stations list is not visible, click Expand button before."),
+	)
 	def script_goToStationsList(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -557,7 +629,7 @@ class AppModule(AppModule):
 			ui.message(_("You are in stations list window"))
 			return
 		if obj is None or not winUser.isWindowVisible(obj.windowHandle):
-			# try to  display stations list by pressing expand button
+			# try to display stations list by pressing expand button
 			clickButton("expandButton")
 			time.sleep(1.0)
 			obj = findWindowNVDAObject("stationsList")
@@ -569,19 +641,16 @@ class AppModule(AppModule):
 		obj.setFocus()
 		eventHandler.queueEvent("gainFocus", obj)
 
-	script_goToStationsList.__doc__ = _(
-		"Move focus to stations list. IF stations list is not visible, click Expand button before.")
-
 	def _getSearchEditComboBoxObject(self):
 		foreground = api.getForegroundObject()
 		for i in range(0, foreground.childCount):
 			o = foreground.getChild(i)
-			if o.windowControlID == 1019 and o.role == ROLE_COMBOBOX:
+			if o.windowControlID == 1019 and o.role == Role.COMBOBOX:
 				return o
 		return None
 
 	def checkSearchEditComboBoxDisplay(self, setFocus=False):
-		# check if  search edit combo box is shown.
+		# check if search edit combo box is shown.
 		# If Not press "expand" buttonto show it.
 		obj = findWindowNVDAObject("searchCombo")
 		if obj is None or not winUser.isWindowVisible(obj.windowHandle):
@@ -597,6 +666,11 @@ class AppModule(AppModule):
 			comboBox.setFocus()
 		return True
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for go To Search Edit Box command.
+		description=_(
+			"Move focus to search edit box. IF search edit box is not visible, click Expand button before."),
+	)
 	def script_goToSearchEditBox(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -607,7 +681,7 @@ class AppModule(AppModule):
 			ui.message(_("You are in search edit field"))
 			return
 		if comboObj is None or not winUser.isWindowVisible(comboObj.windowHandle):
-			# try to  display search edit box
+			# try to display search edit box
 			# and stations list by pressing expand button
 			clickButton("expandButton")
 			time.sleep(1.0)
@@ -618,8 +692,6 @@ class AppModule(AppModule):
 				return
 		# now set focus
 		comboObj.setFocus()
-	script_goToSearchEditBox.__doc__ = _(
-		"Move focus to search edit box. IF search edit box is not visible, click Expand button before.")
 
 	def clickHeaderColumn(self, column):
 		def callback(column):
@@ -634,7 +706,7 @@ class AppModule(AppModule):
 			info.collapse(True)
 			api.setReviewPosition(info)
 			curObject = api.getNavigatorObject()
-			if curObject .role == ROLE_LISTITEM:
+			if curObject .role == Role.LISTITEM:
 				info = baseInfo.copy()
 				info.collapse()
 				api.setReviewPosition(info)
@@ -664,7 +736,7 @@ class AppModule(AppModule):
 		stationsListNVDAObject = findWindowNVDAObject("stationsList")
 		if stationsListNVDAObject is None\
 			or not winUser.isWindowVisible(stationsListNVDAObject.windowHandle):
-			# try to  display stations list by pressing expand button
+			# try to display stations list by pressing expand button
 			clickButton("expandButton")
 			time.sleep(1.0)
 			stationsListNVDAObject = findWindowNVDAObject("stationsList")
@@ -679,6 +751,10 @@ class AppModule(AppModule):
 			return False
 		return True
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for activate title Sort Menu command.
+		description=_("Activate context menu to sort stations list by title"),
+	)
 	def script_activate_titleSortMenu(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -686,8 +762,11 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=1)
-	script_activate_titleSortMenu.__doc__ = _("Activate context menu to sort stations list by title")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for activate country Sort Menu command.
+		description=_("Activate context menu to sort stations list by country"),
+	)
 	def script_activate_countrySortMenu(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -695,8 +774,11 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=2)
-	script_activate_countrySortMenu.__doc__ = _("Activate context menu to sort stations list by country")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for activate genre Sort Menu command.
+		description=_("Activate context menu to sort stations list by genre"),
+	)
 	def script_activate_genreSortMenu(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -704,8 +786,11 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=3)
-	script_activate_genreSortMenu.__doc__ = _("Activate context menu to sort stations list by genre")
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for activate language Sort Menu command.
+		description=_("Activate context menu to sort stations list by language"),
+	)
 	def script_activate_languageSortMenu(self, gesture):
 		if not self.inMainWindow():
 			gesture.send()
@@ -713,7 +798,6 @@ class AppModule(AppModule):
 		if not self.checkStationsList():
 			return
 		self.clickHeaderColumn(column=4)
-	script_activate_languageSortMenu.__doc__ = _("Activate context menu to sort stations list by language")
 
 	def startStation(self, stationsListObject):
 		from random import randint
@@ -736,6 +820,10 @@ class AppModule(AppModule):
 		setSpeechMode(oldSpeechMode)
 		return obj
 
+	@scriptHandler.script(
+		# Translators: Input help mode message for start Station Randomly command.
+		description=_("Start a station randomly"),
+	)
 	def script_startStationRandomly(self, gesture):
 		from . import rs_translations
 		rs_translations.initialize()
@@ -744,7 +832,7 @@ class AppModule(AppModule):
 			clickButtonWithoutMoving("playButton")
 		h = findWindow("stationsList")
 		if not h or not winUser.isWindowVisible(h):
-			# try to  display stations list by pressing expand button
+			# try to display stations list by pressing expand button
 			clickButton("expandButton")
 			time.sleep(1.0)
 			h = findWindow("stationsList")
@@ -800,44 +888,21 @@ class AppModule(AppModule):
 		queueHandler.queueFunction(
 			queueHandler.eventQueue,
 			ui.message,
-			# Translators: message to user  to report station search running
+			# Translators: message to user to report station search running
 			_("Station search running"))
 		queueHandler.queueFunction(
 			queueHandler.eventQueue,
 			callback,
-			stationsListNVDAObject)
+			stationsListNVDAObject
+		)
 
-	script_startStationRandomly .__doc__ = _("Start a station randomly")
-
+	@scriptHandler.script(
+		gesture="kb:control+alt+f10",
+	)
 	def script_test(self, gesture):
 		printDebug("test radiosure")
 		print("radioSure test")
 		ui.message("radioSure test")
-		wx.CallAfter(self.script_startStationRandomly, gesture)
-
-	__gestures = {
-		"kb:control+alt+f10": "test",
-		"kb:control+shift+upArrow": "increaseSlightlyVolume",
-		"kb:control+shift+downArrow": "decreaseSlightlyVolume",
-		"kb:control+shift+rightArrow": "increaseVolume",
-		"kb:control+shift+leftArrow": "decreaseVolume",
-		"kb:control+shift+pageUp": "increaseStronglyVolume",
-		"kb:control+shift+pageDown": "decreaseStronglyVolume",
-		"kb:control+shift+m": "middleVolume",
-		"kb:alt+leftArrow": "clickBackButton",
-		"kb:alt+rightArrow": "clickNextButton",
-		"kb:control+e": "clickExpandButton",
-		"kb:control+f": "clickFavButton",
-		"kb:control+m": "clickMuteButton",
-		"kb:control+o": "clickOptionsButton",
-		"kb:control+p": "clickPlayButton",
-		"kb:control+q": "clickExitButton",
-		"kb:control+r": "clickRecButton",
-		"kb:control+t": "clickTopButton",
-		"kb:alt+v": "sayVolume",
-		"kb:alt+i": "sayStationInformations",
-		"kb:alt+b": "sayBuffer",
-	}
 
 	_altControlGestures = {
 		"kb:alt+control+e": "goToSearchEditBox",

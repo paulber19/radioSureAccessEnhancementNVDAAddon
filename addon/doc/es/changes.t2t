@@ -4,14 +4,30 @@ Autor: ADDON_AUTHOR_NAME
 
 %!includeconf: ../addon_global.t2tconf
 %!includeconf: addon_informations.t2tconf
-URL: ADDON_AUTHOR_URL
+URL: [ADDON_REPOSITORY ADDON_REPOSITORY]
 
-[Repositorio en GitHub: ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Descarga:
 - [Versión actual: ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
 - [Versión anterior: ADDON_PREV_VERSION ADDON_DOWNLOAD_PREVIOUS]
 - [Versiones de desarrollo ADDON_DEV_URL]
+
+
++ v2.8 (23/03/2024) +
+Compatibilidad con NVDA 2024.1
+
+Nuevas características:
+- se toma en cuenta un nuevo modo de "voz a petición" introducido en nvda 2024.1:   todos los scripts que anuncien información verbalizarán esta información. En este modo, todos los demás scripts permanecerán en silencio.
+
+
+Corrección de fallos:
+- corrección ortográfica de determinadas cadenas de caracteres.
+
+
+Desarrolladores:
+- actualización de la librería psutil a la versión 5.9.6.
+- uso del decorador scriptHandler.script.
+- eliminación de código específico de versiones anteriores a NVDA 2022.1.
 
 
 + v2.7 (14/02/2023) +

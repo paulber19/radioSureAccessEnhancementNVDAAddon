@@ -5,9 +5,8 @@ Autor: ADDON_AUTHOR_NAME
 %!includeconf: ../addon_userManual.t2tconf
 %!includeconf: addon_informations.t2tconf
 %!includeconf: addon_keys.t2tconf
-URL: ADDON_AUTHOR_URL
+URL: [ADDON_REPOSITORY ADDON_REPOSITORY]
 
-[Repositorio en GitHub: ADDON_REPOSITORY ADDON_REPOSITORY]
 
 Descargar:
 - [versión estable ADDON_CUR_VERSION ADDON_DOWNLOAD_SERVER1]
@@ -59,6 +58,7 @@ La versión del complemento puede ser:
 
 
 Por defecto, una versión estable se actualiza con la última versión estable (Número de versión superior).
+
 Sin embargo, es posible actualizar la versión actual estable con una versión de desarrollo de la próxima versión estable. Simplemente marcando la opción "Actualizar también versiones estable hacia versiones de desarrollo" situado en las opciones del complemento, elemento de menú "Actualización".
 
 Una versión de desarrollo se actualiza:

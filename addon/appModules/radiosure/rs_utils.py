@@ -1,6 +1,6 @@
 # appModules\radiosure\rs_utils.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2021-2022 paulber19
+# Copyright (C) 2021-2024 paulber19
 # This file is covered by the GNU General Public License.
 
 
@@ -13,6 +13,14 @@ import time
 import queueHandler
 import gui
 import config
+import ui
+try:
+	# NVDA >= 2024.1
+	speech.speech.SpeechMode.onDemand
+	speakOnDemand = {"speakOnDemand": True}
+except AttributeError:
+	# NVDA <= 2023.3
+	speakOnDemand = {}
 
 addonHandler.initTranslation()
 # winuser.h constant
@@ -32,7 +40,7 @@ def isOpened(dialog):
 def makeAddonWindowTitle(dialogTitle):
 	curAddon = addonHandler.getCodeAddon()
 	addonSummary = curAddon.manifest['summary']
-	# Translators:  title of all add-on dialog boxs.
+	# Translators: title of all add-on dialog boxs.
 	return _("{addonSummary}'s add-on - {dialogTitle}").format(
 		addonSummary=addonSummary, dialogTitle=dialogTitle)
 
@@ -85,24 +93,26 @@ def MouseWheelBack():
 
 
 def getSpeechMode():
-	try:
-		# for nvda  version >= 2021.1
-		return speech.getState().speechMode
-	except AttributeError:
-		return speech.speechMode
+	return speech.getState().speechMode
 
 
 def setSpeechMode(mode):
-	try:
-		# for nvda version >= 2021.1
-		speech.setSpeechMode(mode)
-	except AttributeError:
-		speech.speechMode = mode
+	speech.setSpeechMode(mode)
 
 
 def setSpeechMode_off():
-	try:
-		# for nvda version >= 2021.1
-		speech.setSpeechMode(speech.SpeechMode.off)
-	except AttributeError:
-		speech.speechMode = speech.speechMode_off
+	speech.setSpeechMode(speech.SpeechMode.off)
+
+
+def executeWithSpeakOnDemand(func, *args, **kwargs):
+	from speech.speech import _speechState, SpeechMode
+	if not speakOnDemand or _speechState.speechMode != SpeechMode.onDemand:
+		return func(*args, **kwargs)
+	_speechState.speechMode = SpeechMode.talk
+	ret = func(*args, **kwargs)
+	_speechState.speechMode = SpeechMode.onDemand
+	return ret
+
+
+def messageWithSpeakOnDemand(msg):
+	executeWithSpeakOnDemand(ui.message, msg)
