@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: radioSureAccessEnhancement 2.8\n"
+"Project-Id-Version: radioSureAccessEnhancement 2.9\n"
 "Report-Msgid-Bugs-To: paulber19\n"
-"POT-Creation-Date: 2024-03-26 10:54+0100\n"
+"POT-Creation-Date: 2024-10-18 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 #. Translators: title of message box
 #. Translators: dialog's title.
 #. Translators: title of message box.
-#: shared\rs_addonConfigManager.py:185 appModules\radioSure\__init__.py:317
+#: shared\rs_addonConfigManager.py:185 appModules\radioSure\__init__.py:313
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:107
 msgid "Warning"
 msgstr ""
@@ -82,216 +82,216 @@ msgstr ""
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:238 appModules\radioSure\__init__.py:569
+#: appModules\radioSure\__init__.py:234 appModules\radioSure\__init__.py:565
 #, python-format
 msgid "%s percent"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:262
+#: appModules\radioSure\__init__.py:258
 msgid "Stations"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:263
+#: appModules\radioSure\__init__.py:259
 msgid "Search"
 msgstr ""
 
 #. Translators: Input help mode message for click exit Button command.
-#: appModules\radioSure\__init__.py:306
+#: appModules\radioSure\__init__.py:302
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr ""
 
 #. Translators: message to ask the user if he want quit RadioSure.
-#: appModules\radioSure\__init__.py:315
+#: appModules\radioSure\__init__.py:311
 msgid "Are you sure you want to quit RadioSure?"
 msgstr ""
 
 #. Translators: Input help mode message for click play Button command.
-#: appModules\radioSure\__init__.py:339
+#: appModules\radioSure\__init__.py:335
 msgid ""
 "Without moving focus, click on Play button to play or stop the current "
 "station"
 msgstr ""
 
 #. Translators: Input help mode message for click back Button command.
-#: appModules\radioSure\__init__.py:351
+#: appModules\radioSure\__init__.py:347
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 
 #. Translators: Input help mode message for click next Button command.
-#: appModules\radioSure\__init__.py:365
+#: appModules\radioSure\__init__.py:361
 msgid ""
 "Without moving focus, click on Next button to play the next played station"
 msgstr ""
 
 #. Translators: Input help mode message for click rec Button command.
-#: appModules\radioSure\__init__.py:379
+#: appModules\radioSure\__init__.py:375
 msgid "Without moving focus, click on Rec button to start or stop record"
 msgstr ""
 
 #. Translators: Input help mode message for click expand Button command.
-#: appModules\radioSure\__init__.py:392
+#: appModules\radioSure\__init__.py:388
 msgid ""
 "Without moving focus, click on Expand button to show or mask stations list"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:411
+#: appModules\radioSure\__init__.py:407
 msgid "Search edit box and Stations list are not more visible"
 msgstr ""
 
 #. Translators: Input help mode message for click option Button command.
-#: appModules\radioSure\__init__.py:421
+#: appModules\radioSure\__init__.py:417
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 
 #. Translators: Input help mode message for click fav Button command.
-#: appModules\radioSure\__init__.py:436
+#: appModules\radioSure\__init__.py:432
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr ""
 
 #. Translators: Input help mode message for click stop Button command.
-#: appModules\radioSure\__init__.py:452
+#: appModules\radioSure\__init__.py:448
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr ""
 
 #. Translators: Input help mode message for click Mute Button command.
-#: appModules\radioSure\__init__.py:465
+#: appModules\radioSure\__init__.py:461
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Slightly Volume command.
-#: appModules\radioSure\__init__.py:478
+#: appModules\radioSure\__init__.py:474
 msgid "Decrease slightly the volume(down 3%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Slightly Volume command.
-#: appModules\radioSure\__init__.py:489
+#: appModules\radioSure\__init__.py:485
 msgid "Increase slightly the volume(up 3%)"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Volume command.
-#: appModules\radioSure\__init__.py:500
+#: appModules\radioSure\__init__.py:496
 msgid "Decrease the volume(down 5%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Volume command.
-#: appModules\radioSure\__init__.py:511
+#: appModules\radioSure\__init__.py:507
 msgid "Increase the volume(up 5%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Strongly Volume command.
-#: appModules\radioSure\__init__.py:522
+#: appModules\radioSure\__init__.py:518
 msgid "Increase strongly the volume(up 20%)"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Strongly Volume command.
-#: appModules\radioSure\__init__.py:533
+#: appModules\radioSure\__init__.py:529
 msgid "Decrease strongly the volume(down -20%)"
 msgstr ""
 
 #. Translators: Input help mode message for middle volume command.
-#: appModules\radioSure\__init__.py:544
+#: appModules\radioSure\__init__.py:540
 msgid "Set volume to middle( 50%)"
 msgstr ""
 
 #. Translators: Input help mode message for say volume command.
-#: appModules\radioSure\__init__.py:559
+#: appModules\radioSure\__init__.py:555
 msgid "Say volume"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:574
+#: appModules\radioSure\__init__.py:570
 msgid ""
 "Say the name of current station and the status line. Twice, copy these "
 "informations to clipboard"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:584
+#: appModules\radioSure\__init__.py:580
 msgid "Informations copied to clipboard"
 msgstr ""
 
 #. Translators: Input help mode message for say buffer command.
-#: appModules\radioSure\__init__.py:596
+#: appModules\radioSure\__init__.py:592
 msgid "Say buffer"
 msgstr ""
 
 #. Translators: Input help mode message for go To Stations List command.
-#: appModules\radioSure\__init__.py:620
+#: appModules\radioSure\__init__.py:616
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
 msgstr ""
 
-#: appModules\radioSure\__init__.py:629
+#: appModules\radioSure\__init__.py:625
 msgid "You are in stations list window"
 msgstr ""
 
 #. impossible to display list
-#: appModules\radioSure\__init__.py:638 appModules\radioSure\__init__.py:746
-#: appModules\radioSure\__init__.py:841
+#: appModules\radioSure\__init__.py:634 appModules\radioSure\__init__.py:742
+#: appModules\radioSure\__init__.py:837
 msgid "Stations list not found"
 msgstr ""
 
 #. impossible to display search edit box
-#: appModules\radioSure\__init__.py:662 appModules\radioSure\__init__.py:691
+#: appModules\radioSure\__init__.py:658 appModules\radioSure\__init__.py:687
 msgid "Search edit box not found"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:672
+#: appModules\radioSure\__init__.py:668
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
 msgstr ""
 
-#: appModules\radioSure\__init__.py:681
+#: appModules\radioSure\__init__.py:677
 msgid "You are in search edit field"
 msgstr ""
 
 #. Translators: message to user
 #. when there are none or one station in the list.
-#: appModules\radioSure\__init__.py:750
+#: appModules\radioSure\__init__.py:746
 msgid "Not available because the station list is empty or has only one station"
 msgstr ""
 
 #. Translators: Input help mode message for activate title Sort Menu command.
-#: appModules\radioSure\__init__.py:756
+#: appModules\radioSure\__init__.py:752
 msgid "Activate context menu to sort stations list by title"
 msgstr ""
 
 #. Translators: Input help mode message for activate country Sort Menu command.
-#: appModules\radioSure\__init__.py:768
+#: appModules\radioSure\__init__.py:764
 msgid "Activate context menu to sort stations list by country"
 msgstr ""
 
 #. Translators: Input help mode message for activate genre Sort Menu command.
-#: appModules\radioSure\__init__.py:780
+#: appModules\radioSure\__init__.py:776
 msgid "Activate context menu to sort stations list by genre"
 msgstr ""
 
 #. Translators: Input help mode message for activate language Sort Menu command.
-#: appModules\radioSure\__init__.py:792
+#: appModules\radioSure\__init__.py:788
 msgid "Activate context menu to sort stations list by language"
 msgstr ""
 
 #. Translators: Input help mode message for start Station Randomly command.
-#: appModules\radioSure\__init__.py:825
+#: appModules\radioSure\__init__.py:821
 msgid "Start a station randomly"
 msgstr ""
 
 #. Translators: message to user
-#: appModules\radioSure\__init__.py:871
+#: appModules\radioSure\__init__.py:867
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr ""
 
 #. Translators: message to user there is no stations in list.
-#: appModules\radioSure\__init__.py:885
+#: appModules\radioSure\__init__.py:881
 msgid "No station in list"
 msgstr ""
 
 #. Translators: message to user to report station search running
-#: appModules\radioSure\__init__.py:892
+#: appModules\radioSure\__init__.py:888
 msgid "Station search running"
 msgstr ""
 
@@ -415,31 +415,31 @@ msgstr ""
 
 #. Translators: The message displayed when an error occurs
 #. when installing an add-on package.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:195
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:196
 msgid "Failed to update {name} add-on"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:247
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:248
 msgid "{summary} - update"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:257
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:258
 msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:285
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:286
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
 "version: {minYear}.{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
 
 #. Translators: message to user to report a new version.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:329
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:330
 #, python-format
 msgid "New version%s is available. Do you want to download it now?"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:333
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:334
 msgid ""
 "New version{0} is available.\n"
 "But it is not compatible with this version of NVDA: minimum version requred "
@@ -447,33 +447,33 @@ msgid ""
 "Do you want to ignore this incompatibility and still download it now?"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:353
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:354
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:360
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:361
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:515
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:516
 msgid "&Yes"
 msgstr ""
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:520
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:521
 msgid "&No"
 msgstr ""
 
 #. Translators: The label of a button to remind the user later
 #. about performing some action.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:525
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:526
 msgid "&Later"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:529
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:530
 msgid "Wha&t's new"
 msgstr ""

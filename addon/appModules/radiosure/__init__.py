@@ -71,16 +71,12 @@ WM_KEYUP = 0x0101
 WM_KEYDOWN = 0x0100
 WM_SETFOCUS = 0x0007
 
-_addonSummary = _curAddon.manifest['summary']
-_addonVersion = _curAddon.manifest['version']
-_addonName = _curAddon.manifest['name']
-_scriptCategory = str(_addonSummary)
+_scriptCategory = str(_curAddon.manifest['summary'])
 
 # pour getWindow function
 firstWindow = 0
 nextWindow = 2
 firstChild = 5
-
 
 ctrlIdsDic = {
 	"searchEdit": 1001,

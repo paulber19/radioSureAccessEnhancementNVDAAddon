@@ -1,13 +1,18 @@
 # appModules\radiosure\rs_translations.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2020-2022, paulber19
+# Copyright (C) 2020-2024, paulber19
 # This file is covered by the GNU General Public License.
 
 import addonHandler
 from logHandler import log
 import os
 import api
-from . import psutil
+try:
+	# for nvda version >= 2024.3
+	# psutil is embedded in NVDA
+	import psutil
+except ImportError:
+	from . import psutil
 
 from .utilities import xmltodict
 
