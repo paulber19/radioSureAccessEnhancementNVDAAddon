@@ -16,6 +16,25 @@ Download:
 Sorry, but this document is an automatic translation from french language.
 
 
++ v2.10 (June/05/2025) +
+Compatibility with NVDA 2025.1
+
+NVDA versions prior to the 2024.1 version are no longer supported.
+
+Bug fixes:
+- the update search is no longer done when the "Automatically search for updates" option is unchecked just after starting NVDA.
+
+
+Development :
+- when installing the add-on, the current configuration is no longer saved in the add-on folder but is now saved in the user configuration folder. This allows you to still keep the current configuration if an installation goes wrong.
+
+
+Compliance with the NVDA API:
+- Use of the "ExecandPump" method of the "Systemutils" module.
+- Take into account the obsolescence of Gui.messagebox and Gui.message.messagebox, replaced by messagedialog:
+ - Messagedialog is now used for all NVDA versions greater than 2025.1.
+
+
 + v2.9 (October/18/2024) +
 Compatibility with NVDA 2024.2, NVDA 2024.3 and NVDA 2024.4.
 
@@ -62,7 +81,7 @@ Compatibility with NVDA 2021.3
 
 + v2.3.2 (July/09/2021) +
 Bug fixes:
-- some input  gestures like "control + p", "control + m", didn't work.
+- some input gestures like "control + p", "control + m", didn't work.
 
 
 + v2.3.1 (June/25/2021) +

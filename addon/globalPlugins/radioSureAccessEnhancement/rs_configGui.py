@@ -1,6 +1,6 @@
 # globalPlugins\radioSureAccessEnhancement\rs_configGui.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright 2019-2022,paulber19
+# Copyright 2019-2025,paulber19
 # This file is covered by the GNU General Public License.
 
 # manage add-on configuration dialog
@@ -18,31 +18,35 @@ path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
 from rs_addonConfigManager import _addonConfigManager  # noqa:E402
 from rs_NVDAStrings import NVDAString
+from messages import confirm_YesNo, inform, ReturnCode
 del sys.path[-1]
+del sys.modules["rs_NVDAStrings"]
+del sys.modules["messages"]
+
 addonHandler.initTranslation()
 
 
 def askForNVDARestart():
-	if gui.messageBox(
+	if confirm_YesNo(
 		# Translators: A message asking the user if they wish to restart NVDA
 		_(
 			"Some Changes have been made . "
 			"You must save the configuration and restart NVDA for these changes to take effect. "
 			"Would you like to do it now?"),
 		"%s - %s" % (_addonSummary, NVDAString("Restart NVDA")),
-		wx.YES | wx.NO | wx.ICON_WARNING) == wx.YES:
+	) == ReturnCode.YES:
 		_addonConfigManager.saveSettings(True)
 		queueHandler.queueFunction(queueHandler.eventQueue, core.restart)
 		return
-	gui.messageBox(
+	inform(
 		# Translators: A message  to user
 		_("Don't forget to save the configuration for the changes to take effect !"),
 		"%s - %s" % (_addonSummary, NVDAString("Warning")),
-		wx.OK | wx.ICON_WARNING)
+	)
 
 
 class OptionsSettingsPanel(SettingsPanel):
-	# Translators: This is the label for the Audacity settings  dialog.
+	# Translators: This is the label for the radioSure settings  dialog.
 	title = _("Options")
 
 	def makeSettings(self, settingsSizer):
@@ -99,13 +103,13 @@ class OptionsSettingsPanel(SettingsPanel):
 			_addonConfigManager.toggleUseShiftControlGesturesOption(False))
 
 	def onClearHistoryButton(self, evt):
-		if gui.messageBox(
+		if confirm_YesNo(
 			# Translators:  message to ask the user
 			# if  he wants to clear  stations's history.
 			_("Are you sure you want  to clearthe history of stations without connexion?"),
 			# Translators: title of message box.
 			_("Warning"),
-			wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING) == wx.YES:
+		) == ReturnCode.YES:
 			_addonConfigManager.clearBadStationsHistory()
 
 	def postInit(self):
@@ -191,6 +195,8 @@ class UpdateSettingsPanel(SettingsPanel):
 	def saveSettingChanges(self):
 		if self.autoCheckForUpdatesCheckBox.IsChecked() != _addonConfigManager .toggleAutoUpdateCheck(False):
 			_addonConfigManager .toggleAutoUpdateCheck(True)
+			from . updateHandler.update_check import setCheckForUpdate
+			setCheckForUpdate(_addonConfigManager.toggleAutoUpdateCheck(False))
 		if self.updateReleaseVersionsToDevVersionsCheckBox.IsChecked() != (
 			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions(False)):
 			_addonConfigManager .toggleUpdateReleaseVersionsToDevVersions(True)

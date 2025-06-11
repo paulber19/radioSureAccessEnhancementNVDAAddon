@@ -1,18 +1,15 @@
 # appModules\radiosure\rs_utils.py
 # A part of radioSureAccessEnhancement add-on
-# Copyright (C) 2021-2024 paulber19
+# Copyright (C) 2021-2025 paulber19
 # This file is covered by the GNU General Public License.
 
 
 import addonHandler
-import wx
 import api
 import speech
 import winUser
 import time
 import queueHandler
-import gui
-import config
 import ui
 try:
 	# NVDA >= 2024.1
@@ -43,18 +40,6 @@ def makeAddonWindowTitle(dialogTitle):
 	# Translators: title of all add-on dialog boxs.
 	return _("{addonSummary}'s add-on - {dialogTitle}").format(
 		addonSummary=addonSummary, dialogTitle=dialogTitle)
-
-
-def messageBox(
-	message,
-	caption=wx.MessageBoxCaptionStr,
-	style=wx.OK | wx.CENTER,
-	parent=None):
-	option = config.conf["presentation"]["reportObjectDescriptions"]
-	config.conf["presentation"]["reportObjectDescriptions"] = True
-	ret = gui.messageBox(message, caption, style, parent)
-	config.conf["presentation"]["reportObjectDescriptions"] = option
-	return ret
 
 
 def getPositionXY(obj):

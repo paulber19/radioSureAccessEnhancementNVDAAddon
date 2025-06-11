@@ -1,12 +1,11 @@
 # appModules\radioSure\__init__.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019-2024, Paulber19
+# Copyright (C) 2019-2025, Paulber19
 # This file is covered by the GNU General Public License.
 # Released under GPL 2
 
 
 import addonHandler
-import gui
 import config
 from logHandler import log
 import NVDAObjects
@@ -38,11 +37,11 @@ from .rs_utils import (
 	executeWithSpeakOnDemand,
 )
 try:
-	# NVDA >= 2024.1
+	# NVDA version >= 2024.1
 	speech.speech.SpeechMode.onDemand
 	speakOnDemand = {"speakOnDemand": True}
 except AttributeError:
-	# NVDA <= 2023.3
+	# NVDA version <= 2023.3
 	speakOnDemand = {}
 
 _curAddon = addonHandler.getCodeAddon()
@@ -60,12 +59,15 @@ except ImportError:
 	def toggleDebugFlag():
 		return
 del sys.path[-1]
-path = os.path.join(_curAddon.path, "shared")
-sys.path.append(path)
+sharedPath = os.path.join(_curAddon.path, "shared")
+sys.path.append(sharedPath)
 from rs_addonConfigManager import _addonConfigManager
+from messages import confirm_YesNo, ReturnCode
 del sys.path[-1]
+del sys.modules["messages"]
 
 addonHandler.initTranslation()
+
 # winUser constants
 WM_KEYUP = 0x0101
 WM_KEYDOWN = 0x0100
@@ -306,11 +308,12 @@ class AppModule(AppModule):
 		def callback():
 			h = winUser.getForegroundWindow()
 			obj = api.getFocusObject()
-			if gui.messageBox(
+			if confirm_YesNo(
 				# Translators: message to ask the user if he want quit RadioSure.
 				_("Are you sure you want to quit RadioSure?"),
 				# Translators: dialog's title.
-				_("Warning"), wx.YES_NO | wx.NO_DEFAULT | wx.ICON_WARNING) == wx.YES:
+				_("Warning")
+			) == ReturnCode.YES:
 				oldSpeechMode = getSpeechMode()
 				setSpeechMode_off()
 				winUser.setForegroundWindow(h)
