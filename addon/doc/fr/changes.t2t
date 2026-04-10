@@ -12,6 +12,23 @@ Téléchargement :
 - [Version stable précédente : ADDON_PREV_VERSION ADDON_DOWNLOAD_PREVIOUS]
 - [versions de développement ADDON_DEV_URL]
 
++ v2.11 (26/02/2026) +
+Compatibilité avec NVDA 2026.1
+
+Les versions antérieures à la version NVDA 2025.1 ne sont plus supportées.
+
+Développement :
+- suppression du dossier psutil( le package psutil étant embarqué dans NVDA depuis la version 2025.1).
+- suppression du package xml (le package étant embarqué dans NVDA depuis NVDA 2025.1).
+- mise à jour du module "xmltodict.py"  à la version 0.14.2.
+- pour afficher le "Quoi de neuf" d'une nouvelle version de l'extension, le document "changes.html" n'est plus ouvert par"urlopen", mais est téléchargé , enregistré momentanément dans le dossier "appData\local\temp" et ouvert dans le navigateur.
+-  prise en compte de la fermeture du site rawgit.com pour la mise à jour  de l'extension.
+- utilisation de json en lieu et place de pickle pour stoquer l'état de la mise à jour de l'extension.
+
+
+Mise en conformité avec l'API de NVDA :
+- prise en compte du déplacement de la version de NVDA dans le module buildVersion.py.
+
 
 + v2.10 (05/06/2025) +
 Compatibilité avec NVDA 2025.1

@@ -18,10 +18,8 @@ path = os.path.join(_curAddon.path, "shared")
 sys.path.append(path)
 from rs_addonConfigManager import _addonConfigManager  # noqa:E402
 from rs_NVDAStrings import NVDAString
-from messages import confirm_YesNo, inform, ReturnCode
+from rs_messages import confirm_YesNo, inform, ReturnCode
 del sys.path[-1]
-del sys.modules["rs_NVDAStrings"]
-del sys.modules["messages"]
 
 addonHandler.initTranslation()
 

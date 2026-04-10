@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: radioSureAccessEnhancement 2.10.1\n"
-"Report-Msgid-Bugs-To: paulber19\n"
-"POT-Creation-Date: 2026-02-05 15:45+0100\n"
+"Project-Id-Version: radioSureAccessEnhancement 2.11\n"
+"Report-Msgid-Bugs-To: paulber19 <paulber19@laposte.net>\n"
+"POT-Creation-Date: 2026-04-01 15:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,18 +39,18 @@ msgid ""
 msgstr ""
 
 #. Translators: the label of a message box dialog.
-#: installTasks.py:42
+#: installTasks.py:40
 msgid "Do you want to keep current add-on configuration settings ?"
 msgstr ""
 
 #. Translators: the title of a message box dialog.
-#: installTasks.py:44 installTasks.py:49
+#: installTasks.py:42 installTasks.py:47
 #, python-format
 msgid "%s - installation"
 msgstr ""
 
 #. Translators: the label of a message box dialog.
-#: installTasks.py:47
+#: installTasks.py:45
 msgid ""
 "Are you sure you don't want to keep the current add-on configuration "
 "settings?"
@@ -65,322 +65,322 @@ msgstr ""
 #. Translators: title of message box
 #. Translators: dialog's title.
 #. Translators: title of message box.
-#: shared\rs_addonConfigManager.py:199 appModules\radioSure\__init__.py:315
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:111
+#: shared\rs_addonConfigManager.py:199 appModules\radioSure\__init__.py:308
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:109
 msgid "Warning"
 msgstr ""
 
 #. Translators: the label of a dialog box message.
-#: appModules\radioSure\rs_utils.py:32
+#: appModules\radioSure\rs_utils.py:25
 #, python-format
 msgid "%s dialog is allready open"
 msgstr ""
 
 #. Translators: title of all add-on dialog boxs.
-#: appModules\radioSure\rs_utils.py:41
+#: appModules\radioSure\rs_utils.py:34
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:236 appModules\radioSure\__init__.py:568
+#: appModules\radioSure\__init__.py:229 appModules\radioSure\__init__.py:561
 #, python-format
 msgid "%s percent"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:260
+#: appModules\radioSure\__init__.py:253
 msgid "Stations"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:261
+#: appModules\radioSure\__init__.py:254
 msgid "Search"
 msgstr ""
 
 #. Translators: Input help mode message for click exit Button command.
-#: appModules\radioSure\__init__.py:304
+#: appModules\radioSure\__init__.py:297
 msgid "Move focus to Exit button and click it to exit the application"
 msgstr ""
 
 #. Translators: message to ask the user if he want quit RadioSure.
-#: appModules\radioSure\__init__.py:313
+#: appModules\radioSure\__init__.py:306
 msgid "Are you sure you want to quit RadioSure?"
 msgstr ""
 
 #. Translators: Input help mode message for click play Button command.
-#: appModules\radioSure\__init__.py:338
+#: appModules\radioSure\__init__.py:331
 msgid ""
 "Without moving focus, click on Play button to play or stop the current "
 "station"
 msgstr ""
 
 #. Translators: Input help mode message for click back Button command.
-#: appModules\radioSure\__init__.py:350
+#: appModules\radioSure\__init__.py:343
 msgid ""
 "Without moving focus, click on Back button to play the prior played station"
 msgstr ""
 
 #. Translators: Input help mode message for click next Button command.
-#: appModules\radioSure\__init__.py:364
+#: appModules\radioSure\__init__.py:357
 msgid ""
 "Without moving focus, click on Next button to play the next played station"
 msgstr ""
 
 #. Translators: Input help mode message for click rec Button command.
-#: appModules\radioSure\__init__.py:378
+#: appModules\radioSure\__init__.py:371
 msgid "Without moving focus, click on Rec button to start or stop record"
 msgstr ""
 
 #. Translators: Input help mode message for click expand Button command.
-#: appModules\radioSure\__init__.py:391
+#: appModules\radioSure\__init__.py:384
 msgid ""
 "Without moving focus, click on Expand button to show or mask stations list"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:410
+#: appModules\radioSure\__init__.py:403
 msgid "Search edit box and Stations list are not more visible"
 msgstr ""
 
 #. Translators: Input help mode message for click option Button command.
-#: appModules\radioSure\__init__.py:420
+#: appModules\radioSure\__init__.py:413
 msgid "Move focus to Options button and click it to open Options dialog"
 msgstr ""
 
 #. Translators: Input help mode message for click fav Button command.
-#: appModules\radioSure\__init__.py:435
+#: appModules\radioSure\__init__.py:428
 msgid ""
 "Move focus to Fav button and click it to show the list of favorites station"
 msgstr ""
 
 #. Translators: Input help mode message for click stop Button command.
-#: appModules\radioSure\__init__.py:451
+#: appModules\radioSure\__init__.py:444
 msgid "Without moving focus, click on Top buttonto ???"
 msgstr ""
 
 #. Translators: Input help mode message for click Mute Button command.
-#: appModules\radioSure\__init__.py:464
+#: appModules\radioSure\__init__.py:457
 msgid ""
 "Without moving focus, click on Mute butt button to Mute volume on or off"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Slightly Volume command.
-#: appModules\radioSure\__init__.py:477
+#: appModules\radioSure\__init__.py:470
 msgid "Decrease slightly the volume(down 3%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Slightly Volume command.
-#: appModules\radioSure\__init__.py:488
+#: appModules\radioSure\__init__.py:481
 msgid "Increase slightly the volume(up 3%)"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Volume command.
-#: appModules\radioSure\__init__.py:499
+#: appModules\radioSure\__init__.py:492
 msgid "Decrease the volume(down 5%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Volume command.
-#: appModules\radioSure\__init__.py:510
+#: appModules\radioSure\__init__.py:503
 msgid "Increase the volume(up 5%)"
 msgstr ""
 
 #. Translators: Input help mode message for increase Strongly Volume command.
-#: appModules\radioSure\__init__.py:521
+#: appModules\radioSure\__init__.py:514
 msgid "Increase strongly the volume(up 20%)"
 msgstr ""
 
 #. Translators: Input help mode message for decrease Strongly Volume command.
-#: appModules\radioSure\__init__.py:532
+#: appModules\radioSure\__init__.py:525
 msgid "Decrease strongly the volume(down -20%)"
 msgstr ""
 
 #. Translators: Input help mode message for middle volume command.
-#: appModules\radioSure\__init__.py:543
+#: appModules\radioSure\__init__.py:536
 msgid "Set volume to middle( 50%)"
 msgstr ""
 
 #. Translators: Input help mode message for say volume command.
-#: appModules\radioSure\__init__.py:558
+#: appModules\radioSure\__init__.py:551
 msgid "Say volume"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:573
+#: appModules\radioSure\__init__.py:566
 msgid ""
 "Say the name of current station and the status line. Twice, copy these "
 "informations to clipboard"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:583
+#: appModules\radioSure\__init__.py:576
 msgid "Informations copied to clipboard"
 msgstr ""
 
 #. Translators: Input help mode message for say buffer command.
-#: appModules\radioSure\__init__.py:595
+#: appModules\radioSure\__init__.py:588
 msgid "Say buffer"
 msgstr ""
 
 #. Translators: Input help mode message for go To Stations List command.
-#: appModules\radioSure\__init__.py:619
+#: appModules\radioSure\__init__.py:612
 msgid ""
 "Move focus to stations list. IF stations list is not visible, click Expand "
 "button before."
 msgstr ""
 
-#: appModules\radioSure\__init__.py:628
+#: appModules\radioSure\__init__.py:621
 msgid "You are in stations list window"
 msgstr ""
 
 #. impossible to display list
-#: appModules\radioSure\__init__.py:637 appModules\radioSure\__init__.py:745
-#: appModules\radioSure\__init__.py:840
+#: appModules\radioSure\__init__.py:630 appModules\radioSure\__init__.py:738
+#: appModules\radioSure\__init__.py:833
 msgid "Stations list not found"
 msgstr ""
 
 #. impossible to display search edit box
-#: appModules\radioSure\__init__.py:661 appModules\radioSure\__init__.py:690
+#: appModules\radioSure\__init__.py:654 appModules\radioSure\__init__.py:683
 msgid "Search edit box not found"
 msgstr ""
 
-#: appModules\radioSure\__init__.py:671
+#: appModules\radioSure\__init__.py:664
 msgid ""
 "Move focus to search edit box. IF search edit box is not visible, click "
 "Expand button before."
 msgstr ""
 
-#: appModules\radioSure\__init__.py:680
+#: appModules\radioSure\__init__.py:673
 msgid "You are in search edit field"
 msgstr ""
 
 #. Translators: message to user
 #. when there are none or one station in the list.
-#: appModules\radioSure\__init__.py:749
+#: appModules\radioSure\__init__.py:742
 msgid "Not available because the station list is empty or has only one station"
 msgstr ""
 
 #. Translators: Input help mode message for activate title Sort Menu command.
-#: appModules\radioSure\__init__.py:755
+#: appModules\radioSure\__init__.py:748
 msgid "Activate context menu to sort stations list by title"
 msgstr ""
 
 #. Translators: Input help mode message for activate country Sort Menu command.
-#: appModules\radioSure\__init__.py:767
+#: appModules\radioSure\__init__.py:760
 msgid "Activate context menu to sort stations list by country"
 msgstr ""
 
 #. Translators: Input help mode message for activate genre Sort Menu command.
-#: appModules\radioSure\__init__.py:779
+#: appModules\radioSure\__init__.py:772
 msgid "Activate context menu to sort stations list by genre"
 msgstr ""
 
 #. Translators: Input help mode message for activate language Sort Menu command.
-#: appModules\radioSure\__init__.py:791
+#: appModules\radioSure\__init__.py:784
 msgid "Activate context menu to sort stations list by language"
 msgstr ""
 
 #. Translators: Input help mode message for start Station Randomly command.
-#: appModules\radioSure\__init__.py:824
+#: appModules\radioSure\__init__.py:817
 msgid "Start a station randomly"
 msgstr ""
 
 #. Translators: message to user
-#: appModules\radioSure\__init__.py:870
+#: appModules\radioSure\__init__.py:863
 #, python-format
 msgid "None of the %s stations selected randomly could be connected"
 msgstr ""
 
 #. Translators: message to user there is no stations in list.
-#: appModules\radioSure\__init__.py:884
+#: appModules\radioSure\__init__.py:877
 msgid "No station in list"
 msgstr ""
 
 #. Translators: message to user to report station search running
-#: appModules\radioSure\__init__.py:891
+#: appModules\radioSure\__init__.py:884
 msgid "Station search running"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:33
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:31
 msgid ""
 "Some Changes have been made . You must save the configuration and restart "
 "NVDA for these changes to take effect. Would you like to do it now?"
 msgstr ""
 
 #. Translators: A message  to user
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:43
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:41
 msgid "Don't forget to save the configuration for the changes to take effect !"
 msgstr ""
 
 #. Translators: This is the label for the radioSure settings  dialog.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:50
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:48
 msgid "Options"
 msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:55
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:53
 msgid "Desactivate progress &bars update"
 msgstr ""
 
 #. Translators: This is the label for a group of editing options
 #. in Options settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:62
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:60
 msgid "Random playing"
 msgstr ""
 
 #. Translators: This is the label for a choice in the Options settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:70
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:68
 msgid "&Maximum stations to check:"
 msgstr ""
 
 #. Translators: This is the label for a choice in the Options settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:79
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:77
 msgid "&Maximum delay for waiting connexion (in seconds):"
 msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:88
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:86
 msgid "&Skip stations without connexion"
 msgstr ""
 
 #. translators: label for a button in Options settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:94
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:92
 msgid "&Clear history of stations without connexion"
 msgstr ""
 
 #. Translators: This is the label for a checkbox in Options Settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:99
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:97
 msgid "&Use \"shift+control\" instead of \"alt+control\" for input gestures"
 msgstr ""
 
 #. Translators:  message to ask the user
 #. if  he wants to clear  stations's history.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:109
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:107
 msgid ""
 "Are you sure you want  to clearthe history of stations without connexion?"
 msgstr ""
 
 #. Translators: This is the label for the Advanced settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:145
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:143
 #: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:98
 msgid "Update"
 msgstr ""
 
 #. Translators: This is the label for a checkbox in the Update Settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:153
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:151
 msgid "Automatically check for &updates"
 msgstr ""
 
 #. Translators: This is the label for a checkbox in the Update settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:159
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:157
 msgid "Update also release versions to &developpement versions"
 msgstr ""
 
 #. translators: label for a button in Update settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:165
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:163
 msgid "&Check for update"
 msgstr ""
 
 #. translators: this is a label for a button in update settings panel.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:170
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:168
 msgid "View &history"
 msgstr ""
 
 #. translators: title of the dialog.
-#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:213
+#: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:211
 msgid "Settings"
 msgstr ""
 

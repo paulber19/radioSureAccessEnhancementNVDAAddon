@@ -16,6 +16,23 @@ Download:
 Sorry, but this document is an automatic translation from french language.
 
 
++ v2.11 (February/26/2026) +
+Compatibility with NVDA 2026.1
+
+Versions prior to NVDA version 2025.1 are no longer supported.
+
+Development:
+- deletion of the psutil folder (the psutil package being embedded in NVDA since version 2025.1).
+- removal of the xml package (the package being embedded in NVDA since NVDA 2025.1).
+- update of the "xmltodict.py" module to version 0.14.2.
+- to display the "What's new" of a new version of the extension, the "changes.html" document is no longer opened by "urlopen", but is downloaded, saved momentarily in the "appData\local\temp" folder and opened in the browser.
+- taking into account the closure of the rawgit.com site for updating add-on.
+- use of json instead of pickle to store the add-on update status.
+
+
+Compliance with the NVDA API:
+- taking into account the movement of the NVDA version in the buildVersion.py module.
+
 + v2.10 (June/05/2025) +
 Compatibility with NVDA 2025.1
 

@@ -31,9 +31,9 @@ addon_info = {
 	See user manual for more informations.
 	"""),
 	# version
-	"addon_version": "2.10.1",
+	"addon_version": "2.11",
 	# Author(s)
-	"addon_author": "paulber19",
+	"addon_author": "paulber19 <paulber19@laposte.net>",
 	# URL for the add-on documentation support
 	"addon_url": "https://github.com/paulber19/radioSureAccessEnhancementNVDAAddon.git",
 	# URL for the add-on repository where the source code can be found
@@ -41,10 +41,10 @@ addon_info = {
 	# Documentation file name
 	"addon_docFileName": "addonUserManual.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
-	"addon_minimumNVDAVersion": "2024.1",
+	"addon_minimumNVDAVersion": "2025.1",
 	# Last NVDA version supported/tested
 	# (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2025.1",
+	"addon_lastTestedNVDAVersion": "2026.1",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel": None,
 	# Add-on license such as GPL 2

@@ -1,6 +1,6 @@
 # appModules\radioSure\__init__.py
 # a part of radioSureAccessEnhancement add-on
-# Copyright (C) 2019-2025, Paulber19
+# Copyright (C) 2019-2026, Paulber19
 # This file is covered by the GNU General Public License.
 # Released under GPL 2
 
@@ -21,7 +21,6 @@ from winUser import getWindow, getControlID
 from winUser import VK_DOWN, VK_UP, sendMessage
 from winUser import VK_NEXT, VK_PRIOR, VK_LEFT, VK_RIGHT
 from controlTypes.role import Role
-
 from NVDAObjects import NVDAObject
 import review
 import textInfos
@@ -36,13 +35,8 @@ from .rs_utils import (
 	getSpeechMode, setSpeechMode, setSpeechMode_off,
 	executeWithSpeakOnDemand,
 )
-try:
-	# NVDA version >= 2024.1
-	speech.speech.SpeechMode.onDemand
-	speakOnDemand = {"speakOnDemand": True}
-except AttributeError:
-	# NVDA version <= 2023.3
-	speakOnDemand = {}
+
+speakOnDemand = {"speakOnDemand": True}
 
 _curAddon = addonHandler.getCodeAddon()
 debugToolsPath = os.path.join(_curAddon.path, "debugTools")
@@ -62,9 +56,8 @@ del sys.path[-1]
 sharedPath = os.path.join(_curAddon.path, "shared")
 sys.path.append(sharedPath)
 from rs_addonConfigManager import _addonConfigManager
-from messages import confirm_YesNo, ReturnCode
+from rs_messages import confirm_YesNo, ReturnCode
 del sys.path[-1]
-del sys.modules["messages"]
 
 addonHandler.initTranslation()
 
@@ -725,8 +718,8 @@ class AppModule(AppModule):
 			j = int(t + h / 2)
 			import winUser
 			winUser.setCursorPos(i, j)
-			winUser.mouse_event(winUser.MOUSEEVENTF_RIGHTDOWN, 0, 0, None, None)
-			winUser.mouse_event(winUser.MOUSEEVENTF_RIGHTUP, 0, 0, None, None)
+			winUser.mouse_event(winUser.MOUSEEVENTF_RIGHTDOWN, 0, 0)
+			winUser.mouse_event(winUser.MOUSEEVENTF_RIGHTUP, 0, 0)
 		if not self.checkSearchEditComboBoxDisplay(True):
 			return
 		wx.CallLater(800, callback, column)

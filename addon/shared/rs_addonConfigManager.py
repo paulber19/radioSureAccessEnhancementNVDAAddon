@@ -187,7 +187,7 @@ class AddonConfigurationManager():
 		config.post_configSave.register(self.handlePostConfigSave)
 
 	def warnConfigurationReset(self):
-		from messages import alert
+		from rs_messages import alert
 		wx.CallLater(
 			100,
 			alert,
@@ -282,13 +282,8 @@ class AddonConfigurationManager():
 
 	def canConfigurationBeSaved(self, force):
 		# Never save config or state if running securely or if running from the launcher.
-		try:
-			# for NVDA version >= 2023.2
-			from NVDAState import shouldWriteToDisk
-			writeToDisk = shouldWriteToDisk()
-		except ImportError:
-			# for NVDA version < 2023.2
-			writeToDisk = not (globalVars.appArgs.secure or globalVars.appArgs.launcher)
+		from NVDAState import shouldWriteToDisk
+		writeToDisk = shouldWriteToDisk()
 		if not writeToDisk:
 			log.debug("Not writing add-on configuration, either --secure or --launcher args present")
 			return False
