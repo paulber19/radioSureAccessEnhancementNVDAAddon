@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: radioSureAccessEnhancement 2.11\n"
+"Project-Id-Version: radioSureAccessEnhancement 2.12\n"
 "Report-Msgid-Bugs-To: paulber19 <paulber19@laposte.net>\n"
-"POT-Creation-Date: 2026-04-01 15:07+0200\n"
+"POT-Creation-Date: 2026-07-22 09:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Add-on summary,
-#. usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown
-#. on installation and add-on information.
-#: buildVars.py:24
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: buildVars.py:21
 msgid "RadioSure Internet Radio Player: accessibility enhancement"
 msgstr ""
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on
-#. on add-on information from add-ons manager
-#: buildVars.py:28
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:24
 msgid ""
 "This add-on Improves the accessibility of RadioSure, Internet Radio Player "
 "with NVDA.\n"
@@ -38,19 +36,26 @@ msgid ""
 "\t"
 msgstr ""
 
+#. Brief changelog for this version
+#. It can span multiple lines."""),
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:34
+msgid "See add-on history."
+msgstr ""
+
 #. Translators: the label of a message box dialog.
-#: installTasks.py:40
+#: installTasks.py:52
 msgid "Do you want to keep current add-on configuration settings ?"
 msgstr ""
 
 #. Translators: the title of a message box dialog.
-#: installTasks.py:42 installTasks.py:47
+#: installTasks.py:54 installTasks.py:59
 #, python-format
 msgid "%s - installation"
 msgstr ""
 
 #. Translators: the label of a message box dialog.
-#: installTasks.py:45
+#: installTasks.py:57
 msgid ""
 "Are you sure you don't want to keep the current add-on configuration "
 "settings?"
@@ -71,13 +76,13 @@ msgid "Warning"
 msgstr ""
 
 #. Translators: the label of a dialog box message.
-#: appModules\radioSure\rs_utils.py:25
+#: appModules\radioSure\rs_utils.py:22
 #, python-format
 msgid "%s dialog is allready open"
 msgstr ""
 
 #. Translators: title of all add-on dialog boxs.
-#: appModules\radioSure\rs_utils.py:34
+#: appModules\radioSure\rs_utils.py:31
 msgid "{addonSummary}'s add-on - {dialogTitle}"
 msgstr ""
 
@@ -355,7 +360,7 @@ msgstr ""
 
 #. Translators: This is the label for the Advanced settings panel.
 #: globalPlugins\radioSureAccessEnhancement\rs_configGui.py:143
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:98
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:181
 msgid "Update"
 msgstr ""
 
@@ -386,60 +391,60 @@ msgstr ""
 
 #. Translators: The progress message
 #. indicating the name of the add-on being downloaded.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:101
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:184
 msgid "Downloading {name}"
 msgstr ""
 
 #. Translators: A message indicating that an error occurred
 #. while downloading an update to NVDA.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:116
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:199
 msgid "Error downloading update for {name}."
 msgstr ""
 
 #. Translators: message to user
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:170
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:252
 msgid "Cannot update {name} - missing file or invalid file format"
 msgstr ""
 
 #. Translators: The title of the dialog
 #. presented while an Addon is being updated.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:187
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:269
 msgid "Updating"
 msgstr ""
 
 #. Translators: The message displayed while an addon is being updated.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:189
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:271
 msgid "Please wait while the add-on is being updated."
 msgstr ""
 
 #. Translators: The message displayed when an error occurs
 #. when installing an add-on package.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:211
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:293
 msgid "Failed to update {name} add-on"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:255
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:337
 msgid "{summary} - update"
 msgstr ""
 
 #. Translators: message to user that the update service is temporarily in maintenance
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:268
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:350
 msgid "The service is temporarily under maintenance. Please, try again later."
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:295
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:377
 msgid ""
 "The update is not compatible with this version of NVDA. Minimum NVDA "
 "version: {minYear}.{minMajor}, last tested: {testedYear}.{testedMajor}."
 msgstr ""
 
 #. Translators: message to user to report a new version.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:356
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:436
 #, python-format
 msgid "New version%s is available. Do you want to download it now?"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:360
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:440
 msgid ""
 "New version{0} is available.\n"
 "But it is not compatible with this version of NVDA: minimum version requred "
@@ -448,33 +453,33 @@ msgid ""
 msgstr ""
 
 #. Translators: message to user that add-on is up to date
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:381
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:461
 #, python-format
 msgid "You are up-to-date. %s is the latest version."
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:388
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:468
 msgid "Oops! There was a problem checking for updates. Please retry later"
 msgstr ""
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:543
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:623
 msgid "&Yes"
 msgstr ""
 
 #. Translators: This is a label of a button appearing
 #. on UpdateCheckResult dialog.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:548
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:628
 msgid "&No"
 msgstr ""
 
 #. Translators: The label of a button to remind the user later
 #. about performing some action.
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:553
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:633
 msgid "&Later"
 msgstr ""
 
-#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:557
+#: globalPlugins\radioSureAccessEnhancement\updateHandler\update_check.py:637
 msgid "Wha&t's new"
 msgstr ""

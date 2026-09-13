@@ -5,10 +5,7 @@
 
 
 import addonHandler
-import api
 import speech
-import winUser
-import time
 import queueHandler
 import ui
 speakOnDemand = {"speakOnDemand": True}
